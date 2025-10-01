@@ -407,116 +407,108 @@ const TechnicalPartners = () => {
                 </div>
 
                 {/* TECHNICAL PARTNERS GRID */}
-                <div className="partners-grid">
-                  {filteredTechnicalPartners.map((partner, i) => (
-                    <div key={`tech-${i}`} className="partner-grid-item" style={{animationDelay: `${i * 0.1}s`}}>
-                      <div className="tp-blog-item modern-card">
-                        <div className="tp-blog-thumb fix" style={{
-                          backgroundColor: '#ffffff',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          minHeight: '180px',
-                          borderRadius: '12px 12px 0 0'
-                        }}>
-                          <div className="partner-logo-modern" style={{
-                            width: '70px',
-                            height: '70px',
-                            borderRadius: '12px',
-                            background: (() => {
-                              switch(partner.category) {
-                                case 'Cloud Services': return 'linear-gradient(135deg, #10b981, #059669)';
-                                case 'Cloud Services & Enterprise Software': return 'linear-gradient(135deg, #3b82f6, #1d4ed8)';
-                                case 'Networking Infrastructure': return 'linear-gradient(135deg, #f59e0b, #d97706)';
-                                case 'Enterprise & Analytics': return 'linear-gradient(135deg, #8b5cf6, #7c3aed)';
-                                default: return 'linear-gradient(135deg, #2563eb, #1e40af)';
-                              }
-                            })(),
+                <div className="partners-grid blog-grid-inner">
+                  <div className="row">
+                    {filteredTechnicalPartners.map((partner, i) => (
+                      <div key={`tech-${i}`} className="col-xl-4 col-lg-6 col-md-6 mb-30" style={{animationDelay: `${i * 0.1}s`}}>
+                        <div className="tp-blog-item">
+                          <div className="tp-blog-thumb fix" style={{
+                            backgroundColor: '#ffffff',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            color: 'white',
-                            fontSize: '24px',
-                            fontWeight: 'bold',
-                            letterSpacing: '1px',
-                            textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-                            boxShadow: '0 8px 16px rgba(0,0,0,0.15)',
-                            transition: 'all 0.3s ease'
+                            minHeight: '180px'
                           }}>
-                            {partner.name.split(' ').map(word => word[0]).join('').slice(0, 3)}
-                          </div>
-                        </div>
-                        <div className="tp-blog-content" style={{padding: '24px'}}>
-                          <div className="tp-blog-meta d-flex align-items-center mb-3">
-                            <div className="tp-blog-category category-color-2" style={{
-                              background: partner.type === 'Strategic Partner'
-                                ? 'linear-gradient(135deg, #f59e0b, #d97706)'
-                                : 'linear-gradient(135deg, #2563eb, #1e40af)',
-                              color: 'white'
-                            }}>
-                              <span>{partner.type.split(' ')[0]}</span>
-                            </div>
-                            <div className="tp-blog-date">
-                              <span>{partner.category.split(' ')[0]}</span>
-                            </div>
-                          </div>
-                          <div className="tp-blog-title-box mb-3">
-                            <h4 className="tp-blog-title-sm" style={{
-                              fontSize: '1rem',
-                              fontWeight: '600',
-                              marginBottom: '8px',
-                              lineHeight: '1.4'
-                            }}>
-                              {partner.name}
-                            </h4>
-                            <p style={{
-                              margin: '0',
-                              color: '#6b7280',
-                              fontSize: '0.875rem',
-                              lineHeight: '1.5'
-                            }}>
-                              {partner.partnership}
-                            </p>
-                          </div>
-                          <div className="tp-blog-author-info-box d-flex align-items-center">
-                            <div className="tp-blog-avata" style={{
-                              background: partner.type === 'Strategic Partner'
-                                ? 'linear-gradient(135deg, #f59e0b, #d97706)'
-                                : 'linear-gradient(135deg, #2563eb, #1e40af)',
-                              borderRadius: '50%',
-                              width: '36px',
-                              height: '36px',
+                            <div className="partner-logo-modern" style={{
+                              width: '70px',
+                              height: '70px',
+                              borderRadius: '12px',
+                              background: (() => {
+                                switch(partner.category) {
+                                  case 'Cloud Services': return 'linear-gradient(135deg, #10b981, #059669)';
+                                  case 'Cloud Services & Enterprise Software': return 'linear-gradient(135deg, #3b82f6, #1d4ed8)';
+                                  case 'Networking Infrastructure': return 'linear-gradient(135deg, #f59e0b, #d97706)';
+                                  case 'Enterprise & Analytics': return 'linear-gradient(135deg, #8b5cf6, #7c3aed)';
+                                  default: return 'linear-gradient(135deg, #2563eb, #1e40af)';
+                                }
+                              })(),
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              marginRight: '12px'
+                              color: 'white',
+                              fontSize: '24px',
+                              fontWeight: 'bold',
+                              letterSpacing: '1px',
+                              textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+                              boxShadow: '0 8px 16px rgba(0,0,0,0.15)',
+                              transition: 'all 0.3s ease'
                             }}>
-                              <i className="fas fa-cogs" style={{
-                                color: 'white',
-                                fontSize: '0.75rem'
-                              }}></i>
+                              {partner.name.split(' ').map(word => word[0]).join('').slice(0, 3)}
                             </div>
-                            <div className="tp-blog-author-info">
-                              <span style={{
-                                fontSize: '0.75rem',
-                                color: '#6b7280',
-                                fontWeight: '500'
+                          </div>
+                          <div className="tp-blog-content">
+                            <div className="tp-blog-meta d-flex align-items-center">
+                              <div className="tp-blog-category category-color-1" style={{
+                                background: partner.type === 'Strategic Partner'
+                                  ? 'linear-gradient(135deg, #f59e0b, #d97706)'
+                                  : 'linear-gradient(135deg, #2563eb, #1e40af)',
+                                color: 'white'
                               }}>
-                                {partner.type.replace(' Partner', '')}
-                              </span>
+                                <span>{partner.type.split(' ')[0]}</span>
+                              </div>
+                              <div className="tp-blog-date">
+                                <span>{partner.category.split(' ')[0]}</span>
+                              </div>
+                            </div>
+                            <div className="tp-blog-title-box">
+                              <h4 className="tp-blog-title-sm">
+                                {partner.name}
+                              </h4>
+                            </div>
+                            <p style={{
+                              color: '#6b7280',
+                              fontSize: '0.875rem',
+                              lineHeight: '1.5',
+                              marginBottom: '20px'
+                            }}>
+                              {partner.partnership}
+                            </p>
+                            <div className="tp-blog-author-info-box d-flex align-items-center">
+                              <div className="tp-blog-avata" style={{
+                                background: partner.type === 'Strategic Partner'
+                                  ? 'linear-gradient(135deg, #f59e0b, #d97706)'
+                                  : 'linear-gradient(135deg, #2563eb, #1e40af)',
+                                borderRadius: '50%',
+                                width: '40px',
+                                height: '40px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                              }}>
+                                <i className="fas fa-cogs" style={{
+                                  color: 'white',
+                                  fontSize: '14px'
+                                }}></i>
+                              </div>
+                              <div className="tp-blog-author-info">
+                                <h5>{partner.type.replace(' Partner', '')}</h5>
+                                <span>Technology Partner</span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                  {filteredTechnicalPartners.length === 0 && (
-                    <div className="no-results" style={{textAlign: 'center', padding: '60px', gridColumn: '1 / -1'}}>
-                      <i className="fas fa-search" style={{fontSize: '3rem', color: '#cccccc', marginBottom: '20px'}}></i>
-                      <h3>No partners found</h3>
-                      <p>Try adjusting your search terms or filters</p>
-                    </div>
-                  )}
+                    ))}
+                    {filteredTechnicalPartners.length === 0 && (
+                      <div className="col-12">
+                        <div style={{textAlign: 'center', padding: '60px', background: 'white', borderRadius: '30px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)'}}>
+                          <i className="fas fa-search" style={{fontSize: '3rem', color: '#cccccc', marginBottom: '20px'}}></i>
+                          <h3>No partners found</h3>
+                          <p>Try adjusting your search terms or filters</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -594,19 +586,6 @@ const TechnicalPartners = () => {
           background: #f8fafc;
         }
 
-        .partners-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          gap: 30px;
-          margin-top: 60px;
-        }
-
-        .partner-grid-item {
-          animation: fadeInUp 0.8s ease-out forwards;
-          opacity: 0;
-          transform: translateY(30px);
-        }
-
         @keyframes fadeInUp {
           to {
             opacity: 1;
@@ -614,26 +593,11 @@ const TechnicalPartners = () => {
           }
         }
 
-        .modern-card {
-          background: white;
-          border-radius: 16px;
-          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-          border: 1px solid rgba(0, 0, 0, 0.05);
-          overflow: hidden;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          height: 100%;
-        }
-
-        .modern-card:hover {
-          transform: translateY(-8px) scale(1.02);
-          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-        }
-
         .partner-logo-modern {
           transition: all 0.3s ease;
         }
 
-        .modern-card:hover .partner-logo-modern {
+        .tp-blog-item:hover .partner-logo-modern {
           transform: scale(1.05);
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
@@ -658,16 +622,6 @@ const TechnicalPartners = () => {
             font-size: 1rem;
           }
 
-          .partners-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 40px;
-          }
-
-          .modern-card {
-            margin-bottom: 20px;
-          }
-
           .hero-bg-elements .floating-shape {
             display: none;
           }
@@ -676,10 +630,6 @@ const TechnicalPartners = () => {
         @media (max-width: 576px) {
           .hero-title {
             font-size: 1.75rem;
-          }
-
-          .partners-grid {
-            margin-top: 30px;
           }
         }
       `}</style>

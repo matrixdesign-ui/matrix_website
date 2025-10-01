@@ -539,154 +539,97 @@ const Clients = () => {
                 </div>
 
                 {/* CLIENTS GRID */}
-                <div className="clients-grid">
-                  {filteredClientPartners.length > 0 ? (
-                    filteredClientPartners.map((client, i) => (
-                      <div key={`client-${i}`} className="client-card" style={{
-                        background: 'white',
-                        borderRadius: '16px',
-                        boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
-                        border: '1px solid rgba(0,0,0,0.05)',
-                        overflow: 'hidden',
-                        cursor: 'pointer',
-                        transition: 'all 0.4s cubic-bezier(0.4,0,0.2,1)',
-                        animation: `fadeInUp 0.6s ease-out ${i * 0.07}s both`
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-8px)';
-                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.08)';
-                      }}
-                      >
-                        <div className="client-header" style={{
-                          padding: '30px 30px 20px',
-                          background: 'linear-gradient(135deg, #f8fafc 0%, white 100%)',
-                          borderBottom: '1px solid rgba(0,0,0,0.05)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '20px'
+                <div className="clients-grid blog-grid-inner">
+                  <div className="row">
+                    {filteredClientPartners.length > 0 ? (
+                      filteredClientPartners.map((client, i) => (
+                        <div key={`client-${i}`} className="col-xl-4 col-lg-6 col-md-6 mb-30" style={{
+                          animation: `fadeInUp 0.6s ease-out ${i * 0.07}s both`
                         }}>
-                          <div className="client-logo" style={{
-                            width: '80px',
-                            height: '80px',
-                            borderRadius: '50%',
-                            background: `linear-gradient(135deg, ${['#6366f1', '#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316', '#84cc16', '#36b9cc', '#fdba74', '#89f6e6'][i % 12]}, ${['#8b5cf6', '#1d4ed8', '#d97706', '#059669', '#dc2626', '#6366f1', '#0891b2', '#ea580c', '#65a30d', '#2c98b5', '#fb923c', '#5fdfdf'][i % 12]})`,
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            color: 'white',
-                            fontSize: '32px',
-                            fontWeight: 'bold',
-                            letterSpacing: '1px',
-                            textShadow: '0 2px 6px rgba(0,0,0,0.3)',
-                            boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
-                            flexShrink: '0'
-                          }}>
-                            {client.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
-                          </div>
-
-                          <div className="client-info" style={{flex: '1'}}>
-                            <div className="client-sector-badge" style={{
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              padding: '6px 12px',
-                              background: 'linear-gradient(135deg, #e0e7ff, #f3f4f6)',
-                              borderRadius: '20px',
-                              color: '#6366f1',
-                              fontSize: '0.8rem',
-                              fontWeight: '600',
-                              marginBottom: '8px'
-                            }}>
-                              <i className={`fas fa-${client.category === 'Government' ? 'landmark' : client.category === 'Finance' ? 'university' : client.category === 'Healthcare' ? 'heartbeat' : client.category === 'Education' ? 'graduation-cap' : 'building'}`} style={{marginRight: '6px'}}></i>
-                              {client.category}
-                            </div>
-
-                            <h3 className="client-name" style={{
-                              fontSize: '1.4rem',
-                              fontWeight: '700',
-                              color: '#1e293b',
-                              lineHeight: '1.3',
-                              marginBottom: '6px'
-                            }}>
-                              {client.name}
-                            </h3>
-
-                            <div className="client-partnership-period" style={{
+                          <div className="tp-blog-item">
+                            {/* Client Logo/Thumb */}
+                            <div className="tp-blog-thumb fix" style={{
+                              background: `linear-gradient(135deg, ${['#6366f1', '#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316', '#84cc16', '#36b9cc', '#fdba74', '#89f6e6'][i % 12]}, ${['#8b5cf6', '#1d4ed8', '#d97706', '#059669', '#dc2626', '#6366f1', '#0891b2', '#ea580c', '#65a30d', '#2c98b5', '#fb923c', '#5fdfdf'][i % 12]})`,
                               display: 'flex',
                               alignItems: 'center',
-                              gap: '8px',
-                              color: '#64748b',
-                              fontSize: '0.9rem'
+                              justifyContent: 'center',
+                              minHeight: '200px',
+                              color: 'white',
+                              fontSize: '48px',
+                              fontWeight: 'bold',
+                              textShadow: '0 2px 8px rgba(0,0,0,0.3)'
                             }}>
-                              <i className="fas fa-calendar" style={{fontSize: '0.8rem'}}></i>
-                              Partner since {client.since} ({new Date().getFullYear() - parseInt(client.since)} years)
+                              {client.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
+                            </div>
+
+                            {/* Client Content */}
+                            <div className="tp-blog-content">
+                              {/* Meta Information */}
+                              <div className="tp-blog-meta d-flex align-items-center">
+                                <div className="tp-blog-category category-color-1">
+                                  <span>{client.category}</span>
+                                </div>
+                                <div className="tp-blog-date">
+                                  <span>Since {client.since}</span>
+                                </div>
+                              </div>
+
+                              {/* Client Title */}
+                              <div className="tp-blog-title-box">
+                                <h3 className="tp-blog-title-sm">
+                                  {client.name}
+                                </h3>
+                              </div>
+
+                              {/* Partnership Description */}
+                              <p style={{
+                                color: '#64748b',
+                                lineHeight: '1.6',
+                                marginBottom: '24px',
+                                fontSize: '1rem'
+                              }}>
+                                {client.partnership}
+                              </p>
+
+                              {/* Author/Partnership Info */}
+                              <div className="tp-blog-author-info-box d-flex align-items-center">
+                                <div className="tp-blog-avata" style={{
+                                  width: '40px',
+                                  height: '40px',
+                                  borderRadius: '50%',
+                                  background: '#059669',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  color: 'white'
+                                }}>
+                                  <i className="fas fa-handshake"></i>
+                                </div>
+                                <div className="tp-blog-author-info">
+                                  <h5>Trusted Partner</h5>
+                                  <span>{new Date().getFullYear() - parseInt(client.since)} years partnership</span>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-
-                        <div className="client-body" style={{padding: '24px 30px'}}>
-                          <p className="client-description" style={{
-                            color: '#64748b',
-                            lineHeight: '1.6',
-                            marginBottom: '24px',
-                            fontSize: '1rem'
-                          }}>
-                            {client.partnership}
-                          </p>
-
-                          <div className="client-footer" style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between'
-                          }}>
-                            <div className="trust-indicator" style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              gap: '8px',
-                              color: '#059669',
-                              fontSize: '0.9rem',
-                              fontWeight: '600'
-                            }}>
-                              <i className="fas fa-shield-alt"></i>
-                              Trusted Partner
-                            </div>
-
-                            <button className="view-details-btn" style={{
-                              padding: '10px 20px',
-                              background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
-                              color: 'white',
-                              border: 'none',
-                              borderRadius: '8px',
-                              fontSize: '0.9rem',
-                              fontWeight: '600',
-                              cursor: 'pointer',
-                              transition: 'all 0.2s ease'
-                            }}
-                            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                            >
-                              View Details
-                            </button>
-                          </div>
+                      ))
+                    ) : (
+                      <div className="col-12">
+                        <div style={{
+                          textAlign: 'center',
+                          padding: '80px',
+                          background: 'white',
+                          borderRadius: '30px',
+                          boxShadow: '0 4px 24px rgba(0,0,0,0.08)'
+                        }}>
+                          <i className="fas fa-search" style={{fontSize: '4rem', color: '#cbd5e1', marginBottom: '20px'}}></i>
+                          <h3 style={{color: '#64748b', marginBottom: '10px'}}>No clients found</h3>
+                          <p style={{color: '#94a3b8'}}>Try adjusting your search or filter criteria</p>
                         </div>
                       </div>
-                    ))
-                  ) : (
-                    <div style={{
-                      textAlign: 'center',
-                      padding: '80px',
-                      background: 'white',
-                      borderRadius: '16px',
-                      boxShadow: '0 4px 24px rgba(0,0,0,0.08)'
-                    }}>
-                      <i className="fas fa-search" style={{fontSize: '4rem', color: '#cbd5e1', marginBottom: '20px'}}></i>
-                      <h3 style={{color: '#64748b', marginBottom: '10px'}}>No clients found</h3>
-                      <p style={{color: '#94a3b8'}}>Try adjusting your search or filter criteria</p>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
             </section>
@@ -696,12 +639,6 @@ const Clients = () => {
       </div>
 
       <style jsx>{`
-        .clients-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-          gap: 30px;
-        }
-
         .floating-shapes .shape {
           position: absolute;
           border-radius: 50%;
@@ -749,11 +686,6 @@ const Clients = () => {
         }
 
         @media (max-width: 768px) {
-          .clients-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
-          }
-
           .hero-title {
             font-size: 2.5rem !important;
           }

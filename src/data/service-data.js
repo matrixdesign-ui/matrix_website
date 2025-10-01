@@ -241,7 +241,7 @@ const service_data = [
         id: 18,
         icon: img_8, // Reused img_8
         img: img_8,
-        title: <>Unified Emergency Mass Notification</>,
+        title: "Unified Emergency Mass Notification",
         description: <>A multimodal system integrating software and hardware to initiate alerts across various disbursement modes, ensuring 100% alert coverage[cite: 370, 371, 374].</>,
         delay: "2.2s",
         key: "mass-notification",
@@ -253,7 +253,7 @@ const service_data = [
         id: 19,
         icon: img_9, // Reused img_9
         img: img_9,
-        title: <>Data Centre & Server Room Solutions</>,
+        title: "Data Centre & Server Room Solutions",
         description: <>One-stop-shop for design, installation, and maintenance of critical infrastructure, including cooling, power protection (UPS), and network data cabling[cite: 541, 543, 545].</>,
         delay: "2.3s",
         key: "data-centre",

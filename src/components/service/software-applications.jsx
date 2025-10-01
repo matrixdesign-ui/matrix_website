@@ -9,10 +9,10 @@ import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1
 
 const service_content = {
     // UPDATED: Main section title to reflect Matrix's broad offering
-    title: <>Leading Engineering and Tech Solutions <br /> for a Smarter, Secured Future.</>,
+    title: "Leading Engineering and Tech Solutions for a Smarter, Secured Future",
     
     // UPDATED: Call-to-action button text
-    btn_text: <>Explore All Solutions</>,
+    btn_text: "Explore All Solutions",
  
     bg_img: "/assets/img/service/service-3-bg.png",
     
@@ -20,7 +20,7 @@ const service_content = {
     service_title: "Corporate Governance Solutions",
     
     // UPDATED: Featured service info (Highlighting E-Board function from profile)
-    service_info: <>Secure, Paperless Board Meetings <br /> and Executive Communications.</>,
+    service_info: "Secure, Paperless Board Meetings and Executive Communications",
 
     // ADDED: Key for the specific service detail link
     service_key: "e-board" 
@@ -69,11 +69,11 @@ const ServiceArea = () => {
                                   <span>{service_title}</span>
                                   <h4 className="tp-service-3-title-sm">
                                       {/* LINK UPDATE REQUIRED: Should use service_key: */}
-                                      <Link href={`/service-details?service=${service_key}`}>{service_info}</Link></h4>
+                                      <Link href={`/services/${service_key}`}>{service_info}</Link></h4>
                               </div>
                               <div className="tp-service-3-btn">
                                   {/* LINK UPDATE REQUIRED: Should use service_key: */}
-                                  <Link className="tp-btn-white-solid" href={`/service-details?service=${service_key}`}>Learn More</Link>
+                                  <Link className="tp-btn-white-solid" href={`/services/${service_key}`}>Learn More</Link>
                               </div>
                               <div className="tp-service-3-shape">
                                   <Image src={service_icon_2} alt="theme-pure" />
@@ -91,11 +91,15 @@ const ServiceArea = () => {
                                   <div className="tp-service-sm-content">
                                       <span>{item.title}</span>
                                       <h3 className="tp-service-sm-title">
-                                         {/* LINK UPDATE REQUIRED: Should use item.key: */}
-                                         <Link href={item.key ? `/service-details?service=${item.key}` : "/service-details"}>{item.description}</Link></h3>
+                                         <Link href={item.key ? `/services/${item.key}` : "/service-details"} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                           {item.title}
+                                         </Link>
+                                      </h3>
+                                      <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '15px' }}>
+                                        {typeof item.description === 'string' ? item.description : 'Learn more about this service'}
+                                      </p>
                                       <div className="tp-service-sm-link">
-                                         {/* LINK UPDATE REQUIRED: Should use item.key: */}
-                                         <Link href={item.key ? `/service-details?service=${item.key}` : "/service-details"}>Learn More <i className="far fa-arrow-right"></i></Link>
+                                         <Link href={item.key ? `/services/${item.key}` : "/service-details"}>Learn More <i className="far fa-arrow-right"></i></Link>
                                       </div>
                                   </div>
                               </div>

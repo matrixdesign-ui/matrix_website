@@ -39,26 +39,26 @@ const ServiceArea = () => {
                            <div className="row g-0">
                             {service_data.slice(13, 17).map((item, i)  => 
                                 <div key={i} className="col-md-6">
-                                 <div className="tp-service-five-item z-index">
-                                    <div className="tp-services-five-item-bg">
-                                       <div className="inner"></div>
-                                    </div>
-                                    <div className="tp-service-five-wrapper">
-                                       <div className="tp-service-five-icon">
-                                          <Image src={item.img} alt="theme-pure" />
-                                       </div>
-                                       <div className="tp-service-five-content">
-                                          <h3 className="tp-service-five-title-sm">
-                                            <Link href="/service-details"> {item.title}</Link>
-                                          </h3>
-                                          <p>{item.description} </p>
-                                       </div>
-                                    </div>
-                                    <div className="tp-service-five-btn text-end">
-                                       <Link href="/service-details"><i className="far fa-arrow-right"></i></Link>
-                                    </div>
-                                 </div>
-                              </div>                                
+                                   <div className="tp-service-five-item z-index">
+                                      <div className="tp-services-five-item-bg">
+                                         <div className="inner"></div>
+                                      </div>
+                                      <div className="tp-service-five-wrapper">
+                                         <div className="tp-service-five-icon">
+                                            <Image src={item.img} alt="theme-pure" />
+                                         </div>
+                                         <div className="tp-service-five-content">
+                                            <h3 className="tp-service-five-title-sm">
+                                               <Link href="/service-details">{item.title}</Link>
+                                            </h3>
+                                            <p>{item.description} </p>
+                                         </div>
+                                      </div>
+                                      <div className="tp-service-five-btn text-end">
+                                         <Link href="/service-details"><i className="far fa-arrow-right"></i></Link>
+                                      </div>
+                                   </div>
+                                </div>                                
                              )} 
                            </div>
                         </div>
