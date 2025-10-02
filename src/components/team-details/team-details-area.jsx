@@ -41,7 +41,24 @@ const {
     about_info_2
 }  = team_details_content
 
-const TeamDetailsArea = () => {
+const TeamDetailsArea = ({ teamMember }) => {
+    // Use teamMember data if provided, otherwise fall back to default content
+    const memberData = teamMember || {
+        name: "Team Member",
+        job_title: "Position",
+        img: team_img,
+        experience: "N/A",
+        location: "Location",
+        email: "email@matrixvision.co.ke",
+        phone: "+254 700 000 000",
+        education: "Education Details",
+        skills: ["Skill 1", "Skill 2", "Skill 3"],
+        about: "About this team member...",
+        achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
+        certifications: ["Certification 1", "Certification 2"],
+        languages: ["English"]
+    };
+
     return (
         <>
             <div className="team-details-area pt-100 pb-100">
@@ -53,55 +70,70 @@ const TeamDetailsArea = () => {
                               <div className="col-xl-4 col-lg-4 col-md-4">
                                  <div className="team-details-img-box text-center">
                                     <div className="team-details-img">
-                                       <Image src={team_img} alt="theme-pure" />
+                                       <Image src={memberData.img || team_img} alt={`${memberData.name} - ${memberData.job_title}`} />
                                     </div>
                                     <div className="team-details-work-tag">
                                        <span> 
                                           <CheckboxIcon />
                                        </span>
-                                       <span>Looking for Work</span>
+                                       <span>Available for Projects</span>
                                     </div>
                                     <div className="team-details-work-location">
                                        <span> 
                                           <LocationIconThree />
                                        </span>
-                                       <span>Newark, NJ</span>
+                                       <span>{memberData.location || "Nairobi, Kenya"}</span>
                                     </div>
                                  </div>
                               </div>
                               <div className="col-xl-8 col-lg-8 col-md-8">
                                  <div className="team-details-info-box">
-                                    <h3 className="team-details-client-title">{name}</h3>
-                                    <div className="team-details-contact-box d-flex align-items-center">
+                                    <h3 className="team-details-client-title">{memberData.name}</h3>
+                                    <p className="mb-3 text-muted" style={{fontSize: '16px', fontWeight: '500'}}>{memberData.job_title}</p>
+                                    <div className="team-details-contact-box d-flex align-items-center mb-4">
                                        <div className="team-details-social-info">
                                           <Link href="#"><i className="fab fa-facebook-f"></i></Link>
                                           <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                          <Link href="#"><i className="fab fa-linkedin-in"></i></Link>
+                                          <Link href={memberData.linkedin || "#"}><i className="fab fa-linkedin-in"></i></Link>
                                           <Link href="#"><i className="fab fa-instagram"></i></Link>
                                        </div>
                                        <div className="team-details-personal-info">
-                                          <Link href="#"> 
+                                          <Link href={`mailto:${memberData.email}`}> 
                                              <EmailFive />
-                                             <span>Message</span>
+                                             <span>Email</span>
                                           </Link>
-                                          <Link href="#"> 
+                                          <Link href={`tel:${memberData.phone}`}> 
                                              <ShareIcon />
-                                             <span>Share</span>
+                                             <span>Call</span>
                                           </Link>
                                        </div>
                                     </div>
-                                    <div className="team-details-expricence-box d-flex align-items-center">
-                                       {expricence.map((item, i) => 
-                                          <div key={i} className="team-details-expricence-box-1">
-                                             <span>{item.title}</span> <br />
-                                             <em>{item.info}</em>
-                                          </div>
-                                       )} 
+                                    <div className="team-details-expricence-box d-flex align-items-center mb-4">
+                                       <div className="team-details-expricence-box-1">
+                                          <span>Experience:</span> <br />
+                                          <em>{memberData.experience || "N/A"}</em>
+                                       </div>
+                                       <div className="team-details-expricence-box-1">
+                                          <span>Education:</span> <br />
+                                          <em style={{fontSize: '14px'}}>{memberData.education || "N/A"}</em>
+                                       </div>
                                     </div>
-                                    <div className="team-details-skill">
-                                       <h5>{skill_title}</h5>
-                                       {details_skill.map((item, i)  => <span key={i}>{item}</span>)} 
+                                    <div className="team-details-skill mb-4">
+                                       <h5>Core Skills:</h5>
+                                       {(memberData.skills || []).map((skill, i) => <span key={i}>{skill}</span>)} 
                                     </div>
+                                    {memberData.certifications && memberData.certifications.length > 0 && (
+                                       <div className="team-details-skill mb-4">
+                                          <h5>Certifications:</h5>
+                                          {memberData.certifications.map((cert, i) => <span key={i} style={{backgroundColor: '#e8f4f8'}}>{cert}</span>)} 
+                                       </div>
+                                    )}
+                                    {memberData.languages && memberData.languages.length > 0 && (
+                                       <div className="team-details-skill">
+                                          <h5>Languages:</h5>
+                                          {memberData.languages.map((lang, i) => <span key={i} style={{backgroundColor: '#f0f8e8'}}>{lang}</span>)} 
+                                       </div>
+                                    )}
                                  </div>
                               </div>
                            </div> 
@@ -112,14 +144,15 @@ const TeamDetailsArea = () => {
                      <div className="col-xl-8 col-lg-10">
                         <div className="team-details-text-wrapper pt-80">
                            <div className="team-details-text">
-                              <h4 className="team-details-title">{membur_about_title}</h4>
-                              <p>{about_info_1}</p>
+                              <h4 className="team-details-title">About {memberData.name}</h4>
+                              <p>{memberData.about || "Information about this team member..."}</p>
                            </div>
                            <div className="team-details-feature-list">
+                              <h5 className="mb-3">Key Achievements:</h5>
                               <ul>
-                              {feature_list.map((item, i) => <li key={i}>{item}</li>)} 
+                              {(memberData.achievements || []).map((achievement, i) => <li key={i}>{achievement}</li>)} 
                               </ul>
-                              <p>{about_info_2}</p>
+                              <p style={{marginTop: '30px'}}>With extensive experience and proven expertise, {memberData.name} continues to drive innovation and excellence in their role at Matrix Vision Systems, contributing to our mission of delivering cutting-edge technology solutions.</p>
                            </div>
                         </div>
                      </div>

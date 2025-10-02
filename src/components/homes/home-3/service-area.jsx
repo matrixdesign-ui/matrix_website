@@ -53,12 +53,13 @@ const  ServiceArea = () => {
                            <div className="tp-service-3-content">
                               <span>{service_title}</span>
                               <h4 className="tp-service-3-title-sm">
-                                 <Link href="/service-details">
+                                 <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
                                     {service_info}
-                                 </Link></h4>
+                                 </Link>
+                              </h4>
                            </div>
                            <div className="tp-service-3-btn">
-                              <Link className="tp-btn-white-solid" href="/service-details">Learn More</Link>
+                              <Link className="tp-btn-white-solid" href={item.link}>Learn More</Link>
                            </div>
                            <div className="tp-service-3-shape">
                               <Image src={service_img_2} alt="theme-pure" />
@@ -74,9 +75,13 @@ const  ServiceArea = () => {
                            </div>
                            <div className="tp-service-sm-content">
                               <span>{item.title}</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">{item.description} </Link></h3>
+                              <h3 className="tp-service-sm-title">
+                                 <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    {item.description}
+                                 </Link>
+                              </h3>
                               <div className="tp-service-sm-link">
-                                 <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
+                                 <Link href={item.link}>Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
                         </div>

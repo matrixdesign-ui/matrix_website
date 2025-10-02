@@ -18,21 +18,21 @@ const {dataRef} = useMultipleAnime();
               <div className="col-xl-12 col-lg-12 col-md-12">
                 <div className="tp-team-section-box text-center">
                   <h5 className="inner-section-subtitle pb-10">
-                    Talented Team
+                    Our Complete Team
                   </h5>
                   <h3 className="tp-section-title mb-0 text-black">
-                    Meet our Team Members
+                    Meet All Our Professional Team Members
                   </h3>
                 </div>
               </div>
             </div>
           </div>
           <div className="row" ref={dataRef}>
-            {team_data.slice(0, 9).map((item, i) => (
+            {team_data.map((item, i) => (
               <div
                 key={i}
                 data-index={i}
-                className={`col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-70 tp-border-after-${item.cls} team-inner-border-right`}
+                className={`col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-70 tp-border-after-${((i % 4) + 1)} team-inner-border-right`}
               >
                 <div className="tp-team-item text-center tp-team-inner-title-color z-index">
                   <div className="tp-team-img">
@@ -40,7 +40,7 @@ const {dataRef} = useMultipleAnime();
                   </div>
                   <div className="tp-team-content">
                     <h4 className="tp-team-title-sm">
-                      <Link href="/team-details">{item.name}</Link>
+                      <Link href={`/team/${item.id}`}>{item.name}</Link>
                     </h4>
                     <span>{item.job_title}</span>
                   </div>

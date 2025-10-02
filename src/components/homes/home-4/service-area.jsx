@@ -45,8 +45,12 @@ const ServiceArea = () => {
                                     </div>
                                     <div className="tp-service-4-content">
                                         <span>{item.sub_title}</span>
-                                        <h4 className="tp-service-4-title"><Link href="/service-details">{item.title}</Link></h4>
-                                        <Link className="tp-btn-service" href="/service-details">Learn More</Link>
+                                        <h4 className="tp-service-4-title">
+                                            <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                {item.title}
+                                            </Link>
+                                        </h4>
+                                        <Link className="tp-btn-service" href={item.link}>Learn More</Link>
                                     </div>
                                 </div>
                             </div>

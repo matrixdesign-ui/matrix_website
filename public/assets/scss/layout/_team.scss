@@ -39,7 +39,7 @@
     &-img{
         margin-bottom: 30px;
         & img{
-            mix-blend-mode: luminosity;
+            mix-blend-mode: normal;
         }
     }
     &-title-sm{
@@ -227,7 +227,7 @@
 .tp-team-item {
     transition: .4s;
     & .tp-team-img{
-        background-color: #B2B6FF;
+        background-color: transparent;
         border-radius: 50%;
         width: 180px;
         height: 180px;
@@ -235,12 +235,16 @@
         margin-right: auto;
         overflow: hidden;
         & img{
-            mix-blend-mode: luminosity;
+            mix-blend-mode: normal;
             border-radius: 100px;
             transform: translateY(15px);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     &:hover{
+        transform: translateY(-5px);
         & .tp-team-img{
             & img{
                 mix-blend-mode: normal;

@@ -1,6 +1,7 @@
 const serviceDetailsData = {
   "software-applications": {
     title: "Software & Applications",
+    key_benefit: "Streamlined Operations & Enhanced Customer Satisfaction",
     overview_des: "Comprehensive software solutions encompassing customer relationship management, helpdesk systems, electronic board management, and various specialized applications designed to streamline business operations across multiple domains.",
     overview_list: [
       "Customer Relations Management: Advanced CRM systems for enhanced customer engagement and satisfaction.",
@@ -19,6 +20,7 @@ const serviceDetailsData = {
   },
   "infrastructure-development": {
     title: "Infrastructure & Development",
+    key_benefit: "Scalable & Future-Ready Technology Foundation",
     overview_des: "Advanced infrastructure and development solutions combining custom software development with seamless system integration to create robust, scalable business platforms that drive digital transformation.",
     overview_list: [
       "Custom Software Development: Bespoke applications tailored to your unique requirements and business processes.",
@@ -30,6 +32,7 @@ const serviceDetailsData = {
   },
   "enterprise-solutions": {
     title: "Enterprise Solutions",
+    key_benefit: "Enterprise-Grade Performance & Reliability",
     overview_des: "Scalable enterprise-grade solutions for customer relationship management, helpdesk services, electronic board management, and IT support. Designed to handle complex organizational needs and large-scale operations.",
     overview_list: [
       "Customer Relations Management: Comprehensive CRM systems for enhanced customer engagement and satisfaction.",
@@ -41,6 +44,7 @@ const serviceDetailsData = {
   },
   "governance-compliance": {
     title: "Governance & Compliance",
+    key_benefit: "Regulatory Compliance & Risk Mitigation",
     overview_des: "Comprehensive solutions for contract management, legal services, audit processes, and social media monitoring to ensure regulatory compliance and organizational governance.",
     overview_list: [
       "Contract Management: Complete lifecycle management of contract creation and execution.",
@@ -52,6 +56,7 @@ const serviceDetailsData = {
   },
   "facilities-asset-management": {
     title: "Facilities & Asset Management",
+    key_benefit: "Optimized Space Utilization & Operational Efficiency",
     overview_des: "Advanced solutions for computer-aided facility management, asset tracking, automated visitor management, and meeting room coordination to optimize space utilization and operational efficiency.",
     overview_list: [
       "Computer-Aided Facility Management: CAFM solutions for comprehensive facility operations management.",
@@ -63,6 +68,7 @@ const serviceDetailsData = {
   },
   "security-operational-safety": {
     title: "Security & Operational Safety",
+    key_benefit: "Enhanced Security & Complete Peace of Mind",
     overview_des: "Comprehensive security solutions including AI-powered surveillance, access control systems, incident management, and environmental health systems to ensure workplace safety and security.",
     overview_list: [
       "AI-Powered Video Surveillance: Intelligent video analytics and automated security monitoring.",
@@ -75,6 +81,7 @@ const serviceDetailsData = {
   },
   "ict-telecom-analytics": {
     title: "ICT, Telecom & Analytics",
+    key_benefit: "Digital Transformation & Data-Driven Insights",
     overview_des: "Advanced ICT and telecommunications solutions with data center management, unified communications, VoIP systems, and AI-powered analytics for modern business operations.",
     overview_list: [
       "Data Centre Solutions: Secure and efficient data center infrastructure management.",
@@ -87,6 +94,7 @@ const serviceDetailsData = {
   },
   "education-solutions": {
     title: "Education Solutions",
+    key_benefit: "Academic Excellence & Secure Assessment",
     overview_des: "Comprehensive examination management software designed specifically for educational institutions to create, administer, and evaluate exams in a secure and efficient manner.",
     overview_list: [
       "Exam Management Software: Complete exam creation, delivery, and evaluation platform.",
@@ -98,6 +106,7 @@ const serviceDetailsData = {
   },
   "custom-software-development": {
     title: "Custom Software Development",
+    key_benefit: "Tailored Solutions & Competitive Advantage",
     overview_des: "We specialize in developing bespoke software solutions tailored to meet your unique business requirements. Our team of experienced developers uses the latest technologies to create scalable, secure, and efficient applications that drive business growth.",
     overview_list: [
       "Product Quality: Robust and scalable software architecture designed for future growth and seamless operations.",
@@ -108,6 +117,7 @@ const serviceDetailsData = {
   },
   "integration-services": {
     title: "Integration Services",
+    key_benefit: "Unified Systems & Seamless Data Flow",
     overview_des: "Our integration services connect disparate systems and applications, creating a seamless flow of data and processes across your organization. We ensure smooth communication between platforms for optimal business operations.",
     overview_list: [
       "System Integration: Connecting multiple systems to work together harmoniously.",
@@ -118,6 +128,7 @@ const serviceDetailsData = {
   },
   "customer-relations-management": {
     title: "Customer Relations Management",
+    key_benefit: "Stronger Relationships & Increased Sales",
     overview_des: "Our CRM solutions help businesses build stronger customer relationships, improve sales processes, and enhance customer satisfaction through comprehensive customer data management.",
     overview_list: [
       "Customer Insights: Detailed customer profiles and interaction history for better understanding.",
@@ -128,6 +139,7 @@ const serviceDetailsData = {
   },
   "helpdesk-complaint-management": {
     title: "Helpdesk & Complaint Management",
+    key_benefit: "Faster Resolution & Higher Customer Satisfaction",
     overview_des: "Comprehensive helpdesk solution for efficient customer complaint management and support ticket resolution. Streamline your support operations with our advanced helpdesk platform.",
     overview_list: [
       "Ticket Management: Efficient ticketing system with automated routing and escalation for quick resolution.",
@@ -157,6 +169,7 @@ const serviceDetailsData = {
   },
   "e-board": {
     title: "Electronic Board Management (E-Board)",
+    key_benefit: "Transparent Governance & Paperless Operations",
     overview_des: "A digital tool for secure, paperless communication between directors and senior executives, enhancing transparency and accountability in governance.",
     overview_list: [
       "Secure Communication: End-to-end encrypted messaging and document sharing for board members.",
@@ -168,6 +181,7 @@ const serviceDetailsData = {
   },
   "crm": {
     title: "Customer Relations Management (CRM)",
+    key_benefit: "Increased Revenue & Customer Loyalty",
     overview_des: "A business system to manage customer and prospect interactions, driving growth and increasing loyalty through lead management and automated workflows.",
     overview_list: [
       "Lead Management: Comprehensive lead tracking from initial contact to conversion.",
@@ -179,6 +193,7 @@ const serviceDetailsData = {
   },
   "contract": {
     title: "Contract Lifecycle Management (CLM)",
+    key_benefit: "Automated Compliance & Revenue Protection",
     overview_des: "Automate your contract repository, enabling effortless OCR, advanced search, and alerts to prevent missing critical dates impacting revenue.",
     overview_list: [
       "Contract Repository: Centralized storage with advanced search and categorization capabilities.",
@@ -190,6 +205,7 @@ const serviceDetailsData = {
   },
   "helpdesk": {
     title: "Helpdesk & Complaint Management (HCMS)",
+    key_benefit: "Efficient Support & Self-Service Capabilities",
     overview_des: "A web-based platform for quick, accurate resolution of customer complaints and support requests, featuring a self-service knowledgebase.",
     overview_list: [
       "Ticket Management: Comprehensive ticketing system with automated routing and prioritization.",
@@ -201,6 +217,7 @@ const serviceDetailsData = {
   },
   "social-media-monitoring": {
     title: "Social Media Monitoring",
+    key_benefit: "Brand Protection & Real-Time Insights",
     overview_des: "Advanced social media monitoring solution for tracking brand mentions, sentiment analysis, and customer engagement across all social media platforms.",
     overview_list: [
       "Brand Monitoring: Real-time tracking of brand mentions across all major social platforms.",
@@ -212,6 +229,7 @@ const serviceDetailsData = {
   },
   "exam-management": {
     title: "Exam Management Software",
+    key_benefit: "Secure Testing & Automated Assessment",
     overview_des: "Comprehensive exam management solution for educational institutions to create, administer, and evaluate exams online with secure testing environments.",
     overview_list: [
       "Exam Creation: Intuitive tools for creating various question types and exam formats.",
@@ -223,6 +241,7 @@ const serviceDetailsData = {
   },
   "audit": {
     title: "Audit Management System (AMS)",
+    key_benefit: "Comprehensive Audit Control & Compliance Assurance",
     overview_des: "A cloud-based solution providing end-to-end functionality for planning, managing, and conducting the complete audit lifecycle.",
     overview_list: [
       "Audit Planning: Comprehensive audit planning with risk assessment and resource allocation.",
@@ -234,6 +253,7 @@ const serviceDetailsData = {
   },
   "cafm": {
     title: "Computer-Aided Facility & Asset Management (CAFM)",
+    key_benefit: "Centralized Control & Optimal Resource Utilization",
     overview_des: "A centralized system to plan, manage, and maintain work, resources, and assets from a web browser or mobile app, optimizing facility operations.",
     overview_list: [
       "Asset Tracking: Complete asset lifecycle management with real-time tracking and maintenance scheduling.",
@@ -245,6 +265,7 @@ const serviceDetailsData = {
   },
   "automated-visitor-management": {
     title: "Automated Visitor Management System",
+    key_benefit: "Enhanced Security & Streamlined Visitor Experience",
     overview_des: "Modern visitor management solution with automated check-in, security verification, and visitor tracking for enhanced security and improved visitor experience.",
     overview_list: [
       "Digital Check-in: Streamlined visitor registration with digital badges and QR codes.",
@@ -256,6 +277,7 @@ const serviceDetailsData = {
   },
   "meeting-room-management": {
     title: "Meeting Room Management Systems",
+    key_benefit: "Optimized Space Usage & Productivity Enhancement",
     overview_des: "Intelligent meeting room booking and management solution to optimize space utilization, reduce scheduling conflicts, and enhance productivity.",
     overview_list: [
       "Room Booking: Intuitive booking system with real-time availability and conflict resolution.",
@@ -267,6 +289,7 @@ const serviceDetailsData = {
   },
   "incident-management": {
     title: "Incident Management Software",
+    key_benefit: "Rapid Response & Structured Investigation",
     overview_des: "Comprehensive incident management solution for reporting, tracking, and resolving security incidents and emergencies with structured response processes.",
     overview_list: [
       "Incident Reporting: Easy-to-use reporting tools for quick incident documentation and escalation.",
@@ -278,6 +301,7 @@ const serviceDetailsData = {
   },
   "key-management": {
     title: "Smart Key Management Solutions",
+    key_benefit: "Automated Security & Complete Key Accountability",
     overview_des: "A smart, secure, and self-issuing key management system using Access Cards, PIN, and Biometrics to control access to keys.",
     overview_list: [
       "Smart Cabinets: Automated key storage with biometric and card-based access control.",
@@ -289,6 +313,7 @@ const serviceDetailsData = {
   },
   "mass-notification": {
     title: "Unified Emergency Mass Notification",
+    key_benefit: "100% Alert Coverage & Emergency Preparedness",
     overview_des: "A multimodal system integrating software and hardware to initiate alerts across various disbursement modes, ensuring 100% alert coverage.",
     overview_list: [
       "Multi-Channel Alerts: Simultaneous notifications across SMS, email, voice, and digital displays.",
@@ -300,6 +325,7 @@ const serviceDetailsData = {
   },
   "data-centre": {
     title: "Data Centre & Server Room Solutions",
+    key_benefit: "99.9% Uptime & Reliable Infrastructure",
     overview_des: "One-stop-shop for design, installation, and maintenance of critical infrastructure, including cooling, power protection (UPS), and network data cabling.",
     overview_list: [
       "Infrastructure Design: Complete data center design with optimal layout and equipment placement.",
@@ -311,6 +337,7 @@ const serviceDetailsData = {
   },
   "managed-support": {
     title: "Managed Support Services",
+    key_benefit: "24/7 Support & Optimal System Performance",
     overview_des: "Providing top-level after-sales support, maintenance, and expert project management across all our systems and solutions.",
     overview_list: [
       "24/7 Support: Round-the-clock technical support with guaranteed response times.",
@@ -322,6 +349,7 @@ const serviceDetailsData = {
   },
   "ehs": {
     title: "Environmental, Health and Safety (EHS)",
+    key_benefit: "Safer Workplace & Environmental Sustainability",
     overview_des: "Technologically advanced software making the workplace safer, healthier, and more sustainable by tracking incidents, risks, and environmental performance.",
     overview_list: [
       "Risk Assessment: Comprehensive risk identification and assessment tools for workplace safety.",
@@ -333,6 +361,7 @@ const serviceDetailsData = {
   },
   "time-attendance": {
     title: "Time & Attendance Management",
+    key_benefit: "Accurate Payroll & Workforce Analytics",
     overview_des: "Biometric systems for capturing user entries and exits, seamlessly integrable with payroll and ERP systems for accurate workforce management.",
     overview_list: [
       "Biometric Authentication: Fingerprint, facial recognition, and card-based attendance tracking.",

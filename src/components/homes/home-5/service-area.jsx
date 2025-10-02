@@ -49,13 +49,15 @@ const ServiceArea = () => {
                                          </div>
                                          <div className="tp-service-five-content">
                                             <h3 className="tp-service-five-title-sm">
-                                               <Link href="/service-details">{item.title}</Link>
+                                               <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                  {item.title}
+                                               </Link>
                                             </h3>
                                             <p>{item.description} </p>
                                          </div>
                                       </div>
                                       <div className="tp-service-five-btn text-end">
-                                         <Link href="/service-details"><i className="far fa-arrow-right"></i></Link>
+                                         <Link href={item.link}><i className="far fa-arrow-right"></i></Link>
                                       </div>
                                    </div>
                                 </div>                                

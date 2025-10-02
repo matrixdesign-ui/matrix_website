@@ -1,12 +1,3 @@
-// Ensure all necessary imports are available for the components/images used in the data below.
-import ServiceIconOne from "../svg/service/service-icon-1"
-import ServiceIconTwo from "../svg/service/service-icon-2"
-import ServiceIconThree from "../svg/service/service-icon-3"
-import ServiceIconFoure from "../svg/service/service-icon-4"
-import ServiceIconFive from "../svg/service/service-icon-5"
-import ServiceIconsix from "../svg/service/service-icon-6"
-import ServiceIconSeven from "../svg/service/service-icon-7"
-
 // images import
 import img_1 from "../../public/assets/img/service/sv-icon-1.png";
 import img_2 from "../../public/assets/img/service/sv-icon-2.png";
@@ -117,70 +108,70 @@ const service_data = [
     // SOFTWARE & APPS
     {
         id: 6,
-        icon: <ServiceIconOne />,
-        img: <ServiceIconOne />,
+        icon: img_1,
+        img: img_1,
         title: "Electronic Board Management (E-Board)",
-        description: <>A digital tool for secure, paperless communication between directors and senior executives, enhancing transparency and accountability[cite: 61, 62, 65].</>,
+        description: <>A digital tool for secure, paperless communication between directors and senior executives, enhancing transparency and accountability.</>,
         delay: "1.0s",
         key: "e-board",
         link: "/services/e-board"
     },
     {
         id: 7,
-        icon: <ServiceIconTwo />,
-        img: <ServiceIconTwo />,
+        icon: img_2,
+        img: img_2,
         title: "Customer Relations Management (CRM)",
-        description: <>A business system to manage customer and prospect interactions, driving growth and increasing loyalty through lead management and automated workflows[cite: 106, 108, 112].</>,
+        description: <>A business system to manage customer and prospect interactions, driving growth and increasing loyalty through lead management and automated workflows.</>,
         delay: "1.1s",
         key: "crm",
         link: "/services/crm"
     },
     {
         id: 8,
-        icon: <ServiceIconThree />,
-        img: <ServiceIconThree />,
+        icon: img_3,
+        img: img_3,
         title: "Contract Lifecycle Management (CLM)",
-        description: <>Automate your contract repository, enabling effortless OCR, advanced search, and alerts to prevent missing critical dates impacting revenue[cite: 84, 86].</>,
+        description: <>Automate your contract repository, enabling effortless OCR, advanced search, and alerts to prevent missing critical dates impacting revenue.</>,
         delay: "1.2s",
         key: "contract",
         link: "/services/contract"
     },
     {
         id: 9,
-        icon: <ServiceIconFoure/>,
-        img: <ServiceIconFoure />,
+        icon: img_4,
+        img: img_4,
         title: "Helpdesk & Complaint Management (HCMS)",
-        description: <>A web-based platform for quick, accurate resolution of customer complaints and support requests, featuring a self-service knowledgebase[cite: 97, 98, 101].</>,
+        description: <>A web-based platform for quick, accurate resolution of customer complaints and support requests, featuring a self-service knowledgebase.</>,
         delay: "1.3s",
         key: "helpdesk",
         link: "/services/helpdesk"
     },
     {
         id: 10,
-        icon: <ServiceIconFive/>,
-        img: <ServiceIconFive />,
+        icon: img_5,
+        img: img_5,
         title: "Social Media Monitoring",
-        description: <>Advanced social media monitoring solution for tracking brand mentions, sentiment analysis, and customer engagement across all social media platforms[cite: 130, 132].</>,
+        description: <>Advanced social media monitoring solution for tracking brand mentions, sentiment analysis, and customer engagement across all social media platforms.</>,
         delay: "1.4s",
         key: "social-media-monitoring",
         link: "/services/social-media-monitoring"
     },
     {
         id: 11,
-        icon: <ServiceIconsix/>,
-        img: <ServiceIconsix />,
+        icon: img_6,
+        img: img_6,
         title: "Exam Management Software",
-        description: <>Comprehensive exam management solution for educational institutions to create, administer, and evaluate exams online with secure testing environments[cite: 140, 142].</>,
+        description: <>Comprehensive exam management solution for educational institutions to create, administer, and evaluate exams online with secure testing environments.</>,
         delay: "1.5s",
         key: "exam-management",
         link: "/services/exam-management"
     },
     {
         id: 12,
-        icon: icon_1, // Reused icon_1
-        img: icon_1,
+        icon: img_7,
+        img: img_7,
         title: "Audit Management System (AMS)",
-        description: <>A cloud-based solution providing end-to-end functionality for planning, managing, and conducting the complete audit lifecycle[cite: 152, 154].</>,
+        description: <>A cloud-based solution providing end-to-end functionality for planning, managing, and conducting the complete audit lifecycle.</>,
         delay: "1.6s",
         key: "audit",
         link: "/services/audit"
@@ -199,10 +190,10 @@ const service_data = [
     },
     {
         id: 14,
-        icon: <ServiceIconSeven/>,
-        img: <ServiceIconSeven/>,
+        icon: img_8,
+        img: img_8,
         title: "Automated Visitor Management System",
-        description: <>Modern visitor management solution with automated check-in, security verification, and visitor tracking for enhanced security and improved visitor experience[cite: 220, 222].</>,
+        description: <>Modern visitor management solution with automated check-in, security verification, and visitor tracking for enhanced security and improved visitor experience.</>,
         delay: "1.8s",
         key: "automated-visitor-management",
         link: "/services/automated-visitor-management"
@@ -283,65 +274,65 @@ const service_data = [
     // --- GENERAL & SUPPORT SERVICES (Retaining original generic utility) ---
     {
         id: 22,
-        icon: <ServiceIconOne />,
-        img: <ServiceIconOne />,
+        icon: img_1,
+        img: img_1,
         title: "IT Consulting & Strategy",
-        description: <>Strategic consulting services designed to align your technology investments with your business needs, including migration and optimization[cite: 17].</>,
+        description: <>Strategic consulting services designed to align your technology investments with your business needs, including migration and optimization.</>,
         delay: "2.6s",
         link: "/service"
     },
     {
         id: 23,
-        icon: <ServiceIconTwo />,
-        img: <ServiceIconTwo />,
+        icon: img_2,
+        img: img_2,
         title: "System Integration",
-        description: <>Integrating various security, software, and IT systems with each other to attain complete visibility and enhanced efficiency[cite: 15, 355].</>,
+        description: <>Integrating various security, software, and IT systems with each other to attain complete visibility and enhanced efficiency.</>,
         delay: "2.7s",
         link: "/service"
     },
     {
         id: 24,
-        icon: <ServiceIconThree />,
-        img: <ServiceIconThree />,
+        icon: img_3,
+        img: img_3,
         title: "Disaster Recovery & BCP",
-        description: <>Robust business continuity planning and recovery solutions to protect critical business documents and ensure uninterrupted operation[cite: 176].</>,
+        description: <>Robust business continuity planning and recovery solutions to protect critical business documents and ensure uninterrupted operation.</>,
         delay: "2.8s",
         link: "/service"
     },
     {
         id: 25,
-        icon: <ServiceIconFoure/>,
-        img: <ServiceIconFoure />,
+        icon: img_4,
+        img: img_4,
         title: "Cybersecurity & Network Solutions",
-        description: <>Designing, implementing, and securing your network infrastructure to protect against threats and ensure reliable connectivity[cite: 539].</>,
+        description: <>Designing, implementing, and securing your network infrastructure to protect against threats and ensure reliable connectivity.</>,
         delay: "2.9s",
         link: "/service"
     },
     {
         id: 26,
-        icon: <ServiceIconFive/>,
-        img: <ServiceIconFive />,
+        icon: img_5,
+        img: img_5,
         title: "Time & Attendance Management",
-        description: <>Biometric systems for capturing user entries and exits, seamlessly integrable with payroll and ERP systems[cite: 501, 503, 511].</>,
+        description: <>Biometric systems for capturing user entries and exits, seamlessly integrable with payroll and ERP systems.</>,
         delay: "3.0s",
         key: "time-attendance",
         link: "/services/time-attendance"
     },
     {
         id: 27,
-        icon: <ServiceIconsix/>,
-        img: <ServiceIconsix />,
+        icon: img_6,
+        img: img_6,
         title: "Remote Monitoring & Diagnostics",
-        description: <>Proactive support through remote monitoring to identify and resolve issues before they impact your business[cite: 23].</>,
+        description: <>Proactive support through remote monitoring to identify and resolve issues before they impact your business.</>,
         delay: "3.1s",
         link: "/service"
     },
     {
         id: 28,
-        icon: <ServiceIconSeven/>,
-        img: <ServiceIconSeven />,
+        icon: img_7,
+        img: img_7,
         title: "X-Ray & Detection Systems",
-        description: <>Turnkey solutions for high-security entrance control, including X-ray baggage scanners and walk-through metal detectors[cite: 532, 533].</>,
+        description: <>Turnkey solutions for high-security entrance control, including X-ray baggage scanners and walk-through metal detectors.</>,
         delay: "3.2s",
         link: "/service"
     },

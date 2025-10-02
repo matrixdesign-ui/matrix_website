@@ -9,6 +9,7 @@ const ServiceDetailsArea = ({ service }) => {
 
     const overview_title = "Service Overview";
     const overview_des = serviceData?.overview_des || "Default service overview description.";
+    const key_benefit = serviceData?.key_benefit || "";
     const overview_list = serviceData?.overview_list || [];
     const challange_titel = "The Challenge";
     const challange_des = serviceData?.challange_des || "Default challenge description.";
@@ -24,6 +25,42 @@ const ServiceDetailsArea = ({ service }) => {
                                 </div>
                                 <div className="sv-details-title-box mb-55">
                                     <h4 className="sv-details-title">{overview_title}</h4>
+                                    
+                                    {/* Key Benefit Highlight */}
+                                    {key_benefit && (
+                                        <div className="key-benefit-highlight" style={{
+                                            background: 'linear-gradient(135deg, #007bff, #0056b3)',
+                                            color: 'white',
+                                            padding: '16px 24px',
+                                            borderRadius: '12px',
+                                            margin: '20px 0',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            boxShadow: '0 4px 15px rgba(0, 123, 255, 0.2)'
+                                        }}>
+                                            <div style={{
+                                                background: 'rgba(255,255,255,0.2)',
+                                                borderRadius: '50%',
+                                                width: '40px',
+                                                height: '40px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                marginRight: '16px'
+                                            }}>
+                                                <i className="fas fa-star" style={{ fontSize: '18px' }}></i>
+                                            </div>
+                                            <div>
+                                                <strong style={{ fontSize: '1.1rem', display: 'block', marginBottom: '4px' }}>
+                                                    Key Benefit
+                                                </strong>
+                                                <span style={{ fontSize: '0.95rem', opacity: '0.95' }}>
+                                                    {key_benefit}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    )}
+                                    
                                     <p>{overview_des}</p>
                                 </div>
 

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import serviceDetailsData from '../../data/service-details-data';
 
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
@@ -123,7 +124,8 @@ const ServiceArea = () => {
 
                         return (
                           <div key={i} className="col-xl-3 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay={`${0.3 + (i * 0.1)}s`}>
-                            <div className="tp-blog-item" style={{ cursor: 'pointer' }}>
+                            <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                              <div className="tp-blog-item" style={{ cursor: 'pointer' }}>
                                   {/* Service Icon/Thumb */}
                                   <div className="tp-blog-thumb fix" style={{
                                     background: categoryColor,
@@ -151,14 +153,30 @@ const ServiceArea = () => {
                                           </div>
                                       </div>
 
-                                      {/* Service Title - Now Clickable */}
+                                      {/* Service Title - Clickable */}
                                       <div className="tp-blog-title-box">
-                                          <h3 className="tp-blog-title-sm">
-                                              <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                  {item.title}
-                                              </Link>
+                                          <h3 className="tp-blog-title-sm" style={{ margin: '0 0 12px 0' }}>
+                                              {item.title}
                                           </h3>
                                       </div>
+
+                                      {/* Key Benefit Badge */}
+                                      {serviceDetailsData[item.key]?.key_benefit && (
+                                        <div className="key-benefit-badge" style={{
+                                          background: `linear-gradient(90deg, ${categoryColor.split(',')[0].replace('linear-gradient(135deg, ', '')}, ${categoryColor.split(',')[1].replace(')', '')}20)`,
+                                          color: categoryColor.split(',')[0].replace('linear-gradient(135deg, ', ''),
+                                          padding: '6px 12px',
+                                          borderRadius: '20px',
+                                          fontSize: '0.75rem',
+                                          fontWeight: '600',
+                                          marginBottom: '16px',
+                                          border: `1px solid ${categoryColor.split(',')[0].replace('linear-gradient(135deg, ', '')}30`,
+                                          display: 'inline-block'
+                                        }}>
+                                          <i className="fas fa-star" style={{ marginRight: '4px', fontSize: '0.7rem' }}></i>
+                                          {serviceDetailsData[item.key].key_benefit}
+                                        </div>
+                                      )}
 
                                       {/* Service Description */}
                                       <p style={{
@@ -182,21 +200,16 @@ const ServiceArea = () => {
                                             justifyContent: 'center',
                                             color: 'white'
                                           }}>
-                                            <Link href={item.link} style={{ color: 'white' }}>
-                                              <i className="fas fa-arrow-right"></i>
-                                            </Link>
+                                            <i className="fas fa-arrow-right"></i>
                                           </div>
                                           <div className="tp-blog-author-info">
-                                              <h5>
-                                                <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                  Learn More
-                                                </Link>
-                                              </h5>
+                                              <h5 style={{ color: 'inherit' }}>Learn More</h5>
                                               <span>Explore Solutions</span>
                                           </div>
                                       </div>
                                   </div>
                               </div>
+                            </Link>
                           </div>
                         );
                       })}
