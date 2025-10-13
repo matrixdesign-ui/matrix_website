@@ -4,7 +4,7 @@ import React from 'react';
 const cta_content ={ 
      bg_img: "/assets/img/cta/cta-bg.jpg",
      title: "Ready to Transform Your Business?",
-     description: <>Contact us today to learn how Matrix Vision Systems can help you achieve your technology goals.</>,
+     description: <>Ready to elevate your business? Let’s start the conversation.</>,
      btn_text: "Get a Free Consultation",
 }
 const {bg_img, title, description, btn_text}  = cta_content

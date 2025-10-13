@@ -11,7 +11,7 @@ const office_data = [
         img: img_1,
         badge: "Main Office",
         location: "Nairobi, Kenya",
-        address: <>Mais. 7, B.S.K. Village, Muguga Greens, Westlands, Nairobi.<br />P.O Box 6030 - 00200 Nairobi</>,
+        address: <>Mais. 7, B.S.K. Village, Muguga Green, Westlands, Nairobi.<br />P.O Box 6030 - 00200 Nairobi</>,
     },
     // Removed other office locations
 ]
