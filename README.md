@@ -181,10 +181,9 @@ This project is configured to deploy to GitHub Pages using GitHub Actions. The d
 2. **Manual Deployment**: The site is built automatically through GitHub Actions when you push to the main branch
 
 #### **GitHub Pages Configuration**
-1. Go to your repository settings
-2. Navigate to "Pages" section
-3. Select "GitHub Actions" as the source
-4. The site will be available at `https://[username].github.io/matrix_website/`
+1. Go to your repository Settings > Pages
+2. Under "Source", select "GitHub Actions"
+3. No additional configuration is needed - the workflow will automatically deploy
 
 #### **Custom Domain** (Optional)
 1. Add a `CNAME` file to the `public/` directory with your custom domain
@@ -263,6 +262,13 @@ For technical inquiries or business partnerships:
 3. Under "Source", select "GitHub Actions"
 4. No additional configuration is needed - the workflow will automatically deploy
 
+### **Enabling GitHub Pages**
+If you encounter a "Not Found" error during deployment:
+1. Visit your repository Settings > Pages
+2. Under "Source", make sure "GitHub Actions" is selected
+3. If it's not available, select any branch first, then switch back to "GitHub Actions"
+4. Wait a few minutes and try the deployment again
+
 ### **How It Works**
 - When you push changes to the `main` branch, GitHub Actions automatically:
   1. Builds your Next.js application
@@ -273,5 +279,6 @@ For technical inquiries or business partnerships:
 If the deployment fails:
 1. Check the Actions tab in your GitHub repository
 2. Look at the deployment logs for specific error messages
-3. Ensure all dynamic routes have proper getStaticPaths configuration
-4. Make sure there are no conflicting paths in your pages
+3. Ensure GitHub Pages is enabled in your repository settings (Settings > Pages)
+4. Make sure all dynamic routes have proper getStaticPaths configuration
+5. Verify there are no conflicting paths in your pages
