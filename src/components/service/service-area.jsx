@@ -11,7 +11,7 @@ const service_categories = [
   {
     id: 1,
     title: "Software & Applications",
-    description: "Comprehensive software solutions encompassing customer relationship management, helpdesk systems, electronic board management, and various specialized applications.",
+    description: "Comprehensive software solutions encompassing Legal Case Management, Contracts Lifecycle Management, Electronic Board Management,  Audit Management,Ccustomer Relationship Management, Helpdesk Systems, and various specialized applications.",
     link: "/services/software-applications",
     icon: "fas fa-laptop-code",
     key: "software-applications"
@@ -35,7 +35,7 @@ const service_categories = [
   {
     id: 4,
     title: "Governance & Compliance",
-    description: "Comprehensive solutions for contract management, legal services, audit processes, and social media monitoring to ensure compliance.",
+    description: "Comprehensive solutions for Contract Lifecycle Management, Legal Case Management, Audit Management, and Social Media Monitoring to ensure your organization's compliance.",
     link: "/services/governance-compliance",
     icon: "fas fa-gavel",
     key: "governance-compliance"
@@ -43,7 +43,7 @@ const service_categories = [
   {
     id: 5,
     title: "Facilities & Asset Management",
-    description: "Advanced solutions for computer-aided facility management, asset tracking, automated visitor management, and meeting room coordination.",
+    description: "Advanced Computer-Aided Facility Management, Asset Tracking, Automated Visitor Management, and Meeting Room Management.",
     link: "/services/facilities-asset-management",
     icon: "fas fa-building-user",
     key: "facilities-asset-management"
@@ -51,7 +51,7 @@ const service_categories = [
   {
     id: 6,
     title: "Security & Operational Safety",
-    description: "Comprehensive security solutions including AI-powered surveillance, access control systems, incident management, and environmental health systems.",
+    description: "Comprehensive security solutions such as AI-Powered Surveillance, Access Control Systems, Incident Management, and Environmental Health and Safety systems.",
     link: "/services/security-operational-safety",
     icon: "fas fa-shield-alt",
     key: "security-operational-safety"
@@ -59,7 +59,7 @@ const service_categories = [
   {
     id: 7,
     title: "ICT, Telecom & Analytics",
-    description: "Advanced ICT and telecommunications solutions with data center management, unified communications, VoIP systems, and AI-powered analytics.",
+    description: "Advanced ICT and telecommunications solutions spanning Data Center Management, Unified Communications, VoIP systems, and AI-Powered analytics.",
     link: "/services/ict-telecom-analytics",
     icon: "fas fa-network-wired",
     key: "ict-telecom-analytics"
@@ -67,7 +67,7 @@ const service_categories = [
   {
     id: 8,
     title: "Education Solutions",
-    description: "Comprehensive examination management software designed specifically for educational institutions to create, administer, and evaluate exams.",
+    description: "Comprehensive Learning Management system,and Examination Management System designed specifically for educational institutions to create, administer, and evaluate exams.",
     link: "/services/education-solutions",
     icon: "fas fa-graduation-cap",
     key: "education-solutions"
@@ -76,7 +76,7 @@ const service_categories = [
 
 
 const service_content = {
-    title: "Leading Engineering and Tech Solutions for a Smarter, Secured Future",
+    title: "Leading Engineering and ICT Solutions for a Smarter, Secure Future",
     btn_text: "Explore All Solutions",
     bg_img: "/assets/img/service/service-3-bg.png",
     service_title: "Corporate Governance Solutions",
