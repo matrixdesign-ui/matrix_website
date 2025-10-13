@@ -175,30 +175,50 @@ npm run export
 
 ### **GitHub Pages Deployment**
 
-This project can be deployed to GitHub Pages using the following steps:
+This project is configured to deploy to GitHub Pages using GitHub Actions. The deployment happens automatically when changes are pushed to the `main` branch.
 
-1. **Prerequisites**: Install the `gh-pages` package (already included in dependencies)
-2. **Build and Deploy**: Run `npm run deploy` to build and deploy to GitHub Pages
-
-#### **Manual GitHub Pages Setup**
-1. Build the static site: `npm run build`
-2. Deploy to GitHub Pages: `npx gh-pages -d out -t true`
-
-#### **Automatic Deployment with GitHub Actions**
-This repository includes a GitHub Actions workflow for automatic deployment:
-1. Push changes to the `main` branch
-2. The workflow in `.github/workflows/deploy.yml` will automatically build and deploy the site
+1. **Automatic Deployment**: Push to the `main` branch triggers automatic deployment via GitHub Actions
+2. **Manual Deployment**: The site is built automatically through GitHub Actions when you push to the main branch
 
 #### **GitHub Pages Configuration**
-1. Go to your repository settings
-2. Navigate to "Pages" section
-3. Select "GitHub Actions" as the source
-4. The site will be available at `https://[username].github.io/matrix_website/`
+1. Go to your repository Settings > Pages
+2. Under "Source", select "GitHub Actions"
+3. No additional configuration is needed - the workflow will automatically deploy
 
-#### **Custom Domain** (Optional)
-1. Add a `CNAME` file to the `public/` directory with your custom domain
-2. Configure DNS settings with your domain provider
-3. Update repository settings with your custom domain
+#### **Custom Domain Setup**
+To use your custom domain (https://matrixsystems.co.ke):
+
+1. Update the `CNAME` file in the `public/` directory with your domain:
+   ```
+   matrixsystems.co.ke
+   ```
+
+2. Configure DNS settings with your domain provider:
+   - Add an A record pointing to GitHub Pages IP addresses:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - Or add an ALIAS record pointing to:
+     ```
+     matrixdesign-ui.github.io
+     ```
+
+3. Update repository settings:
+   - Go to your repository Settings > Pages
+   - In the "Custom domain" field, enter: `matrixsystems.co.ke`
+   - Enforce HTTPS if available
+
+4. Wait for DNS propagation (may take up to 24 hours)
+
+#### **Troubleshooting Custom Domain**
+If your custom domain isn't working:
+1. Verify the CNAME file contains only your domain (no http:// or https://)
+2. Check that DNS records are correctly configured
+3. Ensure GitHub Pages is enabled in repository settings
+4. Confirm HTTPS enforcement isn't causing issues during certificate provisioning
 
 ### **Deployment Platforms**
 - **Vercel** (Recommended): Zero-config deployment
@@ -261,3 +281,34 @@ For technical inquiries or business partnerships:
 **Built with ❤️ by Matrix Vision Systems Team**
 
 *Empowering businesses through innovative technology solutions across Kenya and East Africa.*
+
+```
+
+## **GitHub Pages Deployment Instructions**
+
+### **Initial Setup**
+1. Ensure your repository is on GitHub
+2. Go to your repository Settings > Pages
+3. Under "Source", select "GitHub Actions"
+4. No additional configuration is needed - the workflow will automatically deploy
+
+### **Enabling GitHub Pages**
+If you encounter a "Not Found" error during deployment:
+1. Visit your repository Settings > Pages
+2. Under "Source", make sure "GitHub Actions" is selected
+3. If it's not available, select any branch first, then switch back to "GitHub Actions"
+4. Wait a few minutes and try the deployment again
+
+### **How It Works**
+- When you push changes to the `main` branch, GitHub Actions automatically:
+  1. Builds your Next.js application
+  2. Exports it as static files
+  3. Deploys to GitHub Pages
+
+### **Troubleshooting Deployment**
+If the deployment fails:
+1. Check the Actions tab in your GitHub repository
+2. Look at the deployment logs for specific error messages
+3. Ensure GitHub Pages is enabled in your repository settings (Settings > Pages)
+4. Make sure all dynamic routes have proper getStaticPaths configuration
+5. Verify there are no conflicting paths in your pages

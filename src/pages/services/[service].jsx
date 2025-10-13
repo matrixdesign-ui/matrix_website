@@ -37,11 +37,39 @@ export async function getStaticProps({ params }) {
   };
 }
 
-// Add getStaticPaths for static export
+// Add getStaticPaths for static export - must use fallback: false for output: export compatibility
 export async function getStaticPaths() {
-  // Return empty paths array for now - you can add specific paths here if needed
+  // Define all possible service paths (excluding those that have static pages)
+  const paths = [
+    { params: { service: 'software-applications' } },
+    { params: { service: 'infrastructure-development' } },
+    { params: { service: 'enterprise-solutions' } },
+    { params: { service: 'governance-compliance' } },
+    { params: { service: 'facilities-asset-management' } },
+    { params: { service: 'security-operational-safety' } },
+    { params: { service: 'ict-telecom-analytics' } },
+    { params: { service: 'education-solutions' } },
+    { params: { service: 'e-board' } },
+    { params: { service: 'crm' } },
+    { params: { service: 'contract' } },
+    { params: { service: 'social-media-monitoring' } },
+    { params: { service: 'exam-management' } },
+    { params: { service: 'audit' } },
+    { params: { service: 'cafm' } },
+    { params: { service: 'automated-visitor-management' } },
+    { params: { service: 'access-control' } },
+    { params: { service: 'fire-burglar-emergency-systems' } },
+    { params: { service: 'data-centre' } },
+    { params: { service: 'time-attendance' } },
+    { params: { service: 'key-management' } },
+    { params: { service: 'mass-notification' } },
+    { params: { service: 'managed-support' } },
+    { params: { service: 'ehs' } }
+  ];
+
+  // Must use fallback: false for compatibility with output: export
   return {
-    paths: [],
-    fallback: 'blocking'
+    paths,
+    fallback: false
   };
 }

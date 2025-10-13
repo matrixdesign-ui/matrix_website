@@ -2,16 +2,9 @@ import React from "react";
 import SEO from "../../common/seo";
 import TeamDetails from "../../components/team-details";
 import Wrapper from "../../layout/wrapper";
-import { useRouter } from "next/router";
 import team_data from "../../data/team-data";
 
-const TeamDetailPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  
-  // Find the team member by ID
-  const teamMember = team_data.find(member => member.id === parseInt(id));
-  
+const TeamDetailPage = ({ teamMember }) => {
   if (!teamMember) {
     return (
       <Wrapper>
@@ -37,3 +30,31 @@ const TeamDetailPage = () => {
 };
 
 export default TeamDetailPage;
+
+// Use getStaticProps for static export
+export async function getStaticProps({ params }) {
+  const { id } = params;
+  
+  // Find the team member by ID
+  const teamMember = team_data.find(member => member.id === parseInt(id));
+  
+  return {
+    props: {
+      teamMember: teamMember || null,
+    },
+  };
+}
+
+// Add getStaticPaths for static export - must use fallback: false for output: export compatibility
+export async function getStaticPaths() {
+  // Define all possible team member paths
+  const paths = team_data.map(member => ({
+    params: { id: member.id.toString() }
+  }));
+
+  // Must use fallback: false for compatibility with output: export
+  return {
+    paths,
+    fallback: false
+  };
+}

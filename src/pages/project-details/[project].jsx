@@ -37,11 +37,18 @@ export async function getStaticProps({ params }) {
   };
 }
 
-// Add getStaticPaths for static export
+// Add getStaticPaths for static export - must use fallback: false for output: export compatibility
 export async function getStaticPaths() {
-  // Return empty paths array for now - you can add specific paths here if needed
+  // Define all possible project paths (add your actual project slugs here)
+  const paths = [
+    { params: { project: 'project-1' } },
+    { params: { project: 'project-2' } },
+    { params: { project: 'project-3' } }
+  ];
+
+  // Must use fallback: false for compatibility with output: export
   return {
-    paths: [],
-    fallback: 'blocking'
+    paths,
+    fallback: false
   };
 }
