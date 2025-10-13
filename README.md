@@ -185,10 +185,40 @@ This project is configured to deploy to GitHub Pages using GitHub Actions. The d
 2. Under "Source", select "GitHub Actions"
 3. No additional configuration is needed - the workflow will automatically deploy
 
-#### **Custom Domain** (Optional)
-1. Add a `CNAME` file to the `public/` directory with your custom domain
-2. Configure DNS settings with your domain provider
-3. Update repository settings with your custom domain
+#### **Custom Domain Setup**
+To use your custom domain (https://matrixsystems.co.ke):
+
+1. Update the `CNAME` file in the `public/` directory with your domain:
+   ```
+   matrixsystems.co.ke
+   ```
+
+2. Configure DNS settings with your domain provider:
+   - Add an A record pointing to GitHub Pages IP addresses:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - Or add an ALIAS record pointing to:
+     ```
+     matrixdesign-ui.github.io
+     ```
+
+3. Update repository settings:
+   - Go to your repository Settings > Pages
+   - In the "Custom domain" field, enter: `matrixsystems.co.ke`
+   - Enforce HTTPS if available
+
+4. Wait for DNS propagation (may take up to 24 hours)
+
+#### **Troubleshooting Custom Domain**
+If your custom domain isn't working:
+1. Verify the CNAME file contains only your domain (no http:// or https://)
+2. Check that DNS records are correctly configured
+3. Ensure GitHub Pages is enabled in repository settings
+4. Confirm HTTPS enforcement isn't causing issues during certificate provisioning
 
 ### **Deployment Platforms**
 - **Vercel** (Recommended): Zero-config deployment

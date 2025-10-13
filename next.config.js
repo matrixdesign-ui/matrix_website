@@ -3,16 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   
-  // Required for GitHub Pages - export as static HTML
+  // Required for static HTML export
   output: 'export',
   
-  // Set base path for GitHub Pages - matches your repository name
-  basePath: '/matrix_website',
+  // Remove base path for custom domain hosting
+  // basePath: '/matrix_website', // Commented out for custom domain
   
-  // Ensure trailing slashes for GitHub Pages compatibility
+  // Ensure trailing slashes for compatibility
   trailingSlash: true,
 
-  // Image optimization - disabled for GitHub Pages
+  // Image optimization - disabled for static export
   images: {
     unoptimized: true,
   },
