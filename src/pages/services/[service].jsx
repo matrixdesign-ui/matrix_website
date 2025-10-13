@@ -26,12 +26,22 @@ const ServicePage = ({ service }) => {
 
 export default ServicePage;
 
-export async function getServerSideProps({ params }) {
+// Use getStaticProps instead of getServerSideProps for static export
+export async function getStaticProps({ params }) {
   const { service } = params;
 
   return {
     props: {
       service: service || null,
     },
+  };
+}
+
+// Add getStaticPaths for static export
+export async function getStaticPaths() {
+  // Return empty paths array for now - you can add specific paths here if needed
+  return {
+    paths: [],
+    fallback: 'blocking'
   };
 }

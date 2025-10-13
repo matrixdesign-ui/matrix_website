@@ -9,12 +9,13 @@ import Image from 'next/image';
 const service_content = {
    title: <>Accounting Software <br /> That <span>Handles it All.</span></>,
    btn_text: <>See All Features</>,
+   service_link: "/service-details",
 
    bg_img: "/assets/img/service/service-3-bg.png",
    service_title: "CRM Management",
    service_info: <>Generate, Manage, and Convert leads <br /> into Customers. Automatically</>,
 }
-const {title, btn_text, bg_img, service_title, service_info}  = service_content
+const {title, btn_text, service_link, bg_img, service_title, service_info}  = service_content
 
 
 const  ServiceArea = () => {
@@ -53,13 +54,13 @@ const  ServiceArea = () => {
                            <div className="tp-service-3-content">
                               <span>{service_title}</span>
                               <h4 className="tp-service-3-title-sm">
-                                 <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                 <Link href={service_link} style={{ textDecoration: 'none', color: 'inherit' }}>
                                     {service_info}
                                  </Link>
                               </h4>
                            </div>
                            <div className="tp-service-3-btn">
-                              <Link className="tp-btn-white-solid" href={item.link}>Learn More</Link>
+                              <Link className="tp-btn-white-solid" href={service_link}>Learn More</Link>
                            </div>
                            <div className="tp-service-3-shape">
                               <Image src={service_img_2} alt="theme-pure" />

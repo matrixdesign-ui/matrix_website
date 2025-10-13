@@ -173,6 +173,33 @@ npm run build
 npm run export
 ```
 
+### **GitHub Pages Deployment**
+
+This project can be deployed to GitHub Pages using the following steps:
+
+1. **Prerequisites**: Install the `gh-pages` package (already included in dependencies)
+2. **Build and Deploy**: Run `npm run deploy` to build and deploy to GitHub Pages
+
+#### **Manual GitHub Pages Setup**
+1. Build the static site: `npm run build`
+2. Deploy to GitHub Pages: `npx gh-pages -d out -t true`
+
+#### **Automatic Deployment with GitHub Actions**
+This repository includes a GitHub Actions workflow for automatic deployment:
+1. Push changes to the `main` branch
+2. The workflow in `.github/workflows/deploy.yml` will automatically build and deploy the site
+
+#### **GitHub Pages Configuration**
+1. Go to your repository settings
+2. Navigate to "Pages" section
+3. Select "GitHub Actions" as the source
+4. The site will be available at `https://[username].github.io/matrix_website/`
+
+#### **Custom Domain** (Optional)
+1. Add a `CNAME` file to the `public/` directory with your custom domain
+2. Configure DNS settings with your domain provider
+3. Update repository settings with your custom domain
+
 ### **Deployment Platforms**
 - **Vercel** (Recommended): Zero-config deployment
 - **Netlify**: Static site hosting

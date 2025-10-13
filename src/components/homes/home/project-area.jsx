@@ -1,5 +1,22 @@
 import project_data from '@/src/data/project-data';
 import RightArrow from '@/src/svg/right-arrow';
+
+// Helper function to map project titles to correct slugs
+const getProjectSlug = (title) => {
+  const titleToSlug = {
+    'Internet Connectivity and Infrastructure': 'internet-connectivity-infrastructure',
+    'Legal Management System (LMS)': 'legal-management-system-lms',
+    'Electronic Board Management (E-Board)': 'electronic-board-management-e-board',
+    'AI Powered Video Surveillance Systems': 'ai-powered-video-surveillance-systems',
+    'Mobile Assets Management System': 'mobile-assets-management-system',
+    'ICT Infrastructure & Connectivity': 'ict-infrastructure-connectivity',
+    'Enterprise IT Helpdesk System': 'enterprise-it-helpdesk-system',
+    'Unified Emergency Mass Notification': 'unified-emergency-mass-notification',
+    'Smart Access Control System': 'smart-access-control-system'
+  };
+  
+  return titleToSlug[title] || title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+};
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -103,13 +120,15 @@ const ProjectArea = () => {
                                                 <span>Status</span>
                                                 <h4>{item.status}</h4>
                                              </div>
+// ... existing code ...
                                              <div className="tp-project__link">
                                                 <Link
-                                                   href={`/project-details/${item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')}`}
+                                                   href={`/project-details/${getProjectSlug(item.title)}`}
                                                 >
                                                    <RightArrow />
                                                 </Link>
                                              </div>
+// ... existing code ...
                                           </div>
                                        </div>
                                     </div>
