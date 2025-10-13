@@ -42,22 +42,22 @@ const Clients = () => {
     {
       name: "Kenya Revenue Authority (KRA)",
       logo: "/assets/img/clients/kra-logo.png",
-      partnership: "Legal Management System LMS",
-      since: "2019",
+      partnership: "Integrated Legal Management System ILMS",
+      since: "2017",
       category: "Government"
     },
     {
       name: "Communications Authority of Kenya (CA)",
       logo: "/assets/img/clients/kra-logo.png",
-      partnership: "Legal Management System LMS",
+      partnership: "Integrated Legal Case Management System ILCMS",
       since: "2024",
       category: "Government"
     },
     {
       name: "Kenya Bureau of Standards (KEBS)",
       logo: "/assets/img/clients/kra-logo.png",
-      partnership: "Legal Management System LMS",
-      since: "2022",
+      partnership: "Legal Information Management System LEMIS",
+      since: "2023",
       category: "Government"
     },
     {
@@ -70,15 +70,15 @@ const Clients = () => {
     {
       name: "International Livestock Research Institute (ILRI)",
       logo: "/assets/img/clients/ilri-logo.png",
-      partnership: "AI-Powered Surveillance Systems for Livestock Management",
-      since: "2021",
+      partnership: "Biometric Access Control System, CCTV Surveillance System, Structured Cabling Systems, Fire Detection and Suppression System, Air Conditioning Systems.",
+      since: "2019",
       category: "Agriculture"
     },
     {
-      name: "Safaricom PLC",
+      name: "Kenya School of Law",
       logo: "/assets/img/clients/safaricom-logo.png",
-      partnership: "Access Control & Digital Security Solutions for Telecom Infrastructure",
-      since: "2022",
+      partnership: "CCTV Security Surveillance System ",
+      since: "2017",
       category: "Technology"
     },
     {
@@ -95,18 +95,18 @@ const Clients = () => {
       since: "2024",
       category: "Healthcare"
     },
-    {
+    /*{
       name: "Kenya Power & Lighting Co.",
       logo: "/assets/img/clients/kenya-power-logo.png",
       partnership: "ICT Infrastructure, Server Rooms & Power Utility Systems",
       since: "2020",
       category: "Government"
-    },
+    },*/
     {
       name: "Machakos University",
       logo: "/assets/img/clients/machakos-uni-logo.png",
-      partnership: "Mobile Assets Management & Digital Campus Solutions",
-      since: "2023",
+      partnership: "Biometric Controlled Gate Security Systems",
+      since: "2019",
       category: "Education"
     },
     {
@@ -117,97 +117,97 @@ const Clients = () => {
       category: "Government"
     },
     {
-      name: "University of Nairobi",
-      logo: "/assets/img/clients/uon-logo.png",
-      partnership: "Campus Security Systems & Digital Learning Platforms",
-      since: "2021",
-      category: "Education"
+      name: "The Nairobi Hospital",
+      logo: "/assets/img/clients/tnh-logo.png",
+      partnership: "Electronic Meeting and Governance System",
+      since: "2022",
+      category: "Healthcare"
     },
     {
-      name: "Kenya Ports Authority",
-      logo: "/assets/img/clients/kpa-logo.png",
-      partnership: "Port Security, Supply Chain Management & Container Systems",
-      since: "2022",
+      name: "Kenya Revenue Authority",
+      logo: "/assets/img/clients/kra-logo.png",
+      partnership: "Integrated Board Management System",
+      since: "2017",
       category: "Government"
     },
     {
-      name: "Nairobi County Government",
-      logo: "/assets/img/clients/nairobi-county-logo.png",
-      partnership: "Smart City Infrastructure & Urban Management Systems",
+      name: "Higher Education Loans Board (HELB)",
+      logo: "/assets/img/clients/helb-logo.png",
+      partnership: "E-Board Management System",
       since: "2018",
       category: "Government"
     },
     {
-      name: "Commercial Bank of Africa (CBA)",
-      logo: "/assets/img/clients/cba-logo.png",
-      partnership: "Digital Banking Security & Transaction Processing Systems",
-      since: "2020",
-      category: "Finance"
+      name: "Kenya Universities and Colleges Central Placement Service (KUCCPS)",
+      logo: "/assets/img/clients/kuccps-logo.png",
+      partnership: "Board Management System",
+      since: "2018",
+      category: "Government"
     },
     {
-      name: "Equity Bank PLC",
-      logo: "/assets/img/clients/equity-logo.png",
-      partnership: "Mobile Banking Solutions & Digital Payment Systems",
-      since: "2021",
-      category: "Finance"
+      name: "Kenya Accountants and Secretaries National Examinations Board (KASNEB)",
+      logo: "/assets/img/clients/kasneb-logo.png",
+      partnership: "Electronic Board Management System",
+      since: "2018",
+      category: "Government"
     },
     {
-      name: "Kenya Airways",
-      logo: "/assets/img/clients/kq-logo.png",
-      partnership: "Airport Security & Passenger Management Systems",
+      name: "National Construction Authority (NCA)",
+      logo: "/assets/img/clients/nca-logo.png",
+      partnership: "Cloud-Based E-Board Management System",
       since: "2019",
-      category: "Technology"
+      category: "Government"
     },
     {
-      name: "Nation Media Group",
-      logo: "/assets/img/clients/nation-logo.png",
-      partnership: "Digital Content Management & Media Information Systems",
-      since: "2023",
-      category: "Media"
+      name: "CIC Insurance Group",
+      logo: "/assets/img/clients/cic-logo.png",
+      partnership: "Access Control, CCTV and Traffic Arm Barriers.",
+      since: "2019",
+      category: "Insurance"
     },
     {
-      name: "KCB Group PLC",
-      logo: "/assets/img/clients/kcb-logo.png",
-      partnership: "Enterprise Banking Solutions & Financial Services Platform",
-      since: "2022",
-      category: "Finance"
-    },
-    {
-      name: "Tuskys Supermarkets Ltd",
-      logo: "/assets/img/clients/tuskys-logo.png",
-      partnership: "Retail Management Systems & Supply Chain Automation",
-      since: "2021",
-      category: "Retail"
-    },
-    {
-      name: "Cooperative Bank of Kenya",
-      logo: "/assets/img/clients/coop-bank-logo.png",
-      partnership: "Core Banking Solutions & Digital Transformation",
-      since: "2023",
-      category: "Finance"
-    },
-    {
-      name: "KTDA Management Services Ltd",
-      logo: "/assets/img/clients/ktda-logo.png",
-      partnership: "Tea Industry Management Software & Quality Control Systems",
-      since: "2022",
+      name: "CIMMYT (International Maize & Wheat Improvement Center)",
+      logo: "/assets/img/clients/cimmyt-logo.png",
+      partnership: "CCTV Surveillance System",
+      since: "2020",
       category: "Agriculture"
     },
     {
-      name: "Kenya Medical Training College",
-      logo: "/assets/img/clients/kmrc-logo.png",
-      partnership: "Medical Training Platform & Student Information System",
-      since: "2024",
+      name: "Communications Authority of Kenya",
+      logo: "/assets/img/clients/tuskys-logo.png",
+      partnership: "Installation of Airconditioning units, UPS Systems, CCTV Surveillance Systems at Regional Offices and Equipment Stations and Linking to HQ for remote monitoring",
+      since: "2017",
+      category: "Government"
+    },
+    {
+      name: "Kenya Medical Training College (KMTC)",
+      logo: "/assets/img/clients/kmtc-logo.png",
+      partnership: "Fingerprint Access Control System at Registries, Payroll Section and Examination Secretariat Offices",
+      since: "2021",
       category: "Healthcare"
     },
     {
-      name: "Standard Gauge Railway",
-      logo: "/assets/img/clients/sgr-logo.png",
-      partnership: "Railway Operations & Safety Management Systems",
-      since: "2023",
-      category: "Transportation"
+      name: "Kenya Medical Research Institute (KEMRI) ",
+      logo: "/assets/img/clients/kemri-logo.png",
+      partnership: "Access Control Systems",
+      since: "2021",
+      category: "Healthcare"
     },
     {
+      name: "Centum Investments Company PLC",
+      logo: "/assets/img/clients/centum-logo.png",
+      partnership: "Integrated Gate Security System with Bollards, Automatic Barriers and Biometric-based access control for visitors and staff at Centum’s International House.",
+      since: "2019",
+      category: "Healthcare"
+    },
+    {
+      name: "KUEHNE + NAGEL Limited",
+      logo: "/assets/img/clients/kuehne-logo.png",
+      partnership: "Automatic Gate Access Control System with Pedestrian Turnstiles, Security Bollards & Traffic Barriers",
+      since: "2018",
+      category: "Transportation"
+    },
+   /* {
       name: "Jomo Kenyatta University of Agriculture & Technology",
       logo: "/assets/img/clients/jkuat-logo.png",
       partnership: "Digital Campus Solutions & Research Management",
@@ -256,7 +256,7 @@ const Clients = () => {
       since: "2022",
       category: "Education"
     },
-    {
+   {
       name: "Bank of Kigali (Rwanda)",
       logo: "/assets/img/clients/bk-logo.png",
       partnership: "Regional Banking Integration & Cross-Border Solutions",
@@ -304,7 +304,7 @@ const Clients = () => {
       partnership: "Manufacturing ERP & Production Control Systems",
       since: "2023",
       category: "Manufacturing"
-    }
+    }*/
   ];
 
   const filteredClientPartners = filterPartners(clientPartners, activeFilter, searchTerm);

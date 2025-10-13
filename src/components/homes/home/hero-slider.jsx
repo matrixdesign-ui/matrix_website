@@ -21,7 +21,7 @@ import  hero_thumb_2 from "../../../../public/assets/img/hero/hero-sm-2.jpg";
 // hero content data
 const hero_content = {
     hero_title: <><span>Engineering the Future</span></>,
-    sub_title: <>Matrix Vision Systems: Delivering Cutting-Edge Technology Solutions for a Smarter Future</>,
+    sub_title: <>Future-Driven Technology. Client-Focused Results.</>,
     hero_shape: [
         {
             id: 1,

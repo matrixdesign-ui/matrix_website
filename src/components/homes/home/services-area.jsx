@@ -9,11 +9,11 @@ import img from "../../../../public/assets/img/service/sv-dashbord.png"
 
 const service_content = {
     title: "Our Expertise",
-    sub_title: <>Delivering comprehensive solutions across diverse industries</>,
+    sub_title: <>Empowering industry leaders with integrated, cross-sector technologies</>,
 
     bg_img: "/assets/img/service/sv-bg.jpg",
     title_2: <>Customized Solutions for Your Needs</>,
-    des: <>We tailor our services to meet your specific business challenges and goals.</>,
+    des: <>We shape our approach to fit your vision, challenges, and success targets.</>,
     btn_text: "Explore Our Solutions",
 }
 const { title, sub_title, bg_img, title_2, des, btn_text } = service_content

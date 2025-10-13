@@ -3,10 +3,10 @@ import React,{useState} from 'react';
 
 const company_content ={
     sub_title:  "ABOUT MATRIX VISION SYSTEMS",
-    title: <>Delivering Innovative Technology Solutions</>,
+    title: <>Tailored Technology Solutions to Drive Your Success</>,
     info_1: <>Matrix Vision Systems is a leading technology company providing engineering, security, and software integrated solutions. We are committed to driving smarter technology interoperability in businesses across Africa and beyond.</>,
     info_2: <>We focus on being a reliable partner and resource to our customers, offering a variety of value-added services designed to help your business run efficiently.</>,
-    info_3: <>Our team is composed of highly skilled personnel with expertise in various systems and solutions, ensuring we offer top-of-the-class innovation and technology.</>,
+    info_3: <>Powered by deep expertise and diverse technical know-how, we deliver innovation that sets new standards.</>,
 }
 const {sub_title, title, info_1, info_2, info_3}  = company_content
 

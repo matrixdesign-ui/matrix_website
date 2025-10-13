@@ -52,7 +52,7 @@ const ProjectArea = () => {
                <div className="row">
                   <div className="col-xl-6">
                      <div className="tp-project__section-box wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <h3 className="tp-section-title">Check Some Of Our Recent Projects.</h3>
+                        <h3 className="tp-section-title">Discover What We've Been Building for Our Partners.</h3>
                      </div>
                   </div>
                </div>

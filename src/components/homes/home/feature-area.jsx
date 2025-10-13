@@ -24,7 +24,7 @@ const feature_data = [
       img: icon_2,
       title: <>Enterprise Facilities & Asset Management</>,
       delay: ".6s",
-      description: "Solutions for managing facilities, assets, and resources."
+      description: "Integrated systems for overseeing your facilities, assets, and operational resources."
    },
    {
       id: 3,
