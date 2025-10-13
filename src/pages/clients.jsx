@@ -228,21 +228,21 @@ const Clients = () => {
       since: "2025",
       category: "Government"
     },
-    /*{
-      name: "Telkom Kenya",
-      logo: "/assets/img/clients/telkom-logo.png",
-      partnership: "Network Infrastructure & Communication Solutions",
-      since: "2022",
-      category: "Technology"
-    },
     {
-      name: "Nairobi Metropolitan Area Transport Authority (NAMATA)",
-      logo: "/assets/img/clients/namatta-logo.png",
-      partnership: "Smart Transport Management & Traffic Control Systems",
-      since: "2024",
+      name: "SONY Sugar",
+      logo: "/assets/img/clients/sony-logo.png",
+      partnership: "E-Board Management System",
+      since: "2018",
       category: "Government"
     },
     {
+      name: "LOMARO",
+      logo: "/assets/img/clients/lomaro-logo.png",
+      partnership: "Collaboration and Projects Management  System",
+      since: "2023",
+      category: "Energy"
+    },
+    /*{
       name: "Karen Hospital",
       logo: "/assets/img/clients/karen-hospital-logo.png",
       partnership: "Healthcare Information Systems & Patient Management",
