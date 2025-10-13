@@ -19,7 +19,7 @@
     "lint:fix": "next lint --fix",
     "analyze": "cross-env ANALYZE=true next build",
     "export": "next export",
-    "deploy": "next build && npx gh-pages -d out",
+    "deploy": "next build && echo 'To deploy to GitHub Pages, commit and push to main branch'",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
@@ -31,7 +31,7 @@
     "critters": "^0.0.23",
     "gh-pages": "^5.0.0",
     "gsap": "^3.11.5",
-    "next": "^15.5.4",
+    "next": "13.4.19",
     "react": "18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",

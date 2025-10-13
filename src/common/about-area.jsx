@@ -42,7 +42,7 @@ const about_data =[
 const about_content = {
     title: "TECHNOLOGY SOLUTIONS",
     sub_title: "Driving Innovation and Efficiency", 
-    des: <>Matrix Vision Systems is a leading provider of technology solutions, specializing in software systems, enterprise facilities management, and advanced security. We empower businesses to thrive in today's digital landscape.</>,
+    des: <>Matrix Vision Systems is a leading provider of technology solutions, specializing in software systems, enterprise facilities management, and advanced security. We empower businesses to thrive in today's eveolving digital landscape.</>,
 
     about_list: [
         <>Custom Software Development</>,

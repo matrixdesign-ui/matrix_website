@@ -175,19 +175,10 @@ npm run export
 
 ### **GitHub Pages Deployment**
 
-This project can be deployed to GitHub Pages using the following steps:
+This project is configured to deploy to GitHub Pages using GitHub Actions. The deployment happens automatically when changes are pushed to the `main` branch.
 
-1. **Prerequisites**: Install the `gh-pages` package (already included in dependencies)
-2. **Build and Deploy**: Run `npm run deploy` to build and deploy to GitHub Pages
-
-#### **Manual GitHub Pages Setup**
-1. Build the static site: `npm run build`
-2. Deploy to GitHub Pages: `npx gh-pages -d out -t true`
-
-#### **Automatic Deployment with GitHub Actions**
-This repository includes a GitHub Actions workflow for automatic deployment:
-1. Push changes to the `main` branch
-2. The workflow in `.github/workflows/deploy.yml` will automatically build and deploy the site
+1. **Automatic Deployment**: Push to the `main` branch triggers automatic deployment via GitHub Actions
+2. **Manual Deployment**: The site is built automatically through GitHub Actions when you push to the main branch
 
 #### **GitHub Pages Configuration**
 1. Go to your repository settings
@@ -261,3 +252,26 @@ For technical inquiries or business partnerships:
 **Built with ❤️ by Matrix Vision Systems Team**
 
 *Empowering businesses through innovative technology solutions across Kenya and East Africa.*
+
+```
+
+## **GitHub Pages Deployment Instructions**
+
+### **Initial Setup**
+1. Ensure your repository is on GitHub
+2. Go to your repository Settings > Pages
+3. Under "Source", select "GitHub Actions"
+4. No additional configuration is needed - the workflow will automatically deploy
+
+### **How It Works**
+- When you push changes to the `main` branch, GitHub Actions automatically:
+  1. Builds your Next.js application
+  2. Exports it as static files
+  3. Deploys to GitHub Pages
+
+### **Troubleshooting Deployment**
+If the deployment fails:
+1. Check the Actions tab in your GitHub repository
+2. Look at the deployment logs for specific error messages
+3. Ensure all dynamic routes have proper getStaticPaths configuration
+4. Make sure there are no conflicting paths in your pages

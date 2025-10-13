@@ -7,7 +7,7 @@ const HelpdeskComplaintManagementPage = () => {
   return (
     <Wrapper>
       <SEO pageTitle="Helpdesk & Complaint Management - Advanced Customer Support Solutions" />
-      <ServiceDetails service="helpdesk-complaint-management" />
+      <ServiceDetails service="helpdesk-complaint-management"/>
     </Wrapper>
   );
 };

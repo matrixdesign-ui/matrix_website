@@ -95,13 +95,13 @@ const Clients = () => {
       since: "2024",
       category: "Healthcare"
     },
-    /*{
-      name: "Kenya Power & Lighting Co.",
-      logo: "/assets/img/clients/kenya-power-logo.png",
-      partnership: "ICT Infrastructure, Server Rooms & Power Utility Systems",
-      since: "2020",
+    {
+      name: "Moi International Sports Centre (MISC)- kasarani",
+      logo: "/assets/img/clients/misc.png",
+      partnership: "WiFi Systems Installation of Rehabilation & Upgrading of Moi  International Sports Centre Kasarani",
+      since: "2024",
       category: "Government"
-    },*/
+    },
     {
       name: "Machakos University",
       logo: "/assets/img/clients/machakos-uni-logo.png",
@@ -207,28 +207,28 @@ const Clients = () => {
       since: "2018",
       category: "Transportation"
     },
-   /* {
-      name: "Jomo Kenyatta University of Agriculture & Technology",
-      logo: "/assets/img/clients/jkuat-logo.png",
-      partnership: "Digital Campus Solutions & Research Management",
-      since: "2021",
+   {
+      name: "Moi International Sports Centre (MISC)- kasarani",
+      logo: "/assets/img/clients/misc.png",
+      partnership: "Lifts Installation Works at MISC Kasarani",
+      since: "2024",
       category: "Education"
     },
-    {
-      name: "EABL (East African Breweries Limited)",
-      logo: "/assets/img/clients/eabl-logo.png",
-      partnership: "Enterprise Resource Planning & Supply Chain Optimization",
-      since: "2023",
+     {
+      name: "CSI Energy Kenya",
+      logo: "/assets/img/clients/csi-logo.png",
+      partnership: "ICT Infrastructure and Security Systems ",
+      since: "2025",
       category: "Manufacturing"
     },
     {
-      name: "Lake Victoria South Water Works",
-      logo: "/assets/img/clients/lvsw-logo.png",
-      partnership: "Water Management Systems & Billing Solutions",
-      since: "2024",
+      name: "Rural Electrification and Renewable Energy Corporation (REREC)",
+      logo: "/assets/img/clients/rerec-logo.png",
+      partnership: "Cameras and Public Address System to REREC",
+      since: "2025",
       category: "Government"
     },
-    {
+    /*{
       name: "Telkom Kenya",
       logo: "/assets/img/clients/telkom-logo.png",
       partnership: "Network Infrastructure & Communication Solutions",
