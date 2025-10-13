@@ -1,8 +1,8 @@
 # Matrix Vision Systems Website 🚀
 
-A modern, high-performance, and accessible business website built with Next.js showcasing Matrix's comprehensive IT and business solutions across Kenya and East Africa.
+A modern, high-performance, and accessible business website built with Next.js showcasing IT and business solutions.
 
-## ✨ Enhanced Features
+## ✨ Key Features
 
 ### 🎯 **Core Business Solutions**
 - **Infrastructure & Development**: System architecture and application development
@@ -14,7 +14,7 @@ A modern, high-performance, and accessible business website built with Next.js s
 - **Facilities & Asset Management**: Facility management solutions
 - **Education Solutions**: Training and educational technology
 
-### 🔧 **Technical Enhancements (v2.0)**
+### 🔧 **Technical Enhancements**
 
 #### **Performance & Optimization**
 - ⚡ **Next.js 13.4+** with App Router and React 18
@@ -28,7 +28,6 @@ A modern, high-performance, and accessible business website built with Next.js s
 - 🔒 **Enhanced Security Headers** (CSP, HSTS, X-Frame-Options)
 - 🔍 **Comprehensive SEO** with meta tags, structured data, and social sharing
 - 🌐 **OpenGraph & Twitter Cards** for rich social media previews
-- 📍 **Local SEO** optimized for Kenya and East Africa markets
 - 🛡️ **Error Boundaries** for graceful error handling
 
 #### **Accessibility & UX**
@@ -42,8 +41,6 @@ A modern, high-performance, and accessible business website built with Next.js s
 - ✅ **Advanced Form Validation** with react-hook-form and Yup
 - 🎯 **Real-time Validation** with instant feedback
 - 💬 **User-friendly Error Messages** and success states
-- 📧 **Email Integration** ready for backend services
-- 🔄 **Auto-save** and form persistence
 
 ## 🛠 **Technology Stack**
 
@@ -52,7 +49,7 @@ A modern, high-performance, and accessible business website built with Next.js s
 - **Language**: JavaScript (ES2022+)
 - **Styling**: SCSS/Sass with CSS Modules
 - **Components**: Functional components with hooks
-- **Routing**: Next.js App Router
+- **Routing**: Next.js Pages Router
 - **State Management**: React Context API + useReducer
 
 ### **Development Tools**
@@ -60,14 +57,13 @@ A modern, high-performance, and accessible business website built with Next.js s
 - **Formatting**: Prettier
 - **Type Checking**: TypeScript ready
 - **Bundle Analysis**: @next/bundle-analyzer
-- **Performance**: Lighthouse CI integration
 
 ### **Third-party Integrations**
 - **Animations**: GSAP with ScrollTrigger
 - **Forms**: React Hook Form + Yup validation
 - **UI Components**: Bootstrap 5 + Custom components
 - **Carousels**: Swiper.js and React Slick
-- **Icons**: FontAwesome Pro + Custom SVGs
+- **Icons**: FontAwesome + Custom SVGs
 
 ## 🚀 **Getting Started**
 
@@ -80,8 +76,8 @@ A modern, high-performance, and accessible business website built with Next.js s
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/matrix-vision-systems/matrix-website.git
-cd matrix-website
+git clone https://github.com/matrixdesign-ui/matrix_website.git
+cd matrix_website
 ```
 
 2. **Install dependencies**:
@@ -91,20 +87,14 @@ npm install
 yarn install
 ```
 
-3. **Set up environment variables**:
-```bash
-cp .env.example .env.local
-# Edit .env.local with your configuration
-```
-
-4. **Run the development server**:
+3. **Run the development server**:
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-5. **Open your browser**:
+4. **Open your browser**:
    Visit [http://localhost:3000](http://localhost:3000)
 
 ### **Available Scripts**
@@ -128,21 +118,20 @@ npm run analyze      # Bundle size analysis
 ## 📁 **Project Structure**
 
 ```
-matrix/
+matrix_website/
 ├── src/
 │   ├── components/           # Reusable React components
-│   │   ├── common/          # Shared components (OptimizedImage, ErrorBoundary)
-│   │   ├── forms/           # Enhanced form components
+│   │   ├── common/          # Shared components
+│   │   ├── forms/           # Form components
 │   │   └── [feature]/       # Feature-specific components
 │   ├── pages/               # Next.js pages and routing
-│   ├── styles/              # SCSS stylesheets and enhancements
-│   ├── utils/               # Utility functions and helpers
+│   ├── styles/              # SCSS stylesheets
+│   ├── utils/               # Utility functions
 │   ├── hooks/               # Custom React hooks
 │   ├── context/             # React Context providers
-│   └── data/                # Static data and configurations
-├── public/                  # Static assets (images, icons, etc.)
-├── .env.example            # Environment variables template
-├── next.config.js          # Enhanced Next.js configuration
+│   └── data/                # Static data
+├── public/                  # Static assets
+├── next.config.js          # Next.js configuration
 ├── package.json            # Dependencies and scripts
 └── README.md               # Project documentation
 ```
@@ -150,14 +139,12 @@ matrix/
 ## 🎯 **Key Components**
 
 ### **Enhanced Forms**
-- [`HeroForm`](src/forms/hero-form.jsx) - Newsletter signup with validation
-- [`ContactUsForm`](src/forms/contact-us-form.jsx) - Full contact form with service selection
-- [`formUtils.js`](src/utils/formUtils.js) - Form utilities and validation helpers
+- Form components with validation
+- Utility functions for form handling
 
 ### **Performance Components**
-- [`OptimizedImage`](src/components/common/OptimizedImage.jsx) - Lazy loading with fallbacks
-- [`ErrorBoundary`](src/components/common/ErrorBoundary.jsx) - Error handling component
-- [`SEO`](src/common/seo.jsx) - Comprehensive SEO meta tags
+- Optimized components for better performance
+- SEO meta tags and accessibility features
 
 ## 🚢 **Deployment**
 
@@ -186,12 +173,9 @@ This project is configured to deploy to GitHub Pages using GitHub Actions. The d
 3. No additional configuration is needed - the workflow will automatically deploy
 
 #### **Custom Domain Setup**
-To use your custom domain (https://matrixsystems.co.ke):
+To use your custom domain:
 
-1. Update the `CNAME` file in the `public/` directory with your domain:
-   ```
-   matrixsystems.co.ke
-   ```
+1. Update the `CNAME` file in the `public/` directory with your domain
 
 2. Configure DNS settings with your domain provider:
    - Add an A record pointing to GitHub Pages IP addresses:
@@ -203,37 +187,22 @@ To use your custom domain (https://matrixsystems.co.ke):
      ```
    - Or add an ALIAS record pointing to:
      ```
-     matrixdesign-ui.github.io
+     <your-username>.github.io
      ```
 
 3. Update repository settings:
    - Go to your repository Settings > Pages
-   - In the "Custom domain" field, enter: `matrixsystems.co.ke`
+   - In the "Custom domain" field, enter your domain
    - Enforce HTTPS if available
 
 4. Wait for DNS propagation (may take up to 24 hours)
 
-#### **Troubleshooting Custom Domain**
-If your custom domain isn't working:
-1. Verify the CNAME file contains only your domain (no http:// or https://)
-2. Check that DNS records are correctly configured
-3. Ensure GitHub Pages is enabled in repository settings
-4. Confirm HTTPS enforcement isn't causing issues during certificate provisioning
-
 ### **Deployment Platforms**
 - **Vercel** (Recommended): Zero-config deployment
 - **Netlify**: Static site hosting
-- **AWS S3 + CloudFront**: Custom infrastructure
 - **Traditional Hosting**: Via static export
 
 ## 🔧 **Configuration**
-
-### **Environment Variables**
-```bash
-NEXT_PUBLIC_SITE_URL=https://matrix.co.ke
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-API_BASE_URL=https://api.matrix.co.ke
-```
 
 ### **Performance Optimization**
 - Bundle size monitoring with webpack-bundle-analyzer
@@ -265,50 +234,14 @@ API_BASE_URL=https://api.matrix.co.ke
 
 ## 📄 **License**
 
-This project is proprietary software owned by Matrix Vision Systems Ltd.
+This project is open source software.
 
-## 📞 **Contact & Support**
+## 📞 **Contact**
 
-For technical inquiries or business partnerships:
+For inquiries:
 
-- **Website**: [https://matrix.co.ke](https://matrix.co.ke)
-- **Email**: info@matrix.co.ke
-- **Phone**: +254-700-000-000
-- **Location**: Muguga Green, Nairobi, Kenya
+- **Website**: [matrixsystems.co.ke](https://matrixsystems.co.ke)
 
 ---
 
-**Built with ❤️ by Matrix Vision Systems Team**
-
-*Empowering businesses through innovative technology solutions across Kenya and East Africa.*
-
-```
-
-## **GitHub Pages Deployment Instructions**
-
-### **Initial Setup**
-1. Ensure your repository is on GitHub
-2. Go to your repository Settings > Pages
-3. Under "Source", select "GitHub Actions"
-4. No additional configuration is needed - the workflow will automatically deploy
-
-### **Enabling GitHub Pages**
-If you encounter a "Not Found" error during deployment:
-1. Visit your repository Settings > Pages
-2. Under "Source", make sure "GitHub Actions" is selected
-3. If it's not available, select any branch first, then switch back to "GitHub Actions"
-4. Wait a few minutes and try the deployment again
-
-### **How It Works**
-- When you push changes to the `main` branch, GitHub Actions automatically:
-  1. Builds your Next.js application
-  2. Exports it as static files
-  3. Deploys to GitHub Pages
-
-### **Troubleshooting Deployment**
-If the deployment fails:
-1. Check the Actions tab in your GitHub repository
-2. Look at the deployment logs for specific error messages
-3. Ensure GitHub Pages is enabled in your repository settings (Settings > Pages)
-4. Make sure all dynamic routes have proper getStaticPaths configuration
-5. Verify there are no conflicting paths in your pages
+**Built with ❤️ using modern web technologies**
