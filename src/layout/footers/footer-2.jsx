@@ -9,7 +9,7 @@ import footer_logo from "../../../public/assets/img/logo/logo-black.png";
 
 
 const footer_content = {
-    address: <>Mais. 7, B.S.K. Village, Muguga Greens, <br />Westlands, Nairobi</>,
+    address: <>Mais. 7, B.S.K. Village, Muguga Green, <br />Westlands, Nairobi</>,
     phone: "+254 721 779 429",
     email: "info@matrixsystems.co.ke",
 

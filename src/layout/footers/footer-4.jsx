@@ -17,7 +17,7 @@ const footer_content = {
    policy_text: <>By subscribing, you accepted our <a href="#">Policy</a></>,
    phone: "+254 721 779 429",
    email: "info@matrixsystems.co.ke",
-   location: <>Mais. 7, B.S.K. Village, Muguga Greens, <br />Westlands, Nairobi</>,
+   location: <>Mais. 7, B.S.K. Village, Muguga Green, <br />Westlands, Nairobi</>,
      copy_right: <>Copyright & Design By Matrix Vision Systems – {new Date().getFullYear()}</>,
      
 
