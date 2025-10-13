@@ -19,6 +19,7 @@
     "lint:fix": "next lint --fix",
     "analyze": "cross-env ANALYZE=true next build",
     "export": "next export",
+    "deploy": "next build && npx gh-pages -d out",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
@@ -28,6 +29,7 @@
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
     "critters": "^0.0.23",
+    "gh-pages": "^5.0.0",
     "gsap": "^3.11.5",
     "next": "^15.5.4",
     "react": "18.2.0",

@@ -8,7 +8,26 @@ import project_details_data from '../../data/project-details-data';
 const ProjectDetailsArea = ({ project }) => {
     const projectData = project_details_data[project];
 
-    if (!projectData) {
+    // Fallback: try alternative matching if direct key lookup fails
+    let finalProjectData = projectData;
+    if (!projectData && project) {
+        // Try to find by exact key match or alternative keys
+        const alternativeKeys = {
+            'internet-connectivity-infrastructure': 'internet-connectivity-infrastructure',
+            'internet-connectivity-and-infrastructure': 'internet-connectivity-infrastructure',
+            'legal-management-system-lms': 'legal-management-system-lms',
+            'electronic-board-management-e-board': 'electronic-board-management-e-board',
+            'ai-powered-video-surveillance-systems': 'ai-powered-video-surveillance-systems',
+            'mobile-assets-management-system': 'mobile-assets-management-system',
+            'ict-infrastructure-connectivity': 'ict-infrastructure-connectivity',
+            'enterprise-it-helpdesk-system': 'enterprise-it-helpdesk-system'
+        };
+        
+        const correctKey = alternativeKeys[project] || project;
+        finalProjectData = project_details_data[correctKey];
+    }
+
+    if (!finalProjectData) {
         return (
             <div className="sv-details-area pt-100 pb-100">
                 <div className="container">
@@ -33,34 +52,34 @@ const ProjectDetailsArea = ({ project }) => {
                         <div className="col-xl-12">
                             <div className="sv-details-wrapper">
                                 <div className="sv-details-title-box mb-55">
-                                    <h4 className="sv-details-title">{projectData.title}</h4>
-                                    <p>{projectData.overview_des}</p>
+                                    <h4 className="sv-details-title">{finalProjectData.title}</h4>
+                                    <p>{finalProjectData.overview_des}</p>
                                     <div className="project-meta mt-4">
                                         <div className="row">
                                             <div className="col-md-3 col-sm-6 mb-3">
                                                 <div className="project-meta-item">
                                                     <h6 className="meta-title">Client</h6>
-                                                    <p className="meta-value">{projectData.client_name}</p>
+                                                    <p className="meta-value">{finalProjectData.client_name}</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-3 col-sm-6 mb-3">
                                                 <div className="project-meta-item">
                                                     <h6 className="meta-title">Status</h6>
-                                                    <span className={`status-badge ${projectData.status.toLowerCase()}`}>
-                                                        {projectData.status}
+                                                    <span className={`status-badge ${finalProjectData.status.toLowerCase()}`}>
+                                                        {finalProjectData.status}
                                                     </span>
                                                 </div>
                                             </div>
                                             <div className="col-md-3 col-sm-6 mb-3">
                                                 <div className="project-meta-item">
                                                     <h6 className="meta-title">Duration</h6>
-                                                    <p className="meta-value">{projectData.duration}</p>
+                                                    <p className="meta-value">{finalProjectData.duration}</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-3 col-sm-6 mb-3">
                                                 <div className="project-meta-item">
                                                     <h6 className="meta-title">Team Size</h6>
-                                                    <p className="meta-value">{projectData.team_size}</p>
+                                                    <p className="meta-value">{finalProjectData.team_size}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,11 +87,11 @@ const ProjectDetailsArea = ({ project }) => {
                                 </div>
 
                                 {/* TECHNOLOGIES USED */}
-                                {projectData.technologies && (
+                                {finalProjectData.technologies && (
                                     <div className="sv-details-text mb-35">
                                         <h4 className="sv-details-text-title pb-10">Technologies Used</h4>
                                         <div className="technologies-list">
-                                            {projectData.technologies.split(',').map((tech, i) => (
+                                            {finalProjectData.technologies.split(',').map((tech, i) => (
                                                 <span key={i} className="tech-badge">
                                                     {tech.trim()}
                                                 </span>
@@ -85,7 +104,7 @@ const ProjectDetailsArea = ({ project }) => {
                                 <div className="sv-details-text mb-35">
                                     <h4 className="sv-details-text-title pb-10">Project Overview</h4>
                                     <ul>
-                                        {projectData.overview_list?.map((item, i) => (
+                                        {finalProjectData.overview_list?.map((item, i) => (
                                             <li key={i}>
                                                 <i className="fal fa-check"></i>
                                                 <p> {item} </p>
@@ -97,15 +116,15 @@ const ProjectDetailsArea = ({ project }) => {
                                 {/* THE CHALLENGE */}
                                 <div className="sv-details-text-2 mb-50">
                                     <h4 className="sv-details-text-title">The Challenge</h4>
-                                    <p>{projectData.challange_des}</p>
+                                    <p>{finalProjectData.challange_des}</p>
                                 </div>
 
                                 {/* PROJECT COMPONENTS SUB-SERVICES */}
-                                {projectData.sub_services && projectData.sub_services.length > 0 && (
+                                {finalProjectData.sub_services && finalProjectData.sub_services.length > 0 && (
                                     <div className="sv-details-sub-services mb-50">
                                         <h4 className="sv-details-text-title mb-30">Project Components</h4>
                                         <div className="row">
-                                            {projectData.sub_services.map((subService, i) => {
+                                            {finalProjectData.sub_services.map((subService, i) => {
                                                 // Array of colored icons for sub-services
                                                 const icons = [
                                                     'fas fa-cogs text-primary',
