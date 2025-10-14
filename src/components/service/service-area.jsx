@@ -14,7 +14,9 @@ const service_categories = [
     description: "Comprehensive software solutions encompassing Legal Case Management, Contracts Lifecycle Management, Electronic Board Management,  Audit Management,Ccustomer Relationship Management, Helpdesk Systems, and various specialized applications.",
     link: "/services/software-applications",
     icon: "fas fa-laptop-code",
-    key: "software-applications"
+    key: "software-applications",
+    type: "Product",
+    cardIcon: "fas fa-laptop-code"
   },
   {
     id: 2,
@@ -22,7 +24,9 @@ const service_categories = [
     description: "Custom software development and system integration services to build scalable, secure, and efficient business applications.",
     link: "/services/infrastructure-development",
     icon: "fas fa-cogs",
-    key: "infrastructure-development"
+    key: "infrastructure-development",
+    type: "Service",
+    cardIcon: "fas fa-server"
   },
   {
     id: 3,
@@ -30,7 +34,9 @@ const service_categories = [
     description: "Scalable enterprise-grade solutions for customer relationship management, helpdesk services, electronic board management, and IT support.",
     link: "/services/enterprise-solutions",
     icon: "fas fa-building",
-    key: "enterprise-solutions"
+    key: "enterprise-solutions",
+    type: "Solution",
+    cardIcon: "fas fa-building"
   },
   {
     id: 4,
@@ -38,7 +44,9 @@ const service_categories = [
     description: "Comprehensive solutions for Contract Lifecycle Management, Legal Case Management, Audit Management, and Social Media Monitoring to ensure your organization's compliance.",
     link: "/services/governance-compliance",
     icon: "fas fa-gavel",
-    key: "governance-compliance"
+    key: "governance-compliance",
+    type: "Solution",
+    cardIcon: "fas fa-gavel"
   },
   {
     id: 5,
@@ -46,7 +54,9 @@ const service_categories = [
     description: "Advanced Computer-Aided Facility Management, Asset Tracking, Automated Visitor Management, and Meeting Room Management.",
     link: "/services/facilities-asset-management",
     icon: "fas fa-building-user",
-    key: "facilities-asset-management"
+    key: "facilities-asset-management",
+    type: "Solution",
+    cardIcon: "fas fa-warehouse"
   },
   {
     id: 6,
@@ -54,7 +64,9 @@ const service_categories = [
     description: "Comprehensive security solutions such as AI-Powered Surveillance, Access Control Systems, Incident Management, and Environmental Health and Safety systems.",
     link: "/services/security-operational-safety",
     icon: "fas fa-shield-alt",
-    key: "security-operational-safety"
+    key: "security-operational-safety",
+    type: "Solution",
+    cardIcon: "fas fa-shield-alt"
   },
   {
     id: 7,
@@ -62,7 +74,9 @@ const service_categories = [
     description: "Advanced ICT and telecommunications solutions spanning Data Center Management, Unified Communications, VoIP systems, and AI-Powered analytics.",
     link: "/services/ict-telecom-analytics",
     icon: "fas fa-network-wired",
-    key: "ict-telecom-analytics"
+    key: "ict-telecom-analytics",
+    type: "Service",
+    cardIcon: "fas fa-network-wired"
   },
   {
     id: 8,
@@ -70,7 +84,9 @@ const service_categories = [
     description: "Comprehensive Learning Management system,and Examination Management System designed specifically for educational institutions to create, administer, and evaluate exams.",
     link: "/services/education-solutions",
     icon: "fas fa-graduation-cap",
-    key: "education-solutions"
+    key: "education-solutions",
+    type: "Solution",
+    cardIcon: "fas fa-graduation-cap"
   }
 ];
 
@@ -106,142 +122,115 @@ const ServiceArea = () => {
                           </div>
                       </div>
                    </div>
-                   <div className="row blog-grid-inner">
-                      {/* MODERN SERVICE CATEGORY CARDS - Using Blog Grid Structure */}
+                   <div className="row g-4">
+                      {/* SERVICE CATEGORY CARDS - Updated to have icons on top with different icons per card */}
                       {service_categories.map((item, i) => {
-                        // Clean professional color scheme for service categories
-                        const categoryColors = [
-                          'linear-gradient(135deg, #007bff, #0056b3)', // Software & Applications
-                          'linear-gradient(135deg, #28a745, #1e5e2a)', // Infrastructure
-                          'linear-gradient(135deg, #fd7e14, #b8570c)', // Enterprise Solutions
-                          'linear-gradient(135deg, #6f42c1, #4a2680)', // Governance & Compliance
-                          'linear-gradient(135deg, #e83e8c, #a9265c)', // Facilities & Management
-                          'linear-gradient(135deg, #20c997, #167f5c)', // Security & Safety
-                          'linear-gradient(135deg, #ffc107, #b38600)', // ICT & Telecom
-                          'linear-gradient(135deg, #17a2b8, #0f6f81)'  // Education
-                        ];
-                        const categoryColor = categoryColors[i % categoryColors.length];
-
+                        // Split description into title and description parts
+                        const descriptionParts = item.description.split(':');
+                        const boldTitle = descriptionParts.length > 1 ? descriptionParts[0] : '';
+                        const descriptionText = descriptionParts.length > 1 ? descriptionParts.slice(1).join(':') : item.description;
+                        
                         return (
-                          <div key={i} className="col-xl-3 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay={`${0.3 + (i * 0.1)}s`}>
-                            <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                              <div className="tp-blog-item" style={{ cursor: 'pointer' }}>
-                                  {/* Service Icon/Thumb */}
-                                  <div className="tp-blog-thumb fix" style={{
-                                    background: categoryColor,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    minHeight: '200px',
-                                    color: 'white'
-                                  }}>
-                                    <i className={`${item.icon}`} style={{
-                                      fontSize: '48px',
-                                      textShadow: '0 2px 8px rgba(0,0,0,0.3)'
-                                    }}></i>
-                                  </div>
-
-                                  {/* Service Content */}
-                                  <div className="tp-blog-content">
-                                      {/* Meta Information */}
-                                      <div className="tp-blog-meta d-flex align-items-center">
-                                          <div className="tp-blog-category category-color-1">
-                                              <span>Service</span>
-                                          </div>
-                                          <div className="tp-blog-date">
-                                              <span>{String(i + 1).padStart(2, '0')}</span>
-                                          </div>
-                                      </div>
-
-                                      {/* Service Title - Clickable */}
-                                      <div className="tp-blog-title-box">
-                                          <h3 className="tp-blog-title-sm" style={{ margin: '0 0 12px 0' }}>
-                                              {item.title}
-                                          </h3>
-                                      </div>
-
-                                      {/* Key Benefit Badge */}
-                                      {serviceDetailsData[item.key]?.key_benefit && (
-                                        <div className="key-benefit-badge" style={{
-                                          background: `linear-gradient(90deg, ${categoryColor.split(',')[0].replace('linear-gradient(135deg, ', '')}, ${categoryColor.split(',')[1].replace(')', '')}20)`,
-                                          color: categoryColor.split(',')[0].replace('linear-gradient(135deg, ', ''),
-                                          padding: '6px 12px',
-                                          borderRadius: '20px',
-                                          fontSize: '0.75rem',
-                                          fontWeight: '600',
-                                          marginBottom: '16px',
-                                          border: `1px solid ${categoryColor.split(',')[0].replace('linear-gradient(135deg, ', '')}30`,
-                                          display: 'inline-block'
-                                        }}>
-                                          <i className="fas fa-star" style={{ marginRight: '4px', fontSize: '0.7rem' }}></i>
-                                          {serviceDetailsData[item.key].key_benefit}
-                                        </div>
-                                      )}
-
-                                      {/* Service Description */}
-                                      <p style={{
-                                        color: '#64748b',
-                                        lineHeight: '1.6',
-                                        marginBottom: '24px',
-                                        fontSize: '0.95rem'
-                                      }}>
-                                        {item.description}
-                                      </p>
-
-                                      {/* Author/Action Info */}
-                                      <div className="tp-blog-author-info-box d-flex align-items-center">
-                                          <div className="tp-blog-avata" style={{
-                                            width: '40px',
-                                            height: '40px',
-                                            borderRadius: '50%',
-                                            background: categoryColor,
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            color: 'white'
-                                          }}>
-                                            <i className="fas fa-arrow-right"></i>
-                                          </div>
-                                          <div className="tp-blog-author-info">
-                                              <h5 style={{ color: 'inherit' }}>Learn More</h5>
-                                              <span>Explore Solutions</span>
-                                          </div>
-                                      </div>
-                                  </div>
+                          <div key={item.id} className="col-xl-4 col-md-6">
+                            <div className="service-card">
+                              {/* Icon on top */}
+                              <div className="service-icon-top mb-25">
+                                <div className="icon-placeholder">
+                                  <i className={`${item.cardIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                </div>
                               </div>
-                            </Link>
+                              
+                              <div className="service-header mb-25">
+                                <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                  <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{item.title}</h3>
+                                </Link>
+                              </div>
+                              
+                              <div className="service-details mb-25">
+                                {boldTitle && (
+                                  <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                    {boldTitle}:
+                                  </h4>
+                                )}
+                                <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{descriptionText}</p>
+                              </div>
+                              
+                              <div className="service-type">
+                                <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                  <span className="type-badge">Learn More</span>
+                                </Link>
+                              </div>
+                            </div>
                           </div>
                         );
                       })}
                    </div>
                </div>
             </div>
+            
+            {/* Styles */}
             <style jsx>{`
-                /* Service-specific hover effects with colored borders */
-                .tp-blog-item:nth-child(1):hover {
-                    border-color: rgba(0, 123, 255, 0.3);
+              .section-title h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: #222;
+              }
+              
+              .service-card {
+                background: white;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                height: 100%;
+                border: 1px solid #eee;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+              }
+              
+              .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+              }
+              
+              .service-type {
+                padding-top: 20px;
+                border-top: 1px solid #eee;
+                width: 100%;
+              }
+              
+              .type-badge {
+                background-color: #007bff; /* Blue color for services */
+                color: white;
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+              }
+              
+              .icon-placeholder {
+                border: none;
+                border-radius: 8px;
+                padding: 20px;
+                min-height: 90px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+              }
+              
+              @media (max-width: 768px) {
+                .section-title h2 {
+                  font-size: 28px;
                 }
-                .tp-blog-item:nth-child(2):hover {
-                    border-color: rgba(40, 167, 69, 0.3);
+                
+                .service-card {
+                  padding: 20px;
                 }
-                .tp-blog-item:nth-child(3):hover {
-                    border-color: rgba(253, 126, 20, 0.3);
-                }
-                .tp-blog-item:nth-child(4):hover {
-                    border-color: rgba(111, 66, 193, 0.3);
-                }
-                .tp-blog-item:nth-child(5):hover {
-                    border-color: rgba(232, 62, 140, 0.3);
-                }
-                .tp-blog-item:nth-child(6):hover {
-                    border-color: rgba(32, 201, 151, 0.3);
-                }
-                .tp-blog-item:nth-child(7):hover {
-                    border-color: rgba(255, 193, 7, 0.3);
-                }
-                .tp-blog-item:nth-child(8):hover {
-                    border-color: rgba(23, 162, 184, 0.3);
-                }
+              }
             `}</style>
         </>
     );

@@ -14,6 +14,34 @@ const ServiceDetailsArea = ({ service }) => {
     const challange_titel = "The Challenge";
     const challange_des = serviceData?.challange_des || "Default challenge description.";
 
+    // Get service title from service data
+    const serviceTitle = serviceData?.title || "Service";
+
+    // Determine relevant icon based on service title
+    const getServiceIcon = (title) => {
+        if (title.includes("Software") || title.includes("Application")) {
+            return "fas fa-laptop-code";
+        } else if (title.includes("Infrastructure") || title.includes("Development")) {
+            return "fas fa-server";
+        } else if (title.includes("Enterprise")) {
+            return "fas fa-building";
+        } else if (title.includes("Governance") || title.includes("Compliance")) {
+            return "fas fa-gavel";
+        } else if (title.includes("Facilities") || title.includes("Asset")) {
+            return "fas fa-warehouse";
+        } else if (title.includes("Security") || title.includes("Safety")) {
+            return "fas fa-shield-alt";
+        } else if (title.includes("ICT") || title.includes("Telecom") || title.includes("Analytics")) {
+            return "fas fa-network-wired";
+        } else if (title.includes("Education")) {
+            return "fas fa-graduation-cap";
+        } else {
+            return "fas fa-cogs";
+        }
+    };
+
+    const serviceIcon = getServiceIcon(serviceTitle);
+
     return (
         <>
             <div className="sv-details-area pt-100 pb-100">
@@ -26,156 +54,79 @@ const ServiceDetailsArea = ({ service }) => {
                                 <div className="sv-details-title-box mb-55">
                                     <h4 className="sv-details-title">{overview_title}</h4>
                                     
-                                    {/* Key Benefit Highlight */}
+                                    {/* Key Benefit Highlight - Updated to have icons on top */}
                                     {key_benefit && (
-                                        <div className="key-benefit-highlight" style={{
-                                            background: 'linear-gradient(135deg, #007bff, #0056b3)',
-                                            color: 'white',
-                                            padding: '16px 24px',
-                                            borderRadius: '12px',
-                                            margin: '20px 0',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            boxShadow: '0 4px 15px rgba(0, 123, 255, 0.2)'
-                                        }}>
-                                            <div style={{
-                                                background: 'rgba(255,255,255,0.2)',
-                                                borderRadius: '50%',
-                                                width: '40px',
-                                                height: '40px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                marginRight: '16px'
-                                            }}>
-                                                <i className="fas fa-star" style={{ fontSize: '18px' }}></i>
+                                        <div className="key-benefit-highlight service-card">
+                                          {/* Icon on top */}
+                                          <div className="service-icon-top mb-25">
+                                            <div className="icon-placeholder">
+                                              <i className={`${serviceIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
                                             </div>
-                                            <div>
-                                                <strong style={{ fontSize: '1.1rem', display: 'block', marginBottom: '4px' }}>
-                                                    Key Benefit
-                                                </strong>
-                                                <span style={{ fontSize: '0.95rem', opacity: '0.95' }}>
-                                                    {key_benefit}
-                                                </span>
-                                            </div>
+                                          </div>
+                                          
+                                          <div className="service-header mb-25">
+                                            <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{serviceTitle}</h3>
+                                          </div>
+                                          
+                                          <div className="service-details mb-25">
+                                            <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                              Key Benefit:
+                                            </h4>
+                                            <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{key_benefit}</p>
+                                          </div>
+                                          
+                                          <div className="service-type">
+                                            <span className="type-badge">Primary Advantage</span>
+                                          </div>
                                         </div>
                                     )}
                                     
                                     <p>{overview_des}</p>
                                 </div>
 
-                                {/* ATTRACTIVE FEATURES CARDS - Using Blog Grid Structure */}
-                                <div className="service-features-cards mb-50 blog-grid-inner">
-                                    <h4 className="sv-details-text-title pb-30">Going Beyond the Usual</h4>
-                                    <div className="row">
+                                {/* SERVICE OFFERINGS - Updated to have icons on top */}
+                                <div className="service-features-cards mb-50">
+                                    <h4 className="sv-details-text-title pb-30">What We Offer</h4>
+                                    <div className="row g-4">
                                         {overview_list.map((item, i) => {
-                                            // Array of gradient colors for feature cards
-                                            const gradients = [
-                                                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                                'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-                                                'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-                                                'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-                                                'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-                                                'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
+                                            // Split item into title and description parts
+                                            const itemParts = item.split(':');
+                                            const boldTitle = itemParts.length > 1 ? itemParts[0] : '';
+                                            const descriptionText = itemParts.length > 1 ? itemParts.slice(1).join(':') : item;
+                                            
+                                            // Determine different icons for each card
+                                            const featureIcons = [
+                                              "fas fa-laptop-code",
+                                              "fas fa-server",
+                                              "fas fa-building",
+                                              "fas fa-gavel",
+                                              "fas fa-warehouse",
+                                              "fas fa-shield-alt",
+                                              "fas fa-network-wired",
+                                              "fas fa-graduation-cap",
+                                              "fas fa-cogs",
+                                              "fas fa-chart-line"
                                             ];
-                                            const gradient = gradients[i % gradients.length];
-
-                                            // Array of icons for features
-                                            const icons = [
-                                                'fas fa-star',
-                                                'fas fa-cogs',
-                                                'fas fa-users',
-                                                'fas fa-shield-alt',
-                                                'fas fa-rocket',
-                                                'fas fa-chart-line'
-                                            ];
-                                            const iconClass = icons[i % icons.length];
-
+                                            const featureIcon = featureIcons[i % featureIcons.length];
+                                            
                                             return (
-                                                <div key={i} className="col-xl-4 col-lg-6 col-md-6 mb-30 wow tpfadeUp"
-                                                     data-wow-duration=".9s" data-wow-delay={`${0.2 + (i * 0.1)}s`}>
-                                                    <div className="tp-blog-item">
-                                                        {/* Feature Icon/Thumb */}
-                                                        <div className="tp-blog-thumb fix" style={{
-                                                          background: gradient,
-                                                          display: 'flex',
-                                                          alignItems: 'center',
-                                                          justifyContent: 'center',
-                                                          minHeight: '140px',
-                                                          position: 'relative'
-                                                        }}>
-                                                          <i className={`${iconClass}`} style={{
-                                                            fontSize: '36px',
-                                                            color: 'white',
-                                                            textShadow: '0 2px 8px rgba(0,0,0,0.3)'
-                                                          }}></i>
-                                                          
-                                                          {/* Feature Number */}
-                                                          <div style={{
-                                                            position: 'absolute',
-                                                            top: '16px',
-                                                            right: '16px',
-                                                            background: 'rgba(255,255,255,0.2)',
-                                                            backdropFilter: 'blur(10px)',
-                                                            color: 'white',
-                                                            width: '32px',
-                                                            height: '32px',
-                                                            borderRadius: '50%',
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'center',
-                                                            fontSize: '14px',
-                                                            fontWeight: 'bold'
-                                                          }}>
-                                                            {String(i + 1).padStart(2, '0')}
-                                                          </div>
+                                                <div key={i} className="col-xl-4 col-md-6">
+                                                    <div className="service-card">
+                                                      {/* Icon on top */}
+                                                      <div className="service-icon-top mb-25">
+                                                        <div className="icon-placeholder">
+                                                          <i className={`${featureIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
                                                         </div>
-
-                                                        {/* Feature Content */}
-                                                        <div className="tp-blog-content">
-                                                            {/* Meta Information */}
-                                                            <div className="tp-blog-meta d-flex align-items-center">
-                                                                <div className="tp-blog-category category-color-1">
-                                                                    <span>Feature</span>
-                                                                </div>
-                                                                <div className="tp-blog-date">
-                                                                    <span>Key Benefit</span>
-                                                                </div>
-                                                            </div>
-
-                                                            {/* Feature Description */}
-                                                            <div className="tp-blog-title-box">
-                                                                <p className="tp-blog-title-sm" style={{
-                                                                  color: '#212529',
-                                                                  fontSize: '0.95rem',
-                                                                  lineHeight: '1.5',
-                                                                  margin: '0',
-                                                                  fontWeight: '500'
-                                                                }}>
-                                                                  {item}
-                                                                </p>
-                                                            </div>
-
-                                                            {/* Author/Action Info */}
-                                                            <div className="tp-blog-author-info-box d-flex align-items-center">
-                                                                <div className="tp-blog-avata" style={{
-                                                                  width: '36px',
-                                                                  height: '36px',
-                                                                  borderRadius: '50%',
-                                                                  background: gradient,
-                                                                  display: 'flex',
-                                                                  alignItems: 'center',
-                                                                  justifyContent: 'center',
-                                                                  color: 'white'
-                                                                }}>
-                                                                  <i className="fas fa-check" style={{fontSize: '12px'}}></i>
-                                                                </div>
-                                                                <div className="tp-blog-author-info">
-                                                                    <h5>Enhanced</h5>
-                                                                    <span>Service Quality</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                      </div>
+            
+                                                      <div className="service-details mb-25">
+                                                        {boldTitle && (
+                                                            <h4 className="service-title" style={{ fontWeight: '880', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                                                {boldTitle}:
+                                                            </h4>
+                                                        )}
+                                                        <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: descriptionText }}></p>
+                                                      </div>
                                                     </div>
                                                 </div>
                                             );
@@ -188,116 +139,74 @@ const ServiceDetailsArea = ({ service }) => {
                                     <p>{challange_des}</p>
                                 </div>
 
-                                {/* SUB-SERVICES SECTION - Using Blog Grid Structure */}
+                                {/* RELATED SERVICES - Updated to have icons on top */}
                                 {serviceData?.sub_services && serviceData.sub_services.length > 0 && (
-                                    <div className="sv-details-sub-services mb-50 blog-grid-inner">
-                                        <h4 className="sv-details-text-title mb-30">Service Components</h4>
-                                        <div className="row">
+                                    <div className="sv-details-sub-services mb-50">
+                                        <h4 className="sv-details-text-title mb-30">Related Offerings</h4>
+                                        <div className="row g-4">
                                             {serviceData.sub_services.map((subService, i) => {
-                                                // Array of gradient colors for sub-services
-                                                const gradients = [
-                                                    'linear-gradient(135deg, #007bff, #0056b3)',
-                                                    'linear-gradient(135deg, #28a745, #1e5e2a)',
-                                                    'linear-gradient(135deg, #fd7e14, #b8570c)',
-                                                    'linear-gradient(135deg, #6f42c1, #4a2680)',
-                                                    'linear-gradient(135deg, #20c997, #167f5c)',
-                                                    'linear-gradient(135deg, #dc3545, #a71e2a)'
+                                                // Split description into title and description parts
+                                                const descParts = subService.description.split(':');
+                                                const boldDescTitle = descParts.length > 1 ? descParts[0] : '';
+                                                const descText = descParts.length > 1 ? descParts.slice(1).join(':') : subService.description;
+                                                
+                                                // Determine different icons for each card
+                                                const subServiceIcons = [
+                                                  "fas fa-cogs",
+                                                  "fas fa-tools",
+                                                  "fas fa-wrench",
+                                                  "fas fa-sliders-h",
+                                                  "fas fa-cog",
+                                                  "fas fa-gear"
                                                 ];
-                                                const gradient = gradients[i % gradients.length];
-
-                                                // Array of icons for sub-services
-                                                const icons = [
-                                                    'fas fa-cogs',
-                                                    'fas fa-users',
-                                                    'fas fa-chart-bar',
-                                                    'fas fa-shield-alt',
-                                                    'fas fa-cloud',
-                                                    'fas fa-tools'
-                                                ];
-                                                const iconClass = icons[i % icons.length];
-
+                                                const subServiceIcon = subServiceIcons[i % subServiceIcons.length];
+                                                
                                                 return (
-                                                    <div key={i} className="col-lg-4 col-md-6 mb-30">
-                                                        <div className="tp-blog-item">
-                                                            {/* Sub-service Icon/Thumb */}
-                                                            <div className="tp-blog-thumb fix" style={{
-                                                              background: gradient,
-                                                              display: 'flex',
-                                                              alignItems: 'center',
-                                                              justifyContent: 'center',
-                                                              minHeight: '140px'
-                                                            }}>
-                                                              <i className={`${iconClass}`} style={{
-                                                                fontSize: '32px',
-                                                                color: 'white',
-                                                                textShadow: '0 2px 6px rgba(0,0,0,0.3)'
-                                                              }}></i>
+                                                    <div key={i} className="col-xl-4 col-md-6">
+                                                        <div className="service-card">
+                                                          {/* Icon on top */}
+                                                          <div className="service-icon-top mb-25">
+                                                            <div className="icon-placeholder">
+                                                              <i className={`${subServiceIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
                                                             </div>
-
-                                                            {/* Sub-service Content */}
-                                                            <div className="tp-blog-content">
-                                                                {/* Meta Information */}
-                                                                <div className="tp-blog-meta d-flex align-items-center">
-                                                                    <div className="tp-blog-category category-color-1">
-                                                                        <span>Component</span>
-                                                                    </div>
-                                                                    <div className="tp-blog-date">
-                                                                        <span>{String(i + 1).padStart(2, '0')}</span>
-                                                                    </div>
-                                                                </div>
-
-                                                                {/* Sub-service Title */}
-                                                                <div className="tp-blog-title-box">
-                                                                    <h4 className="tp-blog-title-sm">
-                                                                        {subService.title}
-                                                                    </h4>
-                                                                </div>
-
-                                                                {/* Sub-service Description */}
-                                                                <p style={{
-                                                                  color: '#64748b',
-                                                                  fontSize: '0.875rem',
-                                                                  lineHeight: '1.5',
-                                                                  marginBottom: '20px'
-                                                                }}>
-                                                                  {subService.description}
-                                                                </p>
-
-                                                                {/* Features List */}
-                                                                <div className="features-list mb-3">
-                                                                    {subService.features.slice(0, 2).map((feature, j) => (
-                                                                        <small key={j} style={{
-                                                                          display: 'block',
-                                                                          color: '#6c757d',
-                                                                          marginBottom: '4px',
-                                                                          fontSize: '0.8rem'
-                                                                        }}>
-                                                                            <i className="fas fa-check" style={{color: '#28a745', marginRight: '6px'}}></i>
-                                                                            {feature}
-                                                                        </small>
-                                                                    ))}
-                                                                </div>
-
-                                                                {/* Author/Action Info */}
-                                                                <div className="tp-blog-author-info-box d-flex align-items-center">
-                                                                    <div className="tp-blog-avata" style={{
-                                                                      width: '36px',
-                                                                      height: '36px',
-                                                                      borderRadius: '50%',
-                                                                      background: gradient,
-                                                                      display: 'flex',
-                                                                      alignItems: 'center',
-                                                                      justifyContent: 'center',
-                                                                      color: 'white'
-                                                                    }}>
-                                                                      <i className="fas fa-plus" style={{fontSize: '12px'}}></i>
-                                                                    </div>
-                                                                    <div className="tp-blog-author-info">
-                                                                        <h5>Service Module</h5>
-                                                                        <span>Available Features</span>
-                                                                    </div>
-                                                                </div>
+                                                          </div>
+                                                          
+                                                          <div className="service-header mb-25">
+                                                            <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{subService.title}</h3>
+                                                          </div>
+                                                          
+                                                          <div className="service-details mb-25">
+                                                            {boldDescTitle && (
+                                                                <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                                                    {boldDescTitle}:
+                                                                </h4>
+                                                            )}
+                                                            <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{descText}</p>
+                                                            <div className="features-list">
+                                                                {subService.features.slice(0, 3).map((feature, j) => {
+                                                                    // Split feature into title and description parts
+                                                                    const featureParts = feature.split(':');
+                                                                    const boldFeatureTitle = featureParts.length > 1 ? featureParts[0] : '';
+                                                                    const featureText = featureParts.length > 1 ? featureParts.slice(1).join(':') : feature;
+                                                                    
+                                                                    return (
+                                                                        <div key={j} className="feature-item" style={{ marginBottom: '12px' }}>
+                                                                            <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                                                                                <i className="fas fa-check" style={{ color: '#007bff', marginRight: '8px', marginTop: '4px', fontSize: '12px' }}></i>
+                                                                                <div>
+                                                                                    {boldFeatureTitle && (
+                                                                                        <span style={{ fontWeight: '600', fontSize: '13px', display: 'block', color: '#222', marginBottom: '4px' }}>
+                                                                                            {boldFeatureTitle}:
+                                                                                        </span>
+                                                                                    )}
+                                                                                    <span style={{ fontSize: '13px', color: '#495057' }}>{featureText}</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    );
+                                                                })}
                                                             </div>
+                                                          </div>
                                                         </div>
                                                     </div>
                                                 );
@@ -322,23 +231,68 @@ const ServiceDetailsArea = ({ service }) => {
                 </div>
             </div>
 
+            {/* Styles */}
             <style jsx>{`
-                /* Service details custom enhancements */
-                .features-list {
-                    text-align: left;
+                .section-title h2 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    color: #222;
                 }
                 
-                .tp-blog-item .features-list {
-                    margin-bottom: 20px;
+                .service-card {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                    transition: all 0.3s ease;
+                    height: 100%;
+                    border: 1px solid #eee;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
                 }
                 
-                /* Custom hover effects for service features */
-                .service-features-cards .tp-blog-item:hover {
-                    transform: translateY(-6px);
+                .service-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
                 }
                 
-                .sv-details-sub-services .tp-blog-item:hover {
-                    transform: translateY(-4px);
+                .service-type {
+                    padding-top: 20px;
+                    border-top: 1px solid #eee;
+                    width: 100%;
+                }
+                
+                .type-badge {
+                    background-color: #007bff; /* Blue color for services */
+                    color: white;
+                    padding: 4px 12px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+                
+                .icon-placeholder {
+                    border: none;
+                    border-radius: 8px;
+                    padding: 20px;
+                    min-height: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                
+                @media (max-width: 768px) {
+                    .section-title h2 {
+                        font-size: 28px;
+                    }
+                    
+                    .service-card {
+                        padding: 20px;
+                    }
                 }
             `}</style>
         </>

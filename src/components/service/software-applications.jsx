@@ -57,57 +57,144 @@ const ServiceArea = () => {
                           </div>
                       </div>
                    </div>
-                   <div className="row">
-
-                      {/* FEATURED SERVICE BLOCK */}
-                      <div className="col-xl-8 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                          <div className="tp-service-3-item mb-30 p-relative z-index" style={{backgroundImage: `url(${bg_img})`}}>
-                              <div className="tp-service-3-icon">
-                                  <Image src={service_icon_1} alt="theme-pure" />
+                   <div className="row g-4">
+                      {/* SERVICE CATEGORY CARDS - Updated to have icons on top with different icons per card */}
+                      {service_data.slice(17, 24).map((item, i) => {
+                        // Split description into title and description parts
+                        let boldTitle = '';
+                        let descriptionText = '';
+                        if (typeof item.description === 'string') {
+                            const descriptionParts = item.description.split(':');
+                            boldTitle = descriptionParts.length > 1 ? descriptionParts[0] : '';
+                            descriptionText = descriptionParts.length > 1 ? descriptionParts.slice(1).join(':') : item.description;
+                        } else {
+                            descriptionText = 'Learn more about this service';
+                        }
+                        
+                        // Determine relevant icon based on item title
+                        let cardIcon = "fas fa-cogs";
+                        if (item.title.includes("Software") || item.title.includes("Application")) {
+                            cardIcon = "fas fa-laptop-code";
+                        } else if (item.title.includes("Infrastructure") || item.title.includes("Development")) {
+                            cardIcon = "fas fa-server";
+                        } else if (item.title.includes("Enterprise")) {
+                            cardIcon = "fas fa-building";
+                        } else if (item.title.includes("Governance") || item.title.includes("Compliance")) {
+                            cardIcon = "fas fa-gavel";
+                        } else if (item.title.includes("Facilities") || item.title.includes("Asset")) {
+                            cardIcon = "fas fa-warehouse";
+                        } else if (item.title.includes("Security") || item.title.includes("Safety")) {
+                            cardIcon = "fas fa-shield-alt";
+                        } else if (item.title.includes("ICT") || item.title.includes("Telecom") || item.title.includes("Analytics")) {
+                            cardIcon = "fas fa-network-wired";
+                        } else if (item.title.includes("Education")) {
+                            cardIcon = "fas fa-graduation-cap";
+                        }
+                        
+                        return (
+                          <div key={i} className="col-xl-4 col-md-6">
+                            <div className="service-card">
+                              {/* Icon on top */}
+                              <div className="service-icon-top mb-25">
+                                <div className="icon-placeholder">
+                                  <i className={cardIcon} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                </div>
                               </div>
-                              <div className="tp-service-3-content">
-                                  <span>{service_title}</span>
-                                  <h4 className="tp-service-3-title-sm">
-                                      {/* LINK UPDATE REQUIRED: Should use service_key: */}
-                                      <Link href={`/services/${service_key}`}>{service_info}</Link></h4>
+                              
+                              <div className="service-header mb-25">
+                                <Link href={item.key ? `/services/${item.key}` : "/service-details"} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                  <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{item.title}</h3>
+                                </Link>
                               </div>
-                              <div className="tp-service-3-btn">
-                                  {/* LINK UPDATE REQUIRED: Should use service_key: */}
-                                  <Link className="tp-btn-white-solid" href={`/services/${service_key}`}>Learn More</Link>
+                              
+                              <div className="service-details mb-25">
+                                {boldTitle && (
+                                  <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                    {boldTitle}:
+                                  </h4>
+                                )}
+                                <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>
+                                  {descriptionText}
+                                </p>
                               </div>
-                              <div className="tp-service-3-shape">
-                                  <Image src={service_icon_2} alt="theme-pure" />
+                              
+                              <div className="service-type">
+                                <Link href={item.key ? `/services/${item.key}` : "/service-details"} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                  <span className="type-badge">Learn More</span>
+                                </Link>
                               </div>
+                            </div>
                           </div>
-                      </div>
-
-                      {/* SMALL SERVICE CARDS */}
-                      {service_data.slice(17, 24).map((item, i)  => 
-                          <div key={i} className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                              <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
-                                  <div className="tp-service-sm-icon">
-                                      {item.icon}
-                                  </div>
-                                  <div className="tp-service-sm-content">
-                                      <span>{item.title}</span>
-                                      <h3 className="tp-service-sm-title">
-                                         <Link href={item.key ? `/services/${item.key}` : "/service-details"} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                           {item.title}
-                                         </Link>
-                                      </h3>
-                                      <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '15px' }}>
-                                        {typeof item.description === 'string' ? item.description : 'Learn more about this service'}
-                                      </p>
-                                      <div className="tp-service-sm-link">
-                                         <Link href={item.key ? `/services/${item.key}` : "/service-details"}>Learn More <i className="far fa-arrow-right"></i></Link>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      )} 
+                        );
+                      })}
                    </div>
                </div>
             </div>
+            
+            {/* Styles */}
+            <style jsx>{`
+              .section-title h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: #222;
+              }
+              
+              .service-card {
+                background: white;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                height: 100%;
+                border: 1px solid #eee;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+              }
+              
+              .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+              }
+              
+              .service-type {
+                padding-top: 20px;
+                border-top: 1px solid #eee;
+                width: 100%;
+              }
+              
+              .type-badge {
+                background-color: #007bff; /* Blue color for services */
+                color: white;
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+              }
+              
+              .icon-placeholder {
+                border: none;
+                border-radius: 8px;
+                padding: 20px;
+                min-height: 90px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+              }
+              
+              @media (max-width: 768px) {
+                .section-title h2 {
+                  font-size: 28px;
+                }
+                
+                .service-card {
+                  padding: 20px;
+                }
+              }
+            `}</style>
         </>
     );
 };

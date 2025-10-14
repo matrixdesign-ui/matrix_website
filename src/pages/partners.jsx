@@ -1,15 +1,15 @@
 import React from "react";
 import SEO from "../common/seo";
-import Integrations from "../components/integrations";
+import PartnersPage from "../components/partners";
 import Wrapper from "../layout/wrapper";
 
-const index = () => {
+const Partners = () => {
   return (
     <Wrapper>
-      <SEO pageTitle={"Matrix Vision Systems - Partners & Clients"} />
-      <Integrations />
+      <SEO pageTitle={"Matrix Vision Systems - Partners"} />
+      <PartnersPage />
     </Wrapper>
   );
 };
 
-export default index;
+export default Partners;
