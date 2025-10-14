@@ -13,7 +13,10 @@ const career_content ={
             id: 1, 
             cls: "mb-45",
             title: "Job Responsibilities",
-            description: <>.</>, 
+            description: <>There are many variations of passages of Lorem Ipsum available, but the majority have
+            suffered alteration in some form, by injected humour, or randomised words which don't
+            look even slightly believable. If you are going to use a passage
+            of Lorem Ipsum,anything embarrassing hidden.</>, 
         },
         {
             id: 2, 
@@ -68,7 +71,7 @@ const career_content ={
             id: 5, 
             cls: "",
             title: "Education & Experience",
-            description: <>TBachelors Degree in Interaction, Graphic Design, Media Arts or similar.</>, 
+            description: <>Bachelors Degree in Interaction, Graphic Design, Media Arts or similar.</>, 
         },
 
     ]
