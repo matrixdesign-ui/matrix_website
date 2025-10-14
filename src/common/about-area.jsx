@@ -45,7 +45,7 @@ const about_content = {
     des: <>Matrix Vision Systems is a leading provider of technology solutions, specializing in enterprise software systems, facilities management systems, and advanced security management systems. We empower businesses to thrive in today's evolving digital landscape.</>,
 
     about_list: [
-        <>Custom Software Development</>,
+        <>Enterprise Software Systems & Custom Development</>,
         <>Enterprise Asset Management</>,
         <>Advanced Security Systems</>,
     ],
