@@ -3,7 +3,7 @@ import Head from "next/head";
 const SEO = ({ 
   pageTitle,
   description = "Matrix Vision Systems - Leading provider of comprehensive IT solutions including Infrastructure Development, Enterprise Solutions, Security Systems, and Digital Transformation services across Kenya and East Africa.",
-  keywords = "IT solutions, enterprise software, digital transformation, cybersecurity, infrastructure development, Kenya, East Africa, Matrix Vision Systems",
+  keywords = "IT solutions, legal management, Contract lifecycle management, e-board, enterprise software, digital transformation, cybersecurity, infrastructure development, Kenya, East Africa, Matrix Vision Systems",
   image = "/assets/img/matrix-og-image.jpg",
   url,
   type = "website",
@@ -17,7 +17,7 @@ const SEO = ({
 }) => {
   const siteTitle = "Matrix Vision Systems";
   const fullTitle = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://matrix.co.ke";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://matrixsystems.co.ke";
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
   const fullImage = image.startsWith('http') ? image : `${baseUrl}${image}`;
   
