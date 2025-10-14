@@ -33,7 +33,7 @@ const setting = {
   const journey_data = [
     {
         id: "01",
-        date: "2015",
+        date: "2009",
         title: <>Matrix <br/>Foundation</>,
         description: <>Matrix Vision Systems was founded with a vision to provide innovative technology solutions.</>,
     },
@@ -41,7 +41,7 @@ const setting = {
         id: "02",
         date: "2017",
         title: <>Expanded Service<br/>Offerings</>,
-        description: <>Expanded service offerings to include enterprise facilities and asset management solutions.</>,
+        description: <>Expanded service offerings to include enterprise software solutions, facilities and asset management solutions.</>,
     },
     {
         id: "03",
@@ -98,7 +98,7 @@ const JourneyArea = () => {
                 <div className="journey-section-box">
                   <h5 className="inner-section-subtitle pb-10">TIMELINE</h5>
                   <h3 className="ab-brand-title pb-0 mb-0">
-                    Journey Was Started
+                    The Journey
                   </h3>
                 </div>
               </div>

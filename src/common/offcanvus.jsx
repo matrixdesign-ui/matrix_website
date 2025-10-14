@@ -26,7 +26,7 @@ const Offcanvus = ({sidebarOpen, setSidebarOpen}) => {
                     <h4 className="offcanva-title">Contact Us</h4>
                     <Link href="https://www.google.com/maps/place/Muguga+Green,+Nairobi/@-1.2670336,36.7852327,17z" target="_blank">
                         Mais. 7, B.S.K. Village, <br />
-                        Muguga Greens, Westlands, Nairobi
+                        Muguga Green, Westlands, Nairobi
                     </Link>
                     <br />
                     <Link href="mailto:info@matrixsystems.co.ke">info@matrixsystems.co.ke</Link>

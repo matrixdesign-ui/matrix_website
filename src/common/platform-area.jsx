@@ -19,8 +19,8 @@ const platform_data = [
         cls: "one", 
         count: "01",
         title: "Software Systems",
-        sub_title: "Custom Solutions",
-        des: <>Tailored software development and integration services to streamline your operations.</>
+        sub_title: "Enterprise Systems and Custom Solutions",
+        des: <>Industry leading enterrpise solutions and tailored software development and integration services to streamline your operations.</>
         
     },
     {
