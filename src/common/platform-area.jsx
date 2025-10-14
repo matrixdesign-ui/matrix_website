@@ -4,12 +4,12 @@ import React, {useEffect, useState} from 'react';
 import bg_shape from "../../public/assets/img/platform/p-bg.png";
 import platform_img from "../../public/assets/img/payment/platform-1.png"; 
 
-const platform_content ={
-    sub_title: "Our Expertise",
-    title: "Comprehensive Technology Solutions",
-    description: <>Matrix Vision Systems delivers integrated solutions across diverse industries, driving efficiency and innovation.</>,
-
+const platform_content = {
+    sub_title: "Why Join Us",
+    title: "Your Career at Matrix Vision Systems",
+    description: <>At Matrix Vision Systems, we're shaping the future of technology across Africa. Join a team that values innovation, growth, and making a real impact.</>,
 }
+
 const { sub_title, title, description }  = platform_content
 
 // plat form data 
@@ -18,36 +18,36 @@ const platform_data = [
         id: 1,
         cls: "one", 
         count: "01",
-        title: "Software Systems",
-        sub_title: "Enterprise Systems and Custom Solutions",
-        des: <>Industry leading enterrpise solutions and tailored software development and integration services to streamline your operations.</>
+        title: "Innovative Projects",
+        sub_title: "Work on Cutting-Edge Technology",
+        des: <>Be part of transformative projects across diverse industries including government, healthcare, education, and enterprise. Work with the latest technologies in automation, security, and digital transformation.</>
         
     },
     {
         id: 2,
         cls: "two", 
         count: "02",
-        title: "Enterprise Facilities Management",
-        sub_title: "Asset Optimization",
-        des: <>Comprehensive solutions for managing facilities, assets, and resources efficiently.</>,
+        title: "Professional Growth",
+        sub_title: "Continuous Learning & Development",
+        des: <>Access to training programs, certifications, and mentorship opportunities. We invest in your career development through workshops, conferences, and skill-building initiatives.</>,
         
     },
     {
         id: 3,
         cls: "three", 
         count: "03",
-        title: "Advanced Security",
-        sub_title: "Secure Protection",
-        des: <>Cutting-edge security systems and surveillance technologies to protect your assets and personnel.</>,
+        title: "Inclusive Culture",
+        sub_title: "Collaborative Environment",
+        des: <>Join a diverse team that values different perspectives and backgrounds. We foster an inclusive workplace where everyone can contribute and thrive.</>,
         
     },
     {
         id: 4,
         cls: "four", 
         count: "04",
-        title: "ICT Infrastructure",
-        sub_title: "Reliable Connectivity",
-        des: <>Reliable and scalable ICT infrastructure solutions to support your communication and data needs.</>,
+        title: "Competitive Benefits",
+        sub_title: "Comprehensive Package",
+        des: <>Enjoy health insurance, flexible working arrangements, performance bonuses, and opportunities for career advancement in a growing company.</>,
         
     },
 ]

@@ -5,87 +5,155 @@ import Link from 'next/link';
 import React,{useState} from 'react';
 
 
-const career_content ={
-    sub_title: "Developer",
-    title: "Senior Frontend Developer",
-    job_post_details: [
-        {
-            id: 1, 
-            cls: "mb-45",
-            title: "Job Responsibilities",
-            description: <>There are many variations of passages of Lorem Ipsum available, but the majority have
-            suffered alteration in some form, by injected humour, or randomised words which don't
-            look even slightly believable. If you are going to use a passage
-            of Lorem Ipsum,anything embarrassing hidden.</>, 
-        },
-        {
-            id: 2, 
-            cls: "mb-45",
-            title: "Job Requirements",
-            description: <>There are many variations of passages of Lorem Ipsum available, but the
-            majority have suffered alteration in some form, by injected humour, or randomised words
-            which don't look even slightly believable. If you are going to use a passage
-            of Lorem Ipsum,anything embarrassing hidden.</>,
-            experiences: [
-                <>5+ years experience in backend engineering, <br />
-                ideally in Python or Node</>,
-                <>Experience building and operating backend <br />
-                distributed systems</>,
-                <>Experience designing serverless architectures <br />
-                on AWS infrastructure</>, 
+const career_contents = {
+    'intern-of-elec-electronics-engineer': {
+        sub_title: "Engineering",
+        title: "Intern of Elec & Electronics Engineer (Automation & Systems Integration)",
+        location: "Nairobi, Kenya",
+        type: "Internship",
+        level: "Entry Level",
+        job_post_details: [
+            {
+                id: 1, 
+                cls: "mb-45",
+                title: "Job Responsibilities",
+                description: <>As an Electrical & Electronics Engineering Intern, you will work closely with our senior engineers on automation and systems integration projects. You'll gain hands-on experience in designing, implementing, and maintaining automated systems for various industrial applications.</>,
+                experiences: [
+                    <>Assist in the design and development of automation systems</>,
+                    <>Support the integration of electrical and electronic components</>,
+                    <>Participate in testing and commissioning of automated systems</>,
+                    <>Document technical specifications and system designs</>,
+                    <>Collaborate with cross-functional teams on project implementation</>,
+                    <>Troubleshoot and resolve technical issues in existing systems</>
+                ],
+            },
+            {
+                id: 2, 
+                cls: "mb-45",
+                title: "Job Requirements",
+                description: <>We are looking for a motivated Electrical & Electronics Engineering student or recent graduate who is passionate about automation and systems integration.</>,
+                experiences: [
+                    <>Currently pursuing or recently completed a degree in Electrical & Electronics Engineering</>,
+                    <>Basic understanding of automation systems and control theory</>,
+                    <>Familiarity with PLC programming (preferred)</>,
+                    <>Knowledge of electrical circuit design and analysis</>,
+                    <>Strong problem-solving skills and attention to detail</>,
+                    <>Excellent communication and teamwork abilities</>
+                ],
+            },
+            {
+                id: 3, 
+                cls: "mb-45",
+                title: "Our Benefits",
+                description: <>As an intern at Matrix Vision Systems, you'll gain valuable industry experience while working on cutting-edge technology projects.</>,
+                experiences: [
+                    <>Hands-on experience with real-world projects</>,
+                    <>Mentorship from experienced engineers</>,
+                    <>Exposure to latest automation technologies</>,
+                    <>Flexible working hours to accommodate academic schedule</>,
+                    <>Potential for future employment opportunities</>,
+                    <>Certificate of completion</>
+                ],
+            },
+            {
+                id: 4, 
+                cls: "",
+                title: "Education & Experience",
+                description: <>Applicants should be currently enrolled in or have recently completed a Bachelor's degree in Electrical & Electronics Engineering or related field.</>,
+            },
+        ]
+    }
+};
 
-            ],
-        },
-        {
-            id: 3, 
-            cls: "mb-45",
-            title: "Our Benefits",
-            description: <>Now, the paradigm has shifted. The question is not why you should include
-            a content marketing strategy.</>,
-            experiences: [
-                <>Flexible hours</>,
-                <>Unlimited PTO</>,
-                <>Medical insurance</>,
-                <>Career growth</>,
+const CareerDetailsArea = ({ id }) => {
+    // Default content if no ID is provided or ID is not found
+    const career_content = id && career_contents[id] ? career_contents[id] : {
+        sub_title: "Developer",
+        title: "Senior Frontend Developer",
+        location: "London, UK",
+        type: "Full-time",
+        level: "Senior",
+        job_post_details: [
+            {
+                id: 1, 
+                cls: "mb-45",
+                title: "Job Responsibilities",
+                description: <>There are many variations of passages of Lorem Ipsum available, but the majority have
+                suffered alteration in some form, by injected humour, or randomised words which don't
+                look even slightly believable. If you are going to use a passage
+                of Lorem Ipsum,anything embarrassing hidden.</>, 
+            },
+            {
+                id: 2, 
+                cls: "mb-45",
+                title: "Job Requirements",
+                description: <>There are many variations of passages of Lorem Ipsum available, but the
+                majority have suffered alteration in some form, by injected humour, or randomised words
+                which don't look even slightly believable. If you are going to use a passage
+                of Lorem Ipsum,anything embarrassing hidden.</>,
+                experiences: [
+                    <>5+ years experience in backend engineering, <br />
+                    ideally in Python or Node</>,
+                    <>Experience building and operating backend <br />
+                    distributed systems</>,
+                    <>Experience designing serverless architectures <br />
+                    on AWS infrastructure</>, 
 
-            ],
-        },
-        {
-            id: 4, 
-            cls: "mb-20",
-            title: "Job Requirements",
-            description: <>There are many variations of passages of Lorem Ipsum available, but the
-            majority have suffered alteration in some form, by injected humour, or randomised words
-            which don't look even slightly believable. If you are going to use a passage
-            of Lorem Ipsum,anything embarrassing hidden.</>,
-            experiences: [
-                <>Experience building software and systems that balance <br /> simplicity,
-                flexibility, and security.</>,
-                <>Track record with a smart contract language <br /> such as Solidity</>,
-                <>A customer-focused and product-focused mindset.</>,
-                
+                ],
+            },
+            {
+                id: 3, 
+                cls: "mb-45",
+                title: "Our Benefits",
+                description: <>Now, the paradigm has shifted. The question is not why you should include
+                a content marketing strategy.</>,
+                experiences: [
+                    <>Flexible hours</>,
+                    <>Unlimited PTO</>,
+                    <>Medical insurance</>,
+                    <>Career growth</>,
 
-            ],
-        },
-        {
-            id: 5, 
-            cls: "",
-            title: "Education & Experience",
-            description: <>Bachelors Degree in Interaction, Graphic Design, Media Arts or similar.</>, 
-        },
+                ],
+            },
+            {
+                id: 4, 
+                cls: "mb-20",
+                title: "Job Requirements",
+                description: <>There are many variations of passages of Lorem Ipsum available, but the
+                majority have suffered alteration in some form, by injected humour, or randomised words
+                which don't look even slightly believable. If you are going to use a passage
+                of Lorem Ipsum,anything embarrassing hidden.</>,
+                experiences: [
+                    <>Experience building software and systems that balance <br /> simplicity,
+                    flexibility, and security.</>,
+                    <>Track record with a smart contract language <br /> such as Solidity</>,
+                    <>A customer-focused and product-focused mindset.</>,
+                    
 
-    ]
-}
-const {sub_title, title, job_post_details}  = career_content
+                ],
+            },
+            {
+                id: 5, 
+                cls: "",
+                title: "Education & Experience",
+                description: <>Bachelors Degree in Interaction, Graphic Design, Media Arts or similar.</>, 
+            },
 
-
-const CareerDetailsArea = () => {
-    const [isOpen, setIsOpen]  = useState(false)
+        ]
+    };
+    
+    const {sub_title, title, location, type, level, job_post_details}  = career_content;
+    const [isOpen, setIsOpen]  = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState('');
+    const [experienceValue, setExperienceValue] = useState('');
     const applyHandler = () =>{
         setIsOpen(true) 
     }
 
-  const selectHandler = (e) => {};
+    const selectHandler = (value) => {
+        setExperienceValue(value);
+    };
 
 
     return (
@@ -95,6 +163,16 @@ const CareerDetailsArea = () => {
                   <div className="row align-content-start">
                      <div className="col-xl-7 col-lg-7">
                         <div className="career-details-wrapper">
+                           {/* Back button */}
+                           <div className="mb-30">
+                              <Link href="/career" className="tp-btn-inner tp-btn-hover alt-color-orange">
+                                 <span>
+                                    <i className="fal fa-arrow-left"></i> Back to Careers
+                                 </span>
+                                 <b></b>
+                              </Link>
+                           </div>
+                           
                            <div className="career-details-title-box">
                               <span>{sub_title}</span>
                               <h4 className="career-details-title">{title}</h4>
@@ -102,13 +180,13 @@ const CareerDetailsArea = () => {
                            <div className="career-details-location-box">
                               <span> 
                                  <LocationIconThree />
-                                 London, UK
+                                 {location}
                               </span>
                               <span> 
                                  <ClockIcon />
-                                 Full-time
+                                 {type}
                               </span>
-                              <span>Senior</span>
+                              <span>{level}</span>
                            </div>
                            {job_post_details.map((item, i)  => 
                               <div key={i} className={`career-details-job-responsiblity ${item.cls}`}>
@@ -145,40 +223,73 @@ const CareerDetailsArea = () => {
                         {isOpen &&
                         <div id="show" className="career-details-hide-wrapper" >
                         
+                           <form onSubmit={(e) => {
+                                e.preventDefault();
+                                setIsSubmitting(true);
+                                setSubmitMessage('');
+                                
+                                // Get form data
+                                const formData = new FormData(e.target);
+                                // Add experience value manually since NiceSelect doesn't directly support it
+                                if (experienceValue) {
+                                    formData.append('experience', experienceValue);
+                                }
+                                
+                                // For static export, we'll just show the data that would be sent
+                                // In a real implementation with a backend, this would send to Victor.Tonui@matrixsystems.co.ke
+                                const formEntries = {};
+                                for (let [key, value] of formData.entries()) {
+                                    formEntries[key] = value;
+                                }
+                                
+                                console.log('Career Application Data:', formEntries);
+                                
+                                // Simulate API call delay
+                                setTimeout(() => {
+                                    setIsSubmitting(false);
+                                    setSubmitMessage('Thank you! Your application has been submitted successfully. We will contact you soon.');
+                                    
+                                    // Reset form on success
+                                    if (true) { // Simulating success
+                                        e.target.reset();
+                                        setExperienceValue('');
+                                    }
+                                }, 1500);
+                           }}>
                            <div className="career-details-apply-info-box pb-10">
                               <div className="career-details-profile-box pb-20">
                                  <h4 className="career-details-title-xs">Profile</h4>
                                  <p>Basic information about you</p>
                               </div>
                               <div className="postbox__comment-form">
-                                 <form  onSubmit={(e) => e.preventDefault()} className="box">
+                                 <div className="box">
                                     <div className="row gx-20">
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-30">
-                                             <input type="text" className="inputText" required />
+                                             <input type="text" name="fullName" className="inputText" required />
                                              <span className="floating-label">Full  Name</span>
                                           </div>
                                        </div>
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-30">
-                                             <input type="text" className="inputText" required />
+                                             <input type="email" name="email" className="inputText" required />
                                              <span className="floating-label">Your Email</span>
                                           </div>
                                        </div>
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-30">
-                                             <input type="text" className="inputText" required />
+                                             <input type="tel" name="phone" className="inputText" required />
                                              <span className="floating-label">Phone</span>
                                           </div>
                                        </div>
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-35">
-                                             <input type="text" className="inputText" required />
+                                             <input type="text" name="address" className="inputText" required />
                                              <span className="floating-label">Address</span>
                                           </div>
                                        </div>
                                     </div>
-                                 </form>
+                                 </div>
                               </div>
                            </div>
 
@@ -188,17 +299,17 @@ const CareerDetailsArea = () => {
                                  <p>Summarize your relevant experience</p>
                               </div>
                               <div className="postbox__comment-form">
-                                 <form onSubmit={(e) => e.preventDefault()} className="box">
+                                 <div className="box">
                                     <div className="row gx-20">
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-30">
-                                             <input type="text" className="inputText" required />
+                                             <input type="text" name="linkedin" className="inputText" required />
                                              <span className="floating-label">LinkedIn Profile</span>
                                           </div>
                                        </div>
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-30">
-                                             <input type="text" className="inputText" required />
+                                             <input type="text" name="website" className="inputText" />
                                              <span className="floating-label">Personal website</span>
                                           </div>
                                        </div>
@@ -206,12 +317,13 @@ const CareerDetailsArea = () => {
                                           <div className="postbox__select mb-30"> 
                                              <NiceSelect
                                              options={[
-                                             { value: "Your Inquiry about", text: "Your Inquiry about" },
-                                             { value: "01 Year", text: "01 Year" },
-                                             { value: "02 Year", text: "02 Year" },
-                                             { value: "03 Year", text: "03 Year" },
-                                             { value: "04 Year", text: "04 Year" },
-                                             { value: "05 Year", text: "05 Year" },
+                                             { value: "", text: "Years of Experience" },
+                                             { value: "0", text: "No Experience" },
+                                             { value: "1", text: "1 Year" },
+                                             { value: "2", text: "2 Years" },
+                                             { value: "3", text: "3 Years" },
+                                             { value: "4", text: "4 Years" },
+                                             { value: "5+", text: "5+ Years" },
                                              ]}
                                              defaultCurrent={0}
                                              onChange={selectHandler}
@@ -220,33 +332,33 @@ const CareerDetailsArea = () => {
                                        </div>
                                        <div className="col-12">
                                           <div className="postbox__comment-input mb-35">
-                                             <input type="text" className="inputText" required />
+                                             <input type="text" name="salary" className="inputText" required />
                                              <span className="floating-label">Expected salary</span>
                                           </div>
                                        </div>
                                     </div>
-                                 </form>
+                                 </div>
                               </div>
                               <div className="col-xxl-12">
                                  <div className="postbox__authorization-title-box">
-                                    <h5 className="career-details-title-xs pb-15">US work authorization<span>*</span></h5>
+                                    <h5 className="career-details-title-xs pb-15">Kenya Work Authorization<span>*</span></h5>
                                  </div>
                                  <div className="postbox__authorization p-relative">
                                     <div className="switcher mb-15">
                                        <label htmlFor="toggle-0">
                                           <small className="switcher-icon"> 
-                                             Are you legally authorized to work in the <br /> United States?
+                                             Are you legally authorized to work in <br /> Kenya?
                                           </small>
-                                          <input type="checkbox" id="toggle-0" />
+                                          <input type="checkbox" id="toggle-0" name="workAuthorization" />
                                           <span><small></small></span>
                                        </label>
                                     </div>
                                     <div className="switcher">
                                        <label htmlFor="toggle-1">
                                           <small className="switcher-icon"> 
-                                             Do you or will you require sponsorship for a US <br /> employment visa (e.g. H-1B)?
+                                             Do you or will you require sponsorship for a Kenyan <br /> employment permit?
                                           </small>
-                                          <input type="checkbox" id="toggle-1" />
+                                          <input type="checkbox" id="toggle-1" name="visaRequired" />
                                           <span><small></small></span>
                                        </label>
                                     </div>
@@ -254,7 +366,7 @@ const CareerDetailsArea = () => {
                               </div>
                               <div className="col-xxl-12">
                                  <div className="postbox__comment-input mb-30">
-                                    <textarea className="textareaText" required ></textarea>
+                                    <textarea name="personalNote" className="textareaText" required ></textarea>
                                     <span className="floating-label-2">Personal note</span>
                                  </div>
                               </div>
@@ -263,7 +375,7 @@ const CareerDetailsArea = () => {
                                     <h5 className="career-details-title-xs pb-15">Upload a recent resume or CV</h5>
                                  </div>
                                  <div className="postbox__resume mb-30">
-                                    <input id="cv" type="file" hidden />
+                                    <input id="cv" name="cv" type="file" hidden />
                                     <label htmlFor="cv">
                                        <span> 
                                           Drag to upload your resume, or browse
@@ -273,10 +385,22 @@ const CareerDetailsArea = () => {
                               </div>
                               <div className="col-xxl-12">
                                  <div className="postbox__btn-box mb-50">
-                                    <button className="submit-btn w-100">Submit Application</button>
+                                    <button 
+                                      type="submit" 
+                                      className="submit-btn w-100"
+                                      disabled={isSubmitting}
+                                    >
+                                      {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                                    </button>
+                                    {submitMessage && (
+                                      <div className={`mt-20 ${submitMessage.includes('Thank you!') ? 'text-success' : 'text-danger'}`}>
+                                        {submitMessage}
+                                      </div>
+                                    )}
                                  </div>
                               </div>
                            </div>
+                           </form>
 
                         </div>
                         }

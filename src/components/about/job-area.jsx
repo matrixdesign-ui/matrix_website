@@ -9,6 +9,13 @@ const job_data = {
     carrer_title: "Open Positions",
     carrer_info: <></>,
     job_info: [
+        {
+            id: 1,
+            category: "Intern of Elec & Electronics Engineer (Automation & Systems Integration)",
+            job_time: "Internship",
+            job_location: "Nairobi, Kenya",
+            slug: "intern-of-elec-electronics-engineer"
+        },
         // {
         //     id:1,
         //     category: "Product Designer",
@@ -39,13 +46,9 @@ const job_data = {
         //     job_time: "Full-time",
         //     job_location: "London, UK",
         // },
-
-
     ]
-
 }
 const {sub_title, carrer_info, title, carrer_title, job_info}  = job_data
-
 
 const JobArea = ({style_carrer}) => {
     return (
@@ -96,7 +99,7 @@ const JobArea = ({style_carrer}) => {
                         <div className=" col-lg-3 col-md-3">
                            <div className="job-post-apply-btn text-start text-md-end">
                               <Link className="tp-btn-inner tp-btn-hover alt-color-orange"
-                              href="/career-details"><span>Apply</span> <b></b>
+                              href={`/career-details/${item.slug}`}><span>Apply</span> <b></b>
                               </Link>
                            </div>
                         </div>
