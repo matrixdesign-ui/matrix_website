@@ -71,7 +71,7 @@ const career_content ={
             id: 5, 
             cls: "",
             title: "Education & Experience",
-            description: <>TBachelors Degree in Interaction, Graphic Design, Media Arts or similar.</>, 
+            description: <>Bachelors Degree in Interaction, Graphic Design, Media Arts or similar.</>, 
         },
 
     ]

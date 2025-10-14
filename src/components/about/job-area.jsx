@@ -7,8 +7,7 @@ const job_data = {
     sub_title: "Current Positions",
     title: <>Join our Growing Team <br /> of Doers.</>,
     carrer_title: "Open Positions",
-    carrer_info: <>Borem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque tristique <br/>
-    Et amet risus enim accumsan sit purus sit.</>,
+    carrer_info: <></>,
     job_info: [
         // {
         //     id:1,
