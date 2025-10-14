@@ -9,7 +9,7 @@ const ServiceDetails = dynamic(() => import("../../components/service-details"),
 });
 
 const ServicePage = ({ service }) => {
-  const pageTitle = service ? `${service.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Softec` : 'Service - Softec';
+  const pageTitle = service ? `${service.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Matrix` : 'Service - Matrix';
 
   return (
     <>
