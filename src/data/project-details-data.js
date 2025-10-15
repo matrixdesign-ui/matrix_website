@@ -175,7 +175,7 @@ const projectDetailsData = {
     ]
   },
 
-  'ict-infrastructure-connectivity': {
+  'ict-infrastructure--connectivity': {
     title: 'ICT Infrastructure & Connectivity',
     client_name: 'Kenya Power',
     status: 'Ongoing',
