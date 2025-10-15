@@ -14,7 +14,7 @@ const serviceDetailsData = {
       "Legal Management Software: Comprehensive legal practice management for law firms and legal departments.",
       "Knowledge Management: Organized knowledge bases with advanced search and collaboration tools.",
       "Audit Management: Systematic audit planning, execution, and compliance reporting.",
-      "Document Management System: Advanced DMS with version control, security, and compliance features."
+      "Document Management System:  DM with version control, security, and compliance features."
     ],
     challange_des: "Businesses need integrated software solutions that work together seamlessly. Our comprehensive Software & Applications solutions address diverse operational requirements while ensuring data consistency, security, and compliance across all systems."
   },

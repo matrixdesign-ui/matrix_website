@@ -44,7 +44,7 @@ const Header = () => {
                         <div className="col-6">
                            <div className="header-top__link">
                               <span>Offer sheria360:<i> Sign up today!. </i></span>
-                              <Link href="#">
+                              <Link href="https://www.sheria360.com/">
                                  <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.40918 9L5.591 5L1.40918 1" stroke="white" strokeWidth="1.5"
                                        strokeLinecap="round" strokeLinejoin="round"/>
