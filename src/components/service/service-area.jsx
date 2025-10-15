@@ -151,49 +151,49 @@ const ServiceArea = () => {
                             <div className="service-card">
                               {/* Background image container with gradient overlay */}
                               <div className="service-bg-container">
-                                <div className="service-image-wrapper">
-                                  <Image 
-                                    src={item.img} 
-                                    alt={item.title} 
-                                    className="service-bg-image"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                  />
-                                </div>
+                                <Image 
+                                  src={item.img} 
+                                  alt={item.title} 
+                                  className="service-bg-image"
+                                  fill
+                                  style={{ objectFit: 'cover' }}
+                                />
                                 {/* Gradient overlay for better text visibility */}
                                 <div className="service-bg-overlay"></div>
                               </div>
                               
                               {/* Content positioned on top of the background image */}
                               <div className="service-content">
-                                <div className="service-icon-top mb-25">
-                                  <div className="icon-placeholder">
-                                    <i className={`${item.cardIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                <div className="service-content-inner">
+                                  <div className="service-icon-top mb-25">
+                                    <div className="icon-placeholder">
+                                      <i className={`${item.cardIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                    </div>
                                   </div>
-                                </div>
-                                
-                                <div className="service-header mb-25">
-                                  <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{item.title}</h3>
-                                  </Link>
-                                </div>
-                                
-                                <div className="service-details mb-25">
-                                  {boldTitle && (
-                                    <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-                                      {boldTitle}:
-                                    </h4>
-                                  )}
-                                  <p className="service-description" style={{ fontSize: '14px', color: '#fff', lineHeight: '1.5', marginBottom: '0', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{descriptionText}</p>
-                                </div>
-                                
-                                <div className="service-type">
-                                  <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <span className="tp-btn-inner tp-btn-hover alt-color-white">
-                                      <span>Learn More</span>
-                                      <b></b>
-                                    </span>
-                                  </Link>
+                                  
+                                  <div className="service-header mb-25">
+                                    <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                      <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{item.title}</h3>
+                                    </Link>
+                                  </div>
+                                  
+                                  <div className="service-details mb-25">
+                                    {boldTitle && (
+                                      <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                                        {boldTitle}:
+                                      </h4>
+                                    )}
+                                    <p className="service-description" style={{ fontSize: '14px', color: '#fff', lineHeight: '1.5', marginBottom: '0', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{descriptionText}</p>
+                                  </div>
+                                  
+                                  <div className="service-type">
+                                    <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                      <span className="tp-btn-inner tp-btn-hover alt-color-white">
+                                        <span>Learn More</span>
+                                        <b></b>
+                                      </span>
+                                    </Link>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -218,12 +218,10 @@ const ServiceArea = () => {
                 padding: 0;
                 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
                 transition: all 0.3s ease;
-                height: 100%;
+                height: 400px;
                 border: 1px solid #eee;
                 position: relative;
                 overflow: hidden;
-                display: flex;
-                flex-direction: column;
               }
               
               .service-card:hover {
@@ -232,16 +230,12 @@ const ServiceArea = () => {
               }
               
               .service-bg-container {
-                position: relative;
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
-              }
-              
-              .service-image-wrapper {
-                position: relative;
-                width: 100%;
-                height: 100%;
               }
               
               .service-bg-image {
@@ -260,9 +254,7 @@ const ServiceArea = () => {
               }
               
               .service-content {
-                position: absolute;
-                top: 0;
-                left: 0;
+                position: relative;
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -273,6 +265,15 @@ const ServiceArea = () => {
                 z-index: 2;
                 padding: 30px;
                 box-sizing: border-box;
+              }
+              
+              .service-content-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
               }
               
               .service-card:hover .service-bg-image {
@@ -317,6 +318,10 @@ const ServiceArea = () => {
               @media (max-width: 768px) {
                 .section-title h2 {
                   font-size: 28px;
+                }
+                
+                .service-card {
+                  height: 350px;
                 }
                 
                 .service-content {
