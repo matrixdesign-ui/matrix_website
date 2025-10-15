@@ -4,6 +4,13 @@
 /*  15. HEADER CSS START
 /*----------------------------------------*/
 
+// Remove separator before search icon
+.header-bottom__action.no-separator {
+    border-right: none !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
 .header-top{
     &__space{
         padding: 20px 0;

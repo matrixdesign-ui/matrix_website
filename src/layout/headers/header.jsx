@@ -9,11 +9,7 @@ import React, {useState, useRef, useEffect, useLayoutEffect} from 'react';
 import NavMenu from './nav-menu';
 import useSticky from '@/src/hooks/use-sticky';
 
-
-
 import logo from "../../../public/assets/img/logo/logo-black.png"
-
-
 
 const Header = () => {
 
@@ -82,7 +78,7 @@ const Header = () => {
                         </div>
                         <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-6">
                            <div className="header-bottom__right d-flex align-items-center justify-content-end">
-                              <div className="header-bottom__action">
+                              <div className="header-bottom__action no-separator">
                                  <a className="d-none d-md-inline-block search-open-btn"
                                     onClick={() => setSearchOpen(true)} > 
                                     <SearchIconTwo />
