@@ -200,7 +200,103 @@ const team_data = [
         certifications: ["Google Cloud Professional ML Engineer", "NVIDIA Deep Learning Institute Certified", "IBM Watson Certified"],
         languages: ["English", "Swahili", "German"]
     },
-    
+    // New team members
+    {
+        id: 9, 
+        cls: 2,
+        img: team_img_1, // Reusing existing image as placeholder
+        name: "Ronald Ochieng",
+        job_title: "Technical Solution Engineer",
+        experience: "5+ years",
+        location: "Nairobi, Kenya",
+        email: "ronald@matrixvision.co.ke",
+        phone: "+254 700 111 222",
+        linkedin: "https://linkedin.com/in/ronald-ochieng",
+        education: "Bachelor of Science in Computer Engineering",
+        skills: ["Technical Solutions", "System Design", "Client Support", "Troubleshooting", "Network Administration"],
+        about: "Ronald Ochieng is a skilled Technical Solution Engineer with expertise in designing and implementing technical solutions for enterprise clients. He specializes in understanding client requirements and translating them into effective technical implementations.",
+        achievements: [
+            "Implemented solutions for 30+ enterprise clients",
+            "Reduced issue resolution time by 40%",
+            "Developed custom integration solutions for complex systems",
+            "Trained 50+ clients on technical implementations",
+            "Maintained 99% client satisfaction rating"
+        ],
+        certifications: ["Microsoft Certified Solutions Associate", "Cisco Certified Network Associate"],
+        languages: ["English", "Swahili"]
+    },
+    {
+        id: 10, 
+        cls: 3,
+        img: team_img_2, // Reusing existing image as placeholder
+        name: "Morris Kitana",
+        job_title: "UX/UI Designer",
+        experience: "4+ years",
+        location: "Nairobi, Kenya",
+        email: "morris@matrixvision.co.ke",
+        phone: "+254 700 333 444",
+        linkedin: "https://linkedin.com/in/morris-kitana",
+        education: "Bachelor of Arts in Graphic Design",
+        skills: ["User Experience Design", "User Interface Design", "Prototyping", "User Research", "Visual Design"],
+        about: "Morris Kitana is a creative UX/UI Designer focused on creating intuitive and engaging user experiences. He combines aesthetic sensibility with user-centered design principles to create interfaces that are both beautiful and functional.",
+        achievements: [
+            "Designed interfaces for 20+ web and mobile applications",
+            "Improved user engagement by 60% through design optimization",
+            "Created design systems used across multiple products",
+            "Conducted user research for 15+ projects",
+            "Won 2 design awards for innovative interface solutions"
+        ],
+        certifications: ["Adobe Certified Expert", "UX Design Professional"],
+        languages: ["English", "Swahili"]
+    },
+    {
+        id: 11, 
+        cls: 4,
+        img: team_img_3, // Reusing existing image as placeholder
+        name: "Yvonne Kituku",
+        job_title: "Accounts and Finance",
+        experience: "6+ years",
+        location: "Nairobi, Kenya",
+        email: "yvonne@matrixvision.co.ke",
+        phone: "+254 700 555 666",
+        linkedin: "https://linkedin.com/in/yvonne-kituku",
+        education: "Bachelor of Commerce in Accounting",
+        skills: ["Financial Management", "Accounting", "Budgeting", "Financial Reporting", "Tax Compliance"],
+        about: "Yvonne Kituku is our Accounts and Finance specialist, responsible for managing all financial operations and ensuring compliance with accounting standards. She brings expertise in financial planning, reporting, and analysis to support strategic decision-making.",
+        achievements: [
+            "Streamlined accounting processes reducing month-end close by 30%",
+            "Implemented financial controls saving the company 15% in operational costs",
+            "Prepared accurate financial reports for stakeholders",
+            "Ensured 100% compliance with tax regulations",
+            "Managed annual audit processes with zero findings"
+        ],
+        certifications: ["CPA (Kenya)", "Certified Financial Planner"],
+        languages: ["English", "Swahili"]
+    },
+    {
+        id: 12, 
+        cls: 1,
+        img: team_img_4, // Reusing existing image as placeholder
+        name: "Assnette Lusasi",
+        job_title: "Office Admin",
+        experience: "3+ years",
+        location: "Nairobi, Kenya",
+        email: "assnette@matrixvision.co.ke",
+        phone: "+254 700 777 888",
+        linkedin: "https://linkedin.com/in/assnette-lusasi",
+        education: "Diploma in Business Administration",
+        skills: ["Office Management", "Administrative Support", "Event Coordination", "Communication", "Organization"],
+        about: "Assnette Lusasi is our Office Administrator, ensuring smooth day-to-day operations of our office. She manages administrative tasks, coordinates events, and provides essential support to all team members.",
+        achievements: [
+            "Improved office efficiency through process optimization",
+            "Coordinated 50+ company events and meetings",
+            "Managed vendor relationships reducing office costs by 20%",
+            "Implemented document management system saving 100+ hours annually",
+            "Maintained 100% employee satisfaction with administrative services"
+        ],
+        certifications: ["Certified Administrative Professional"],
+        languages: ["English", "Swahili"]
+    }
 ];
 
 export default team_data
