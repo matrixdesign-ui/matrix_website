@@ -251,6 +251,54 @@ const team_data = [
         ],
         certifications: ["Certified Administrative Professional"],
         languages: ["English", "Swahili"]
+    },
+    {
+        id: 11, 
+        cls: 4,
+        img: team_img_3, // Reusing existing image as placeholder
+        name: "Edward Oliech",
+        job_title: "Technician",
+        experience: "4+ years",
+        location: "Nairobi, Kenya",
+        email: "edward@matrixvision.co.ke",
+        phone: "+254 700 111 333",
+        linkedin: "https://linkedin.com/in/edward-oliech",
+        education: "Diploma in Electrical Engineering",
+        skills: ["Electrical Systems", "Equipment Maintenance", "Troubleshooting", "Installation", "Safety Protocols"],
+        about: "Edward Oliech is a skilled Technician with expertise in electrical systems installation and maintenance. He ensures all technical equipment operates efficiently and safely, providing reliable support for our client projects.",
+        achievements: [
+            "Maintained 99% uptime for critical electrical systems",
+            "Successfully installed equipment for 40+ client sites",
+            "Reduced equipment failure rate by 35% through preventive maintenance",
+            "Trained 15+ junior technicians on best practices",
+            "Implemented safety protocols resulting in zero workplace incidents"
+        ],
+        certifications: ["City & Guilds Electrical Installation", "NEBOSH Safety Certificate"],
+        languages: ["English", "Swahili"]
+    },
+    {
+        id: 12, 
+        cls: 1,
+        img: team_img_4, // Reusing existing image as placeholder
+        name: "Kepha Otieno",
+        job_title: "Technician",
+        experience: "3+ years",
+        location: "Nairobi, Kenya",
+        email: "kepha@matrixvision.co.ke",
+        phone: "+254 700 222 444",
+        linkedin: "https://linkedin.com/in/kepha-otieno",
+        education: "Diploma in Electronics Engineering",
+        skills: ["Electronics Repair", "System Testing", "Component Replacement", "Calibration", "Technical Documentation"],
+        about: "Kepha Otieno is a dedicated Technician specializing in electronics systems and equipment maintenance. He plays a crucial role in ensuring the reliability and performance of our technical installations.",
+        achievements: [
+            "Repaired 200+ electronic components with 98% success rate",
+            "Developed testing procedures improving quality control by 40%",
+            "Maintained accurate technical documentation for all installations",
+            "Reduced equipment downtime by 30% through rapid response",
+            "Mentored 5 junior technicians in electronics troubleshooting"
+        ],
+        certifications: ["Electronics Technician Certification", "ISO Quality Standards"],
+        languages: ["English", "Swahili"]
     }
 ];
 
