@@ -188,7 +188,7 @@ const ServiceArea = () => {
                                   
                                   <div className="service-type">
                                     <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                      <span className="tp-btn-inner tp-btn-hover alt-color-white">
+                                      <span className="tp-btn-inner tp-btn-hover alt-color-black">
                                         <span>Learn More</span>
                                         <b></b>
                                       </span>
