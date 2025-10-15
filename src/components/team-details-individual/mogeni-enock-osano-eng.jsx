@@ -49,7 +49,7 @@ const MogeniEnockOsanoEng = () => {
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <main>
-                        <BreadcrumbTwo title={title} innertitle={name} team_details={true} />
+                        <BreadcrumbTwo title={name} innertitle={title} team_details={true} />
                         <div className="team-details-area pt-100 pb-100">
                            <div className="container">
                               <div className="row justify-content-center">

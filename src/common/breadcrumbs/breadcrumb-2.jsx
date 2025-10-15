@@ -10,7 +10,6 @@ import shape_3  from "../../../public/assets/img/breadcrumb/breadcrumb-3.png";
 import shape_4  from "../../../public/assets/img/breadcrumb/breadcrumb-sub-1.png";
  
 
-
 const BreadcrumbTwo = ({ title, innertitle, team_details, career_details }) => {
   const { animeRef } = useBreadcrumbTitleAnime();
   let subtitleRef = useRef(null)

@@ -8,6 +8,7 @@ import team_img_7 from  "../../public/assets/img/team/team-4-7.png"
 import team_img_8 from  "../../public/assets/img/team/team-4-8.png"
 import team_img_9 from  "../../public/assets/img/team/team-4-9.png"
 import team_img_10 from  "../../public/assets/img/team/team-4-10.png"
+import team_img_11 from  "../../public/assets/img/team/team-4-11.png"
 
 const team_data = [
     {
@@ -257,7 +258,7 @@ const team_data = [
     {
         id: 11, 
         cls: 4,
-        img: team_img_3, // Reusing existing image as placeholder
+        img: team_img_11, // Reusing existing image as placeholder
         name: "Edward Oliech",
         job_title: "Technician",
         experience: "4+ years",
@@ -281,7 +282,7 @@ const team_data = [
     {
         id: 12, 
         cls: 1,
-        img: team_img_4, // Reusing existing image as placeholder
+        img: team_img_11, // Reusing existing image as placeholder
         name: "Kepha Otieno",
         job_title: "Technician",
         experience: "3+ years",
