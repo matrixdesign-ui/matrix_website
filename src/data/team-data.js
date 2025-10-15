@@ -7,6 +7,7 @@ import team_img_6 from  "../../public/assets/img/team/team-4-6.png"
 import team_img_7 from  "../../public/assets/img/team/team-4-7.png"
 import team_img_8 from  "../../public/assets/img/team/team-4-8.png"
 import team_img_9 from  "../../public/assets/img/team/team-4-9.png"
+import team_img_10 from  "../../public/assets/img/team/team-4-10.png"
 
 const team_data = [
     {
@@ -24,7 +25,7 @@ const team_data = [
         skills: ["Strategic Leadership", "Technical Innovation", "Project Management", "Systems Integration", "Digital Transformation", "Team Building"],
         about: "Mogeni Enock Osano is the Technical Director and CEO of Matrix Vision Systems, bringing over 15 years of comprehensive experience in engineering and technology leadership. He specializes in strategic planning, technical innovation, and driving digital transformation initiatives across various industries. His vision and leadership have been instrumental in establishing Matrix Vision Systems as a leading technology solutions provider.",
         achievements: [
-            "Led multiple successful digital transformation projects for Fortune 500 companies",
+            "Led multiple successful digital transformation projects for 50+ Top East African companies",
             "Pioneered innovative solutions in data analytics and automation systems",
             "Expert in systems integration and enterprise solutions architecture",
             "Established strategic partnerships with international technology vendors",
@@ -49,7 +50,7 @@ const team_data = [
         about: "Eric Atinga serves as the Chief Technology Officer, leading our ICT innovation and software development initiatives. With over 12 years of experience in software engineering and technology leadership, he drives our technical strategy and innovation roadmap. His expertise spans from full-stack development to enterprise architecture and emerging technologies.",
         achievements: [
             "Architected scalable cloud-based solutions serving over 1M users",
-            "Led development of cutting-edge fintech applications",
+            "Led development of cutting-edge fintech, SFA, LMS applications",
             "Expert in modern software development methodologies and DevOps practices",
             "Implemented CI/CD pipelines reducing deployment time by 80%",
             "Published 15+ technical articles and spoke at 10+ tech conferences"
@@ -72,7 +73,7 @@ const team_data = [
         skills: ["Electrical Engineering", "Software Development", "Automation Systems", "Systems Integration", "IoT Solutions", "PLC Programming"],
         about: "Robert Mwongera is a skilled Electrical and Software Engineer specializing in automation and systems integration. He brings a unique blend of hardware and software expertise to create comprehensive solutions for our clients. His innovative approach to bridging traditional electrical systems with modern software solutions has been crucial to many successful projects.",
         achievements: [
-            "Designed and implemented complex automation systems for 20+ manufacturing facilities",
+            "Designed and implemented complex automation systems for 20+ manufacturing facilities in the region",
             "Expert in electrical and software system integration across multiple industries",
             "Led multiple successful industrial automation projects worth $2M+",
             "Developed custom IoT solutions for smart building management",
@@ -136,7 +137,7 @@ const team_data = [
         img: team_img_6,
         name: "Ronald Ochieng",
         job_title: "Technical Solution Engineer",
-        experience: "5+ years",
+        experience: "2+ years",
         location: "Nairobi, Kenya",
         email: "ronald@matrixvision.co.ke",
         phone: "+254 700 111 222",
@@ -208,7 +209,7 @@ const team_data = [
     {
         id: 9, 
         cls: 2,
-        img: team_img_1, // Reusing existing image as placeholder
+        img: team_img_10, // Reusing existing image as placeholder
         name: "Benjamin Nyabuto",
         job_title: "Helpdesk Specialist",
         experience: "3+ years",
@@ -232,7 +233,7 @@ const team_data = [
     {
         id: 10, 
         cls: 3,
-        img: team_img_9, // Reusing existing image as placeholder
+        img: team_img_9, 
         name: "Assnette Lusasi",
         job_title: "Office Admin",
         experience: "3+ years",
