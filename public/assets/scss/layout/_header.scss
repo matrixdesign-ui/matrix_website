@@ -7,8 +7,36 @@
 // Remove separator before search icon
 .header-bottom__action.no-separator {
     border-right: none !important;
+    border-left: none !important;
     margin-right: 0 !important;
+    margin-left: 0 !important;
     padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+// Remove any pseudo-element separators
+.header-bottom__action.no-separator::before {
+    display: none !important;
+}
+
+.header-bottom__action.no-separator::after {
+    display: none !important;
+}
+
+// Remove any general separators between header elements
+.header-bottom__right {
+    & > * {
+        border-left: none !important;
+        border-right: none !important;
+    }
+    
+    & > *:not(:last-child) {
+        border-right: none !important;
+    }
+    
+    & > *:not(:first-child) {
+        border-left: none !important;
+    }
 }
 
 .header-top{
