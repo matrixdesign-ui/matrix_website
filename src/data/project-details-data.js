@@ -1,6 +1,6 @@
 const projectDetailsData = {
   // Matrix Vision Systems Project Portfolio - Business/Corporate Solutions
-  'internet-connectivity-infrastructure': {
+  'internet-connectivity-and-infrastructure': {
     title: 'Internet Connectivity and Infrastructure',
     client_name: 'Ministry of Sports',
     status: 'Ongoing',
@@ -199,48 +199,48 @@ const projectDetailsData = {
       },
       {
         title: 'Connectivity Solutions',
-        description: 'Various connectivity options including fiber, satellite, and wireless.',
-        features: ['Fiber deployment', 'Satellite backup', 'Wireless networks', 'Broadband services']
+        description: 'Comprehensive connectivity solutions for remote and urban locations.',
+        features: ['Fiber optic networks', 'Wireless solutions', 'Satellite backup', 'Load balancing']
       },
       {
         title: 'Managed Services',
-        description: '24/7 network monitoring and maintenance services.',
-        features: ['Network monitoring', 'Fault management', 'Performance optimization', 'Security updates']
+        description: '24/7 managed services for infrastructure monitoring and maintenance.',
+        features: ['Remote monitoring', 'Preventive maintenance', 'Incident response', 'Performance optimization']
       }
     ]
   },
 
   'enterprise-it-helpdesk-system': {
     title: 'Enterprise IT Helpdesk System',
-    client_name: 'Moi Teaching Referral Hospital',
+    client_name: 'Moi Teaching and Referral Hospital',
     status: 'Completed',
-    overview_des: 'Comprehensive web-based IT helpdesk system for tracking and managing user IT incidents and requests.',
+    overview_des: 'Web-based software solution enabling personnel to efficiently track and manage user IT incidents and requests.',
     overview_list: [
       'Incident tracking and management',
-      'Service request handling',
-      'Knowledge base',
-      'Asset management',
-      'Reporting and analytics'
+      'Service request fulfillment',
+      'Knowledge base and self-service portal',
+      'SLA monitoring and reporting',
+      'Asset integration'
     ],
-    challange_des: 'Moi Teaching Referral Hospital needed a modern IT helpdesk system to replace their outdated ticketing system, requiring integration with their existing healthcare IT infrastructure while maintaining HIPAA compliance for patient data.',
-    technologies: 'React, Node.js, Express, PostgreSQL, Docker, Kubernetes, LDAP integration',
-    duration: '5 months',
-    team_size: '8 developers',
+    challange_des: 'Moi Teaching and Referral Hospital needed a centralized IT helpdesk system to manage the technology support needs of a large medical facility with hundreds of staff members and critical systems requiring immediate attention.',
+    technologies: 'PHP, MySQL, Bootstrap, AJAX, Email integration, SMS gateway',
+    duration: '4 months',
+    team_size: '6 developers',
     sub_services: [
       {
-        title: 'Incident Management',
-        description: 'Comprehensive incident tracking and resolution workflow.',
-        features: ['Ticket routing', 'SLA tracking', 'Escalation rules', 'Knowledge base']
-      },
-      {
-        title: 'Asset Management',
-        description: 'IT asset tracking and lifecycle management integration.',
-        features: ['Asset database', 'Maintenance tracking', 'License management', 'Warranty tracking']
+        title: 'Ticket Management',
+        description: 'Comprehensive ticketing system for incident and service request tracking.',
+        features: ['Automated routing', 'Priority assignment', 'Escalation rules', 'Status updates']
       },
       {
         title: 'Self-Service Portal',
-        description: 'Employee self-service portal for common IT requests.',
-        features: ['Password resets', 'Software requests', 'IT announcements', 'User guides']
+        description: 'User-friendly portal for staff to submit requests and track progress.',
+        features: ['Knowledge base', 'Request submission', 'Status tracking', 'Feedback system']
+      },
+      {
+        title: 'Reporting & Analytics',
+        description: 'Detailed reporting and analytics for IT performance monitoring.',
+        features: ['SLA reports', 'Workload analysis', 'Resolution time tracking', 'User satisfaction']
       }
     ]
   },
@@ -249,33 +249,33 @@ const projectDetailsData = {
     title: 'Unified Emergency Mass Notification',
     client_name: 'Rural Electrification Authority',
     status: 'Ongoing',
-    overview_des: 'Multimodal emergency notification system integrating software and hardware for comprehensive alert coverage.',
+    overview_des: 'Multimodal system integrating software and hardware to initiate notifications and activate several output modes for emergency response.',
     overview_list: [
-      'SMS broadcasting',
-      'Voice calling',
-      'Email notifications',
-      'Public address systems',
-      'Mobile app alerts'
+      'Multi-channel notification system',
+      'Mass communication capabilities',
+      'Emergency alert management',
+      'Integration with existing systems',
+      'Real-time status monitoring'
     ],
-    challange_des: 'The Rural Electrification Authority needed a comprehensive emergency communication system that could reach thousands of employees and contractors across remote Kenyan locations with various communication methods to ensure 100% alert coverage.',
-    technologies: 'GSM networks, VoIP, Email platforms, Mobile apps, Public address systems, SCADA integration',
+    challange_des: 'The Rural Electrification Authority required a reliable emergency notification system that could reach thousands of personnel and stakeholders across remote locations in case of critical incidents or emergencies.',
+    technologies: 'SMS gateway, Email servers, Mobile apps, Radio integration, Cloud infrastructure',
     duration: '2024 - Ongoing',
-    team_size: '12 specialists',
+    team_size: '8 specialists',
     sub_services: [
       {
-        title: 'Communication Platform',
-        description: 'Multi-channel communication infrastructure for emergency notifications.',
-        features: ['SMS gateway', 'Voice platform', 'Email system', 'Mobile app', 'Public address']
+        title: 'Notification Engine',
+        description: 'Core engine for managing and dispatching emergency notifications.',
+        features: ['Multi-channel dispatch', 'Template management', 'Contact database', 'Delivery tracking']
       },
       {
-        title: 'Emergency Protocols',
-        description: 'Automated emergency response protocols and contact management.',
-        features: ['Contact groups', 'Escalation trees', 'Automated alerts', 'Response tracking']
+        title: 'Mobile Application',
+        description: 'Mobile app for receiving and responding to emergency notifications.',
+        features: ['Push notifications', 'Location tracking', 'Response confirmation', 'Offline mode']
       },
       {
-        title: 'System Integration',
-        description: 'Integration with existing safety and monitoring systems.',
-        features: ['SCADA integration', 'Sensor alerts', 'Weather systems', 'Emergency buttons']
+        title: 'Administration Portal',
+        description: 'Web-based portal for managing contacts, templates, and system configuration.',
+        features: ['Contact management', 'Template editor', 'Campaign scheduling', 'Analytics dashboard']
       }
     ]
   },
@@ -284,33 +284,33 @@ const projectDetailsData = {
     title: 'Access Control Systems',
     client_name: 'Safaricom',
     status: 'Completed',
-    overview_des: 'Advanced access control systems providing centralized monitoring and control of multiple devices across zones.',
+    overview_des: 'Centralized monitoring and control system for managing access to multiple devices, locations, and zones with advanced security features.',
     overview_list: [
-      'Multi-location access control',
-      'Biometric authentication',
-      'Time-based permissions',
-      'Audit trail management',
-      'Mobile access'
+      'Biometric access control',
+      'Card-based entry systems',
+      'Mobile credential support',
+      'Centralized monitoring dashboard',
+      'Audit trail and reporting'
     ],
-    challange_des: 'Safaricom required comprehensive access control across multiple corporate buildings and data centers, ensuring secure access for thousands of employees while maintaining detailed audit trails and integration with existing security infrastructure.',
-    technologies: 'Biometric sensors, RFID cards, Mobile authentication, Cloud management, Dashboard analytics, CCTV integration',
-    duration: '9 months',
-    team_size: '15 engineers',
+    challange_des: 'Safaricom needed a comprehensive access control system to secure their facilities, data centers, and restricted areas while providing flexible access management for thousands of employees.',
+    technologies: 'Biometric scanners, RFID readers, Mobile apps, Cloud database, Security protocols',
+    duration: '5 months',
+    team_size: '10 engineers',
     sub_services: [
       {
-        title: 'Biometric Authentication',
-        description: 'Advanced biometric authentication including fingerprints and facial recognition.',
-        features: ['Multi-modal biometrics', 'Contactless access', 'Accuracy validation', 'Fail-over systems']
+        title: 'Access Hardware',
+        description: 'Physical access control hardware including readers, controllers, and biometric devices.',
+        features: ['Biometric scanners', 'RFID readers', 'Mobile credentials', 'Door controllers']
       },
       {
-        title: 'Multi-Location Management',
-        description: 'Centralized management platform for multiple locations and zones.',
-        features: ['Cloud dashboard', 'Location management', 'Zone configuration', 'Global policies']
+        title: 'Management Software',
+        description: 'Centralized software for managing access permissions and monitoring activity.',
+        features: ['User management', 'Permission control', 'Real-time monitoring', 'Alert system']
       },
       {
-        title: 'Mobile Access',
-        description: 'Mobile application for secure access and management.',
-        features: ['Digital keys', 'Access requests', 'Emergency access', 'Usage analytics']
+        title: 'Reporting & Analytics',
+        description: 'Comprehensive reporting and analytics for security monitoring and compliance.',
+        features: ['Access logs', 'Violation reports', 'Occupancy tracking', 'Compliance reports']
       }
     ]
   }
