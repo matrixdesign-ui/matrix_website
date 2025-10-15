@@ -2,6 +2,7 @@ import React from "react";
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Wrapper from "../../layout/wrapper";
+import projectData from "../../data/project-data";
 
 // Dynamically import to avoid SSR issues
 const ProjectDetails = dynamic(() => import("../../components/project-details"), {
@@ -39,12 +40,12 @@ export async function getStaticProps({ params }) {
 
 // Add getStaticPaths for static export - must use fallback: false for output: export compatibility
 export async function getStaticPaths() {
-  // Define all possible project paths (add your actual project slugs here)
-  const paths = [
-    { params: { project: 'project-1' } },
-    { params: { project: 'project-2' } },
-    { params: { project: 'project-3' } }
-  ];
+  // Generate paths based on actual project data
+  const paths = projectData.map(item => {
+    // Generate slug the same way as in the links
+    const slug = item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+    return { params: { project: slug } };
+  });
 
   // Must use fallback: false for compatibility with output: export
   return {

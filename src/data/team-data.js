@@ -6,6 +6,7 @@ import team_img_5 from  "../../public/assets/img/team/team-4-5.png"
 import team_img_6 from  "../../public/assets/img/team/team-4-6.png"
 import team_img_7 from  "../../public/assets/img/team/team-4-7.png"
 import team_img_8 from  "../../public/assets/img/team/team-4-8.png"
+import team_img_9 from  "../../public/assets/img/team/team-4-9.png"
 
 const team_data = [
     {
@@ -231,7 +232,7 @@ const team_data = [
     {
         id: 10, 
         cls: 3,
-        img: team_img_2, // Reusing existing image as placeholder
+        img: team_img_9, // Reusing existing image as placeholder
         name: "Assnette Lusasi",
         job_title: "Office Admin",
         experience: "3+ years",
