@@ -149,9 +149,8 @@ const ServiceArea = () => {
                         return (
                           <div key={item.id} className="col-xl-4 col-md-6">
                             <div className="service-card">
-                              {/* Background image container - half of the card */}
+                              {/* Background image container with gradient overlay */}
                               <div className="service-bg-container">
-                                <div className="service-bg-overlay"></div>
                                 <div className="service-image-wrapper">
                                   <Image 
                                     src={item.img} 
@@ -161,9 +160,11 @@ const ServiceArea = () => {
                                     style={{ objectFit: 'cover' }}
                                   />
                                 </div>
+                                {/* Gradient overlay for better text visibility */}
+                                <div className="service-bg-overlay"></div>
                               </div>
                               
-                              {/* Content positioned in the foreground */}
+                              {/* Content positioned on top of the background image */}
                               <div className="service-content">
                                 <div className="service-icon-top mb-25">
                                   <div className="icon-placeholder">
@@ -173,22 +174,22 @@ const ServiceArea = () => {
                                 
                                 <div className="service-header mb-25">
                                   <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{item.title}</h3>
+                                    <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{item.title}</h3>
                                   </Link>
                                 </div>
                                 
                                 <div className="service-details mb-25">
                                   {boldTitle && (
-                                    <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                    <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                                       {boldTitle}:
                                     </h4>
                                   )}
-                                  <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{descriptionText}</p>
+                                  <p className="service-description" style={{ fontSize: '14px', color: '#fff', lineHeight: '1.5', marginBottom: '0', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{descriptionText}</p>
                                 </div>
                                 
                                 <div className="service-type">
                                   <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <span className="tp-btn-inner tp-btn-hover alt-color-black">
+                                    <span className="tp-btn-inner tp-btn-hover alt-color-white">
                                       <span>Learn More</span>
                                       <b></b>
                                     </span>
@@ -233,7 +234,7 @@ const ServiceArea = () => {
               .service-bg-container {
                 position: relative;
                 width: 100%;
-                height: 50%;
+                height: 100%;
                 overflow: hidden;
               }
               
@@ -254,19 +255,24 @@ const ServiceArea = () => {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.3);
+                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
                 z-index: 1;
               }
               
               .service-content {
-                position: relative;
-                padding: 30px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 text-align: center;
-                height: 50%;
                 z-index: 2;
+                padding: 30px;
+                box-sizing: border-box;
               }
               
               .service-card:hover .service-bg-image {
@@ -274,10 +280,8 @@ const ServiceArea = () => {
               }
               
               .service-type {
-                padding-top: 20px;
-                border-top: 1px solid #eee;
-                width: 100%;
                 margin-top: auto;
+                width: 100%;
               }
               
               .type-badge {
@@ -299,13 +303,15 @@ const ServiceArea = () => {
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
-                background: rgba(255, 255, 255, 0.9);
+                background: rgba(255, 255, 255, 0.2);
                 border-radius: 50%;
                 width: 90px;
                 height: 90px;
                 margin: 0 auto;
                 position: relative;
                 z-index: 3;
+                backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
               }
               
               @media (max-width: 768px) {
@@ -315,14 +321,6 @@ const ServiceArea = () => {
                 
                 .service-content {
                   padding: 20px;
-                }
-                
-                .service-bg-container {
-                  height: 40%;
-                }
-                
-                .service-content {
-                  height: 60%;
                 }
               }
             `}</style>
