@@ -128,83 +128,11 @@ const team_data = [
         certifications: ["Certified Control Systems Technician", "Rockwell Automation Certified", "Honeywell Process Solutions"],
         languages: ["English", "Swahili"]
     },
+    // Replaced Sarah Johnson with Ronald Ochieng
     {
         id: 6, 
         cls: 2,
         img: team_img_6,
-        name: "Sarah Johnson",
-        job_title: "Senior Systems Analyst & Business Intelligence Specialist",
-        experience: "9+ years",
-        location: "Nairobi, Kenya",
-        email: "sarah@matrixvision.co.ke",
-        phone: "+254 700 678 901",
-        linkedin: "https://linkedin.com/in/sarah-johnson-matrix",
-        education: "Master of Science in Information Systems",
-        skills: ["Business Intelligence", "Data Analytics", "Systems Analysis", "Database Design", "Power BI", "SQL Server"],
-        about: "Sarah Johnson is our Senior Systems Analyst and Business Intelligence Specialist, bringing deep expertise in data analytics and business process optimization. She specializes in transforming complex data into actionable business insights and designing efficient information systems that drive organizational success.",
-        achievements: [
-            "Designed BI solutions that improved decision-making efficiency by 45%",
-            "Led data migration projects for 15+ enterprise clients",
-            "Developed automated reporting systems saving 200+ hours monthly",
-            "Expert in database optimization reducing query times by 60%",
-            "Implemented data governance frameworks for Fortune 500 companies"
-        ],
-        certifications: ["Microsoft Certified: Azure Data Scientist", "Tableau Desktop Specialist", "Google Analytics Certified"],
-        languages: ["English", "Swahili", "French"]
-    },
-    {
-        id: 7, 
-        cls: 3,
-        img: team_img_7,
-        name: "Michael Chen",
-        job_title: "Senior Software Developer & DevOps Engineer",
-        experience: "11+ years",
-        location: "Nairobi, Kenya",
-        email: "michael@matrixvision.co.ke",
-        phone: "+254 700 789 012",
-        linkedin: "https://linkedin.com/in/michael-chen-dev",
-        education: "Bachelor of Science in Computer Engineering",
-        skills: ["Full-Stack Development", "DevOps", "Cloud Architecture", "Microservices", "Docker", "Kubernetes"],
-        about: "Michael Chen is our Senior Software Developer and DevOps Engineer with extensive experience in building scalable applications and robust deployment pipelines. His expertise spans from front-end development to cloud infrastructure, ensuring our solutions are both user-friendly and technically sound.",
-        achievements: [
-            "Built and deployed 30+ enterprise applications serving millions of users",
-            "Reduced deployment time by 85% through CI/CD pipeline optimization",
-            "Led cloud migration projects saving clients 40% in infrastructure costs",
-            "Expert in containerization and microservices architecture",
-            "Mentored 20+ junior developers in modern development practices"
-        ],
-        certifications: ["AWS Certified DevOps Engineer", "Docker Certified Associate", "Certified Kubernetes Administrator"],
-        languages: ["English", "Mandarin", "Swahili"]
-    },
-    {
-        id: 8, 
-        cls: 1,
-        img: team_img_8,
-        name: "Dr. Priscilla Wanjiku",
-        job_title: "Technical Consultant & Research Director",
-        experience: "13+ years",
-        location: "Nairobi, Kenya",
-        email: "priscilla@matrixvision.co.ke",
-        phone: "+254 700 890 123",
-        linkedin: "https://linkedin.com/in/dr-priscilla-wanjiku",
-        education: "PhD in Computer Science, MSc in Information Technology",
-        skills: ["Technical Consulting", "Research & Development", "AI/ML Solutions", "Strategic Planning", "Innovation Management", "Academic Partnerships"],
-        about: "Dr. Priscilla Wanjiku serves as our Technical Consultant and Research Director, leading our R&D initiatives and maintaining strategic partnerships with academic institutions. With a PhD in Computer Science, she drives innovation in AI/ML solutions and ensures our technology stack remains at the cutting edge of industry developments.",
-        achievements: [
-            "Published 25+ research papers in top-tier computer science journals",
-            "Led AI/ML research projects funded by international organizations",
-            "Established partnerships with 10+ universities for technology transfer",
-            "Developed proprietary algorithms improving system efficiency by 50%",
-            "Secured $2M+ in research grants for innovation projects"
-        ],
-        certifications: ["Google Cloud Professional ML Engineer", "NVIDIA Deep Learning Institute Certified", "IBM Watson Certified"],
-        languages: ["English", "Swahili", "German"]
-    },
-    // New team members
-    {
-        id: 9, 
-        cls: 2,
-        img: team_img_1, // Reusing existing image as placeholder
         name: "Ronald Ochieng",
         job_title: "Technical Solution Engineer",
         experience: "5+ years",
@@ -225,10 +153,11 @@ const team_data = [
         certifications: ["Microsoft Certified Solutions Associate", "Cisco Certified Network Associate"],
         languages: ["English", "Swahili"]
     },
+    // Replaced Michael Chen with Morris Kitana
     {
-        id: 10, 
+        id: 7, 
         cls: 3,
-        img: team_img_2, // Reusing existing image as placeholder
+        img: team_img_7,
         name: "Morris Kitana",
         job_title: "UX/UI Designer",
         experience: "4+ years",
@@ -249,10 +178,11 @@ const team_data = [
         certifications: ["Adobe Certified Expert", "UX Design Professional"],
         languages: ["English", "Swahili"]
     },
+    // Replaced Dr. Priscilla Wanjiku with Yvonne Kituku
     {
-        id: 11, 
-        cls: 4,
-        img: team_img_3, // Reusing existing image as placeholder
+        id: 8, 
+        cls: 1,
+        img: team_img_8,
         name: "Yvonne Kituku",
         job_title: "Accounts and Finance",
         experience: "6+ years",
@@ -273,16 +203,41 @@ const team_data = [
         certifications: ["CPA (Kenya)", "Certified Financial Planner"],
         languages: ["English", "Swahili"]
     },
+    // New team member
     {
-        id: 12, 
-        cls: 1,
-        img: team_img_4, // Reusing existing image as placeholder
+        id: 9, 
+        cls: 2,
+        img: team_img_1, // Reusing existing image as placeholder
+        name: "Benjamin Nyabuto",
+        job_title: "Helpdesk Specialist",
+        experience: "3+ years",
+        location: "Nairobi, Kenya",
+        email: "benjamin@matrixvision.co.ke",
+        phone: "+254 700 777 888",
+        linkedin: "https://linkedin.com/in/benjamin-nyabuto",
+        education: "Diploma in Information Technology",
+        skills: ["Technical Support", "Customer Service", "Troubleshooting", "System Administration", "Network Support"],
+        about: "Benjamin Nyabuto is our Helpdesk Specialist, providing frontline technical support to our clients and internal team members. He specializes in resolving technical issues quickly and efficiently while maintaining excellent customer service standards.",
+        achievements: [
+            "Maintained 98% customer satisfaction rating in technical support",
+            "Reduced average response time by 50% through process improvements",
+            "Handled 500+ support tickets annually with high resolution rates",
+            "Trained new helpdesk staff on best practices and procedures",
+            "Implemented knowledge base articles reducing repeat inquiries by 30%"
+        ],
+        certifications: ["CompTIA A+", "ITIL Foundation", "Microsoft Certified Professional"],
+        languages: ["English", "Swahili"]
+    },
+    {
+        id: 10, 
+        cls: 3,
+        img: team_img_2, // Reusing existing image as placeholder
         name: "Assnette Lusasi",
         job_title: "Office Admin",
         experience: "3+ years",
         location: "Nairobi, Kenya",
         email: "assnette@matrixvision.co.ke",
-        phone: "+254 700 777 888",
+        phone: "+254 700 999 000",
         linkedin: "https://linkedin.com/in/assnette-lusasi",
         education: "Diploma in Business Administration",
         skills: ["Office Management", "Administrative Support", "Event Coordination", "Communication", "Organization"],
