@@ -3,8 +3,16 @@ import Link from 'next/link';
 import React from 'react';
 import serviceDetailsData from '../../data/service-details-data';
 
-import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
-import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
+// Import service images
+import service_img_1 from "../../../public/assets/img/service/sv-icon-1.png";
+import service_img_2 from "../../../public/assets/img/service/sv-icon-2.png";
+import service_img_3 from "../../../public/assets/img/service/sv-icon-3.png";
+import service_img_4 from "../../../public/assets/img/service/sv-icon-4.png";
+import service_img_5 from "../../../public/assets/img/service/sv-icon-5.png";
+import service_img_6 from "../../../public/assets/img/service/sv-icon-4-1.png";
+import service_img_7 from "../../../public/assets/img/service/sv-icon-4-2.png";
+import service_img_8 from "../../../public/assets/img/service/sv-icon-4-3.png";
+import service_img_9 from "../../../public/assets/img/service/sv-icon-4-4.png";
 
 // Services category data for main services page
 const service_categories = [
@@ -14,6 +22,7 @@ const service_categories = [
     description: "Comprehensive software solutions encompassing Legal Case Management, Contracts Lifecycle Management, Electronic Board Management,  Audit Management,Ccustomer Relationship Management, Helpdesk Systems, and various specialized applications.",
     link: "/services/software-applications",
     icon: "fas fa-laptop-code",
+    img: service_img_1,
     key: "software-applications",
     type: "Product",
     cardIcon: "fas fa-laptop-code"
@@ -24,6 +33,7 @@ const service_categories = [
     description: "Custom software development and system integration services to build scalable, secure, and efficient business applications.",
     link: "/services/infrastructure-development",
     icon: "fas fa-cogs",
+    img: service_img_2,
     key: "infrastructure-development",
     type: "Service",
     cardIcon: "fas fa-server"
@@ -34,6 +44,7 @@ const service_categories = [
     description: "Scalable enterprise-grade solutions for customer relationship management, helpdesk services, electronic board management, and IT support.",
     link: "/services/enterprise-solutions",
     icon: "fas fa-building",
+    img: service_img_3,
     key: "enterprise-solutions",
     type: "Solution",
     cardIcon: "fas fa-building"
@@ -44,6 +55,7 @@ const service_categories = [
     description: "Comprehensive solutions for Contract Lifecycle Management, Legal Case Management, Audit Management, and Social Media Monitoring to ensure your organization's compliance.",
     link: "/services/governance-compliance",
     icon: "fas fa-gavel",
+    img: service_img_4,
     key: "governance-compliance",
     type: "Solution",
     cardIcon: "fas fa-gavel"
@@ -54,6 +66,7 @@ const service_categories = [
     description: "Advanced Computer-Aided Facility Management, Asset Tracking, Automated Visitor Management, and Meeting Room Management.",
     link: "/services/facilities-asset-management",
     icon: "fas fa-building-user",
+    img: service_img_5,
     key: "facilities-asset-management",
     type: "Solution",
     cardIcon: "fas fa-warehouse"
@@ -64,6 +77,7 @@ const service_categories = [
     description: "Comprehensive security solutions such as AI-Powered Surveillance, Access Control Systems, Incident Management, and Environmental Health and Safety systems.",
     link: "/services/security-operational-safety",
     icon: "fas fa-shield-alt",
+    img: service_img_6,
     key: "security-operational-safety",
     type: "Solution",
     cardIcon: "fas fa-shield-alt"
@@ -74,6 +88,7 @@ const service_categories = [
     description: "Advanced ICT and telecommunications solutions spanning Data Center Management, Unified Communications, VoIP systems, and AI-Powered analytics.",
     link: "/services/ict-telecom-analytics",
     icon: "fas fa-network-wired",
+    img: service_img_7,
     key: "ict-telecom-analytics",
     type: "Service",
     cardIcon: "fas fa-network-wired"
@@ -84,6 +99,7 @@ const service_categories = [
     description: "Comprehensive Learning Management system,and Examination Management System designed specifically for educational institutions to create, administer, and evaluate exams.",
     link: "/services/education-solutions",
     icon: "fas fa-graduation-cap",
+    img: service_img_8,
     key: "education-solutions",
     type: "Solution",
     cardIcon: "fas fa-graduation-cap"
@@ -133,35 +149,51 @@ const ServiceArea = () => {
                         return (
                           <div key={item.id} className="col-xl-4 col-md-6">
                             <div className="service-card">
-                              {/* Icon on top */}
-                              <div className="service-icon-top mb-25">
-                                <div className="icon-placeholder">
-                                  <i className={`${item.cardIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                              {/* Background image container - half of the card */}
+                              <div className="service-bg-container">
+                                <div className="service-bg-overlay"></div>
+                                <div className="service-image-wrapper">
+                                  <Image 
+                                    src={item.img} 
+                                    alt={item.title} 
+                                    className="service-bg-image"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                  />
                                 </div>
                               </div>
                               
-                              <div className="service-header mb-25">
-                                <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                  <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{item.title}</h3>
-                                </Link>
-                              </div>
-                              
-                              <div className="service-details mb-25">
-                                {boldTitle && (
-                                  <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
-                                    {boldTitle}:
-                                  </h4>
-                                )}
-                                <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{descriptionText}</p>
-                              </div>
-                              
-                              <div className="service-type">
-                                <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                  <span className="tp-btn-inner tp-btn-hover alt-color-black">
-                                    <span>Learn More</span>
-                                    <b></b>
-                                  </span>
-                                </Link>
+                              {/* Content positioned in the foreground */}
+                              <div className="service-content">
+                                <div className="service-icon-top mb-25">
+                                  <div className="icon-placeholder">
+                                    <i className={`${item.cardIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                  </div>
+                                </div>
+                                
+                                <div className="service-header mb-25">
+                                  <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{item.title}</h3>
+                                  </Link>
+                                </div>
+                                
+                                <div className="service-details mb-25">
+                                  {boldTitle && (
+                                    <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
+                                      {boldTitle}:
+                                    </h4>
+                                  )}
+                                  <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{descriptionText}</p>
+                                </div>
+                                
+                                <div className="service-type">
+                                  <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <span className="tp-btn-inner tp-btn-hover alt-color-black">
+                                      <span>Learn More</span>
+                                      <b></b>
+                                    </span>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -182,15 +214,15 @@ const ServiceArea = () => {
               .service-card {
                 background: white;
                 border-radius: 15px;
-                padding: 30px;
+                padding: 0;
                 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
                 transition: all 0.3s ease;
                 height: 100%;
                 border: 1px solid #eee;
+                position: relative;
+                overflow: hidden;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
               }
               
               .service-card:hover {
@@ -198,10 +230,54 @@ const ServiceArea = () => {
                 box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
               }
               
+              .service-bg-container {
+                position: relative;
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+              }
+              
+              .service-image-wrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+              }
+              
+              .service-bg-image {
+                object-fit: cover;
+                transition: transform 0.3s ease;
+              }
+              
+              .service-bg-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 1;
+              }
+              
+              .service-content {
+                position: relative;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                height: 50%;
+                z-index: 2;
+              }
+              
+              .service-card:hover .service-bg-image {
+                transform: scale(1.05);
+              }
+              
               .service-type {
                 padding-top: 20px;
                 border-top: 1px solid #eee;
                 width: 100%;
+                margin-top: auto;
               }
               
               .type-badge {
@@ -223,6 +299,13 @@ const ServiceArea = () => {
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 90px;
+                height: 90px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 3;
               }
               
               @media (max-width: 768px) {
@@ -230,8 +313,16 @@ const ServiceArea = () => {
                   font-size: 28px;
                 }
                 
-                .service-card {
+                .service-content {
                   padding: 20px;
+                }
+                
+                .service-bg-container {
+                  height: 40%;
+                }
+                
+                .service-content {
+                  height: 60%;
                 }
               }
             `}</style>
