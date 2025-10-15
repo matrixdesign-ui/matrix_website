@@ -8,7 +8,7 @@ import React,{useState} from 'react';
 const career_contents = {
     'intern-of-elec-electronics-engineer': {
         sub_title: "Engineering",
-        title: "Intern of Elec & Electronics Engineer (Automation & Systems Integration)",
+        title: "Intern: Elec & Electronics Engineer (Automation & Systems Integration)",
         location: "Nairobi, Kenya",
         type: "Internship",
         level: "Entry Level",
