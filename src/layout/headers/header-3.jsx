@@ -34,7 +34,7 @@ const HeaderThree = () => {
                      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-6">
                         <div className="header-bottom__right d-flex align-items-center justify-content-end">
                            <div className="header-bottom__btn d-flex align-items-center">
-                              <Link className="tp-btn-blue-sm d-none d-md-inline-block tp-btn-hover alt-color-black" href="/service-details">
+                              <Link className="tp-btn-blue-sm d-none d-md-inline-block tp-btn-hover alt-color-black" href="/service">
                                  <span>Get Free</span>
                                  <b></b>
                               </Link>

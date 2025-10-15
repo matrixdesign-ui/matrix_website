@@ -52,8 +52,8 @@ const HeroArea = () => {
                                  <p className="wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">A simple solution for building the optimal work <br /> schedule for your business.</p>
                               </div>
                               <div className="tp-hero-five-btn-box d-flex align-items-center wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                                 <Link className="tp-btn-blue-lg purple-bg circle-effect mr-15 mb-20" href="/">Get Started</Link>
-                                 <Link className="tp-btn-grey mb-20" href="/service-details">Try a Damo</Link>
+                                 <Link className="tp-btn-blue-lg purple-bg circle-effect mr-15 mb-20" href="/service">Get Started</Link>
+                                 <Link className="tp-btn-grey mb-20" href="/service">Try a Damo</Link>
                               </div>
                            </div>
                         </div>

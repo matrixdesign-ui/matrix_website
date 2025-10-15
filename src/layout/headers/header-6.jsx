@@ -44,7 +44,7 @@ const HeaderSix = ({ style_2 = false }) => {
                      <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-6">
                         <div className="header-bottom__right d-flex align-items-center justify-content-end">
                            <div className="header-bottom__btn d-flex align-items-center">
-                              <Link className={`${style_2 ? 'tp-btn-inner alt-color-orange' : 'tp-btn-white alt-color-black'} tp-btn-hover d-none d-md-inline-block`} href="/service-details">
+                              <Link className={`${style_2 ? 'tp-btn-inner alt-color-orange' : 'tp-btn-white alt-color-black'} tp-btn-hover d-none d-md-inline-block`} href="/service">
                                  <span className="white-text">Get Started</span>
                                  <b></b>
                               </Link>
