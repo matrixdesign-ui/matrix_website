@@ -24,7 +24,7 @@ const service_data = [
         icon: img_1,
         img: img_1,
         title: "Software & Applications",
-        description: <>Transforming business processes with cloud-based (SaaS) or on-premise software solutions including CRMs, helpdesk systems, electronic board management, and custom application development[cite: 41, 46].</>,
+        description: <>Transforming business processes with cloud-based (SaaS) or on-premise software solutions including CRMs, helpdesk systems, electronic board management, and custom application development.</>,
         delay: ".4s",
         key: "software-applications"
     },
@@ -33,7 +33,7 @@ const service_data = [
         icon: img_2,
         img: img_2,
         title: "Enterprise Solutions",
-        description: <>Scalable enterprise-grade solutions for customer relationship management, helpdesk services, electronic board management, and comprehensive IT support for large organizations[cite: 48, 50].</>,
+        description: <>Scalable enterprise-grade solutions for customer relationship management, helpdesk services, electronic board management, and comprehensive IT support for large organizations.</>,
         delay: ".6s",
         key: "enterprise-solutions"
     },
@@ -42,7 +42,7 @@ const service_data = [
         icon: img_3,
         img: img_3,
         title: "Enterprise Facilities & Asset Management",
-        description: <>Integration of software and hardware for computer-aided facility management, automated visitor management, meeting room coordination, and centralized asset control[cite: 196, 213].</>,
+        description: <>Integration of software and hardware for computer-aided facility management, automated visitor management, meeting room coordination, and centralized asset control.</>,
         delay: ".7s",
         key: "enterprise-facilities-asset-management"
     },
@@ -51,7 +51,7 @@ const service_data = [
         icon: img_4,
         img: img_4,
         title: "Operational Safety",
-        description: <>Technologically advanced solutions for physical security, health, and environmental compliance, including incident management and environmental health systems[cite: 290, 292].</>,
+        description: <>Technologically advanced solutions for physical security, health, and environmental compliance, including incident management and environmental health systems.</>,
         delay: ".8s",
         key: "operational-safety"
     },

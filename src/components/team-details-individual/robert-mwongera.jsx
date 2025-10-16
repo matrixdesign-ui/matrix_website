@@ -16,7 +16,7 @@ const RobertMwongera = () => {
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <main>
-                        <BreadcrumbTwo title="Robert Mwongera" innertitle="Software & Automation Engineer" team_details={true} />
+                        <BreadcrumbTwo title="Robert Mwongera" innertitle="Elec & Software Eng. (Software, Automation & Systems Integration)" team_details={true} />
                         <div className="team-details-area pt-100 pb-100">
                            <div className="container">
                               <div className="row justify-content-center">

@@ -9,11 +9,7 @@ import React, {useState, useRef, useEffect, useLayoutEffect} from 'react';
 import NavMenu from './nav-menu';
 import useSticky from '@/src/hooks/use-sticky';
 
-
-
 import logo from "../../../public/assets/img/logo/logo-black.png"
-
-
 
 const Header = () => {
 
@@ -48,7 +44,7 @@ const Header = () => {
                         <div className="col-6">
                            <div className="header-top__link">
                               <span>Offer sheria360:<i> Sign up today!. </i></span>
-                              <Link href="#">
+                              <Link href="https://www.sheria360.com/">
                                  <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.40918 9L5.591 5L1.40918 1" stroke="white" strokeWidth="1.5"
                                        strokeLinecap="round" strokeLinejoin="round"/>
@@ -82,7 +78,7 @@ const Header = () => {
                         </div>
                         <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-6">
                            <div className="header-bottom__right d-flex align-items-center justify-content-end">
-                              <div className="header-bottom__action">
+                              <div className="header-bottom__action no-separator">
                                  <a className="d-none d-md-inline-block search-open-btn"
                                     onClick={() => setSearchOpen(true)} > 
                                     <SearchIconTwo />

@@ -120,7 +120,7 @@ const ProjectArea = () => {
                                                 <span>Status</span>
                                                 <h4>{item.status}</h4>
                                              </div>
-// ... existing code ...
+
                                              <div className="tp-project__link">
                                                 <Link
                                                    href={`/project-details/${getProjectSlug(item.title)}`}
@@ -128,7 +128,7 @@ const ProjectArea = () => {
                                                    <RightArrow />
                                                 </Link>
                                              </div>
-// ... existing code ...
+
                                           </div>
                                        </div>
                                     </div>

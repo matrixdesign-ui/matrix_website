@@ -16,7 +16,7 @@ const EzekielNyamisoaM = () => {
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <main>
-                        <BreadcrumbTwo title="Ezekiel Nyamisoa M." innertitle="Head Technician" team_details={true} />
+                        <BreadcrumbTwo title="Ezekiel Nyamisoa M." innertitle="Head Technician (Engineering Unit)" team_details={true} />
                         <div className="team-details-area pt-100 pb-100">
                            <div className="container">
                               <div className="row justify-content-center">
