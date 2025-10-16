@@ -15,7 +15,7 @@ const feature_data = [
    {
       id: 1,
       img: icon_1,
-      title: <>Software Systems & Solutions</>,
+      title: <>Enterprise Software Systems & Custom Applications</>,
       delay: ".4s",
       description: "Custom software development and integration services."
    },
