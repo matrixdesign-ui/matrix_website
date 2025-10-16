@@ -141,7 +141,7 @@ const ClientsPage = () => {
       projects: [
         "E-Board Management System"
       ],
-      partnership: "7 years"
+      partnership: "3 years"
     },
     {
       id: 14,
@@ -151,7 +151,7 @@ const ClientsPage = () => {
       projects: [
         "Board Management System"
       ],
-      partnership: "7 years"
+      partnership: "3 years"
     },
     {
       id: 15,
@@ -161,7 +161,7 @@ const ClientsPage = () => {
       projects: [
         "Electronic Board Management System"
       ],
-      partnership: "7 years"
+      partnership: "2 years"
     },
     {
       id: 16,
@@ -171,7 +171,7 @@ const ClientsPage = () => {
       projects: [
         "Cloud-Based E-Board Management System"
       ],
-      partnership: "6 years"
+      partnership: "5 years"
     },
     {
       id: 17,
