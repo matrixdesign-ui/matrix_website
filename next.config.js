@@ -9,7 +9,7 @@ const nextConfig = {
   // Ensure trailing slashes for compatibility
   trailingSlash: true,
 
-  // Image optimization
+  // Image optimization - disabled for static export
   images: {
     unoptimized: true,
   },
@@ -51,6 +51,9 @@ const nextConfig = {
     
     return config
   },
+  
+  // Configuration for static export
+  output: 'export',
 }
 
 module.exports = nextConfig

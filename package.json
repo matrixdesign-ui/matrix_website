@@ -19,7 +19,7 @@
     "lint:fix": "next lint --fix",
     "analyze": "cross-env ANALYZE=true next build",
     "export": "next export",
-    "deploy": "next build && echo 'To deploy to GitHub Pages, commit and push to main branch'",
+    "deploy": "next build && next export && echo 'To deploy to GitHub Pages, commit and push to main branch'",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
