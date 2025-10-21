@@ -3,16 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   
-  // Required for static HTML export
-  output: 'export',
-  
   // Remove base path for custom domain hosting
   // basePath: '/matrix_website', // Commented out for custom domain
   
   // Ensure trailing slashes for compatibility
   trailingSlash: true,
 
-  // Image optimization - disabled for static export
+  // Image optimization
   images: {
     unoptimized: true,
   },
