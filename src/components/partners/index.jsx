@@ -5,218 +5,132 @@ import Breadcrumb from "../../common/breadcrumbs/breadcrumb";
 import CtaArea from "../contact/cta-area";
 
 const PartnersPage = () => {
-  // Partner data - Expanded list including more Kenyan partners
+  // Partner data - Expanded list including more Kenyan partners with placeholder logos
   const partners = [
     {
       id: 1,
       name: "Microsoft Corporation",
       category: "Cloud Services & Enterprise Software",
       partnership: "Cloud Solutions & AI Platform Integration",
-      type: "Strategic Partner"
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/mocrosoft.jpg"
     },
     {
       id: 2,
       name: "Cisco Systems",
       category: "Networking Infrastructure",
       partnership: "Network Infrastructure & Communications Solutions",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/cisco.png"
     },
     {
       id: 3,
       name: "IBM",
       category: "Enterprise & Analytics",
       partnership: "Data Analytics & AI Consulting Services",
-      type: "Strategic Partner"
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/ibm.jpg"
     },
     {
       id: 4,
       name: "Google Cloud",
       category: "Cloud Services",
       partnership: "Enterprise Cloud Infrastructure & Big Data Solutions",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/google.png"
     },
     {
       id: 5,
       name: "Amazon Web Services (AWS)",
       category: "Cloud Services",
       partnership: "Enterprise Cloud Solutions & Scalable Computing",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/aws.png"
     },
     {
       id: 6,
       name: "Dell Technologies",
       category: "Enterprise Infrastructure",
       partnership: "Server & Storage Solutions for Data Centers",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/dell.png"
     },
     {
       id: 7,
       name: "VMware",
       category: "Virtualization & Cloud",
       partnership: "Virtual Infrastructure & Cloud Computing Platforms",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/vmare.png"
     },
     {
       id: 8,
       name: "SAP SE",
       category: "Enterprise Resource Planning",
       partnership: "Enterprise Resource Planning & Business Software Solutions",
-      type: "Strategic Partner"
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/sap.png"
     },
     {
       id: 9,
       name: "Oracle Corporation",
       category: "Database & Analytics",
       partnership: "Database Solutions & Analytics Platform",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/oracle.png"
     },
     {
       id: 10,
       name: "Adobe Systems",
       category: "Creative & Digital Experience",
       partnership: "Digital Experience Platform & Document Management",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/adobe.png"
     },
     {
       id: 11,
       name: "Salesforce",
       category: "Customer Relationship Management",
       partnership: "Customer Relationship Management & Marketing Solutions",
-      type: "Strategic Partner"
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/salesforce.png"
     },
     {
       id: 12,
       name: "Huawei Technologies",
       category: "Telecommunications & Networking",
       partnership: "Network Infrastructure & 5G Communications",
-      type: "Technology Partner"
+      type: "Technology Partner",
+      logo: "/assets/img/brand/huawei.png"
     },
     {
       id: 13,
-      name: "Safaricom PLC",
-      category: "Telecommunications",
-      partnership: "Mobile Network Infrastructure & Digital Payment Solutions",
-      type: "Strategic Partner"
+      name: "Lenovo",
+      category: "Technology company",
+      partnership: " Hardware design, manufacture,  including PCs, servers,",
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/lenovo.png"
     },
+
     {
       id: 14,
-      name: "Telkom Kenya",
-      category: "Telecommunications",
-      partnership: "Fixed Line & Data Services",
-      type: "Technology Partner"
+      name: "Dahua Technology",
+      category: "CCTV Technology company",
+      partnership: " CCTV, NVR/DVR, access control and intercom solutions",
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/dahua.png"
     },
+
     {
       id: 15,
-      name: "Equity Bank",
-      category: "Financial Services",
-      partnership: "Digital Banking Infrastructure & Payment Solutions",
-      type: "Strategic Partner"
+      name: "HIKVision",
+      category: "CCTV Technology company",
+      partnership: "AIoT solutions and reliable security camera systems,",
+      type: "Strategic Partner",
+      logo: "/assets/img/brand/hikvision.jpg"
     },
-    {
-      id: 16,
-      name: "KCB Group",
-      category: "Financial Services",
-      partnership: "Banking Technology Solutions & Core Banking Systems",
-      type: "Technology Partner"
-    },
-    {
-      id: 17,
-      name: "Kenya Power & Lighting Company",
-      category: "Energy & Utilities",
-      partnership: "Smart Grid Solutions & Energy Management Systems",
-      type: "Technology Partner"
-    },
-    {
-      id: 18,
-      name: "National Oil Corporation of Kenya",
-      category: "Energy & Utilities",
-      partnership: "Enterprise IT Solutions & Digital Transformation",
-      type: "Technology Partner"
-    },
-    {
-      id: 19,
-      name: "Britam Holdings",
-      category: "Financial Services",
-      partnership: "Insurance Technology Solutions & Customer Management Systems",
-      type: "Technology Partner"
-    },
-    {
-      id: 20,
-      name: "Cooperative Bank of Kenya",
-      category: "Financial Services",
-      partnership: "Banking Infrastructure & Digital Banking Platforms",
-      type: "Technology Partner"
-    },
-    {
-      id: 21,
-      name: "Jomo Kenyatta International Airport",
-      category: "Transportation & Logistics",
-      partnership: "Airport Management Systems & Security Solutions",
-      type: "Technology Partner"
-    },
-    {
-      id: 22,
-      name: "Kenya Airways",
-      category: "Transportation & Logistics",
-      partnership: "Reservation Systems & Passenger Management Solutions",
-      type: "Technology Partner"
-    },
-    {
-      id: 23,
-      name: "East African Breweries Limited",
-      category: "Consumer Goods",
-      partnership: "Supply Chain Management & ERP Solutions",
-      type: "Technology Partner"
-    },
-    {
-      id: 24,
-      name: "Bidco Africa",
-      category: "Consumer Goods",
-      partnership: "Enterprise Resource Planning & Manufacturing Systems",
-      type: "Technology Partner"
-    },
-    {
-      id: 25,
-      name: "Family Bank",
-      category: "Financial Services",
-      partnership: "Banking Technology Solutions & Mobile Banking Platforms",
-      type: "Technology Partner"
-    },
-    {
-      id: 26,
-      name: "Absa Bank Kenya",
-      category: "Financial Services",
-      partnership: "Enterprise Banking Solutions & Digital Transformation",
-      type: "Technology Partner"
-    },
-    {
-      id: 27,
-      name: "Standard Chartered Bank Kenya",
-      category: "Financial Services",
-      partnership: "International Banking Solutions & Trade Finance",
-      type: "Technology Partner"
-    },
-    {
-      id: 28,
-      name: "NCBA Group",
-      category: "Financial Services",
-      partnership: "Digital Banking Infrastructure & Core Systems",
-      type: "Technology Partner"
-    },
-    {
-      id: 29,
-      name: "Genghis Khan Restaurant Group",
-      category: "Hospitality & Leisure",
-      partnership: "Point of Sale Systems & Customer Management",
-      type: "Technology Partner"
-    },
-    {
-      id: 30,
-      name: "Nairobi Securities Exchange",
-      category: "Financial Services",
-      partnership: "Trading Platform Infrastructure & Market Data Solutions",
-      type: "Technology Partner"
-    }
+    
+    
   ];
 
   return (
@@ -260,7 +174,10 @@ const PartnersPage = () => {
                   
                   <div className="partner-logo-placeholder mt-30">
                     <div className="logo-placeholder">
-                      <span>Partner Logo</span>
+                      <img
+                        src={partner.logo}
+                        alt={`${partner.name} placeholder logo`}
+                      />
                     </div>
                   </div>
                 </div>
@@ -349,14 +266,19 @@ const PartnersPage = () => {
         .logo-placeholder {
           border: 2px dashed #6c757d; /* Gray color instead of blue */
           border-radius: 8px;
-          padding: 25px;
-          text-align: center;
-          color: #6c757d; /* Gray color instead of blue */
-          font-size: 14px;
-          min-height: 90px;
+          padding: 20px;
+          min-height: 120px;
           display: flex;
           align-items: center;
           justify-content: center;
+          background: #f8f9fc;
+        }
+        
+        .logo-placeholder img {
+          max-width: 140px;
+          max-height: 70px;
+          width: 100%;
+          object-fit: contain;
         }
         
         @media (max-width: 768px) {

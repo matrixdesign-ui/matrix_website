@@ -5,7 +5,7 @@ import Breadcrumb from "../../common/breadcrumbs/breadcrumb";
 import CtaArea from "../contact/cta-area";
 
 const ClientsPage = () => {
-  // Client data - Complete list of all clients
+  // Client data - Complete list of all clients with placeholder logos
   const clients = [
     {
       id: 1,
@@ -16,7 +16,8 @@ const ClientsPage = () => {
         "Integrated Legal Management System ILMS",
         "Integrated Board Management System"
       ],
-      partnership: "8 years"
+      partnership: "8 years",
+      logo: "/assets/img/brand/kra.webp"
     },
     {
       id: 2,
@@ -27,7 +28,8 @@ const ClientsPage = () => {
         "Integrated Legal Case Management System ILCMS",
         "Installation of Airconditioning units, UPS Systems, CCTV Surveillance Systems at Regional Offices"
       ],
-      partnership: "1 year"
+      partnership: "1 year",
+      logo: "/assets/img/brand/ca.jpg"
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ const ClientsPage = () => {
       projects: [
         "Legal Information Management System LEMIS"
       ],
-      partnership: "2 years"
+      partnership: "2 years",
+      logo: "/assets/img/brand/kebs.png"
     },
     {
       id: 4,
@@ -47,7 +50,8 @@ const ClientsPage = () => {
       projects: [
         "Emergency Communication Systems & Rural Connectivity"
       ],
-      partnership: "5 years"
+      partnership: "5 years",
+      logo: "/assets/img/brand/rerec.jpg"
     },
     {
       id: 5,
@@ -60,7 +64,8 @@ const ClientsPage = () => {
         "Structured Cabling Systems",
         "Fire Detection and Suppression System"
       ],
-      partnership: "6 years"
+      partnership: "6 years",
+      logo: "/assets/img/brand/ilri.png"
     },
     {
       id: 6,
@@ -70,7 +75,8 @@ const ClientsPage = () => {
       projects: [
         "CCTV Security Surveillance System"
       ],
-      partnership: "8 years"
+      partnership: "8 years",
+      logo: "/assets/img/brand/ksl.png"
     },
     {
       id: 7,
@@ -80,7 +86,8 @@ const ClientsPage = () => {
       projects: [
         "Electronic Board Management & Healthcare Information Systems"
       ],
-      partnership: "2 years"
+      partnership: "2 years",
+      logo: "/assets/img/brand/nh.png"
     },
     {
       id: 8,
@@ -90,7 +97,8 @@ const ClientsPage = () => {
       projects: [
         "Enterprise IT Helpdesk System & Patient Management"
       ],
-      partnership: "1 year"
+      partnership: "1 year",
+      logo: "/assets/img/brand/mtrh.png"
     },
     {
       id: 9,
@@ -101,7 +109,8 @@ const ClientsPage = () => {
         "WiFi Systems Installation of Rehabilation & Upgrading of Moi International Sports Centre Kasarani",
         "Lifts Installation Works at MISC Kasarani"
       ],
-      partnership: "1 year"
+      partnership: "1 year",
+      logo: "/assets/img/brand/sk.png"
     },
     {
       id: 10,
@@ -111,7 +120,8 @@ const ClientsPage = () => {
       projects: [
         "Biometric Controlled Gate Security Systems"
       ],
-      partnership: "6 years"
+      partnership: "6 years",
+      logo: "/assets/img/brand/mu.png"
     },
     {
       id: 11,
@@ -121,7 +131,8 @@ const ClientsPage = () => {
       projects: [
         "Internet Connectivity Infrastructure for National Sports Programs"
       ],
-      partnership: "1 year"
+      partnership: "1 year",
+      logo: "/assets/img/brand/moyasa.jpg"
     },
     {
       id: 12,
@@ -131,7 +142,8 @@ const ClientsPage = () => {
       projects: [
         "Electronic Meeting and Governance System"
       ],
-      partnership: "3 years"
+      partnership: "3 years",
+      logo: "/assets/img/brand/nh.png"
     },
     {
       id: 13,
@@ -141,7 +153,8 @@ const ClientsPage = () => {
       projects: [
         "E-Board Management System"
       ],
-      partnership: "3 years"
+      partnership: "3 years",
+      logo: "/assets/img/brand/helb.png"
     },
     {
       id: 14,
@@ -151,7 +164,8 @@ const ClientsPage = () => {
       projects: [
         "Board Management System"
       ],
-      partnership: "3 years"
+      partnership: "3 years",
+      logo: "/assets/img/brand/kuc.png"
     },
     {
       id: 15,
@@ -161,7 +175,8 @@ const ClientsPage = () => {
       projects: [
         "Electronic Board Management System"
       ],
-      partnership: "2 years"
+      partnership: "2 years",
+      logo: "/assets/img/brand/kasneb.png"
     },
     {
       id: 16,
@@ -171,7 +186,8 @@ const ClientsPage = () => {
       projects: [
         "Cloud-Based E-Board Management System"
       ],
-      partnership: "5 years"
+      partnership: "5 years",
+      logo: "/assets/img/brand/nca.png"
     },
     {
       id: 17,
@@ -181,7 +197,8 @@ const ClientsPage = () => {
       projects: [
         "Access Control, CCTV and Traffic Arm Barriers"
       ],
-      partnership: "6 years"
+      partnership: "6 years",
+      logo: "/assets/img/brand/cic.png"
     },
     {
       id: 18,
@@ -191,7 +208,8 @@ const ClientsPage = () => {
       projects: [
         "CCTV Surveillance System"
       ],
-      partnership: "5 years"
+      partnership: "5 years",
+      logo: "/assets/img/brand/cim.png"
     },
     {
       id: 19,
@@ -201,7 +219,8 @@ const ClientsPage = () => {
       projects: [
         "Fingerprint Access Control System at Registries, Payroll Section and Examination Secretariat Offices"
       ],
-      partnership: "4 years"
+      partnership: "4 years",
+      logo: "/assets/img/brand/kmtc.png"
     },
     {
       id: 20,
@@ -211,7 +230,8 @@ const ClientsPage = () => {
       projects: [
         "Access Control Systems"
       ],
-      partnership: "4 years"
+      partnership: "4 years",
+      logo: "/assets/img/brand/kemri.png"
     },
     {
       id: 21,
@@ -221,7 +241,8 @@ const ClientsPage = () => {
       projects: [
         "Integrated Gate Security System with Bollards, Automatic Barriers and Biometric-based access control for visitors and staff at Centum's International House"
       ],
-      partnership: "6 years"
+      partnership: "6 years",
+      logo: "/assets/img/brand/centum.png"
     },
     {
       id: 22,
@@ -231,7 +252,8 @@ const ClientsPage = () => {
       projects: [
         "Automatic Gate Access Control System with Pedestrian Turnstiles, Security Bollards & Traffic Barriers"
       ],
-      partnership: "7 years"
+      partnership: "7 years",
+      logo: "/assets/img/brand/kue.png"
     },
     {
       id: 23,
@@ -241,7 +263,8 @@ const ClientsPage = () => {
       projects: [
         "ICT Infrastructure and Security Systems"
       ],
-      partnership: "0 years"
+      partnership: "0 years",
+      logo: "/assets/img/brand/csi.jpg"
     },
     {
       id: 24,
@@ -251,7 +274,8 @@ const ClientsPage = () => {
       projects: [
         "Cameras and Public Address System to REREC"
       ],
-      partnership: "0 years"
+      partnership: "0 years",
+      logo: "/assets/img/brand/rerec.jpg"
     },
     {
       id: 25,
@@ -261,17 +285,19 @@ const ClientsPage = () => {
       projects: [
         "E-Board Management System"
       ],
-      partnership: "7 years"
+      partnership: "7 years",
+      logo: "/assets/img/brand/sony.png"
     },
     {
       id: 26,
-      name: "LOMARO",
+      name: "Emoru Hydrogen LLP",
       sector: "Energy",
       since: "2023",
       projects: [
         "Collaboration and Projects Management System"
       ],
-      partnership: "2 years"
+      partnership: "2 years",
+      logo: "/assets/img/brand/emoru.png"
     }
   ];
 
@@ -324,7 +350,10 @@ const ClientsPage = () => {
                   
                   <div className="client-logo-placeholder mt-30">
                     <div className="logo-placeholder">
-                      <span>Client Logo</span>
+                      <img
+                        src={client.logo}
+                        alt={`${client.name} placeholder logo`}
+                      />
                     </div>
                   </div>
                 </div>
@@ -431,14 +460,19 @@ const ClientsPage = () => {
         .logo-placeholder {
           border: 2px dashed #007bff;
           border-radius: 8px;
-          padding: 25px;
-          text-align: center;
-          color: #007bff;
-          font-size: 14px;
-          min-height: 90px;
+          padding: 20px;
+          min-height: 120px;
           display: flex;
           align-items: center;
           justify-content: center;
+          background: #f8f9ff;
+        }
+        
+        .logo-placeholder img {
+          max-width: 140px;
+          max-height: 70px;
+          width: 100%;
+          object-fit: contain;
         }
         
         @media (max-width: 768px) {
