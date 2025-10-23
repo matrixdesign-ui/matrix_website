@@ -3,7 +3,6 @@ import testimonial_svg from '@/src/data/testimonial-svg';
 import RightArrow from '@/src/svg/right-arrow';
 import StartTwo from '@/src/svg/start-2';
 import gsap from 'gsap';
-import Image from 'next/image';
 import Link from 'next/link';
 import React,{useState, useEffect, useRef} from 'react';
 import Slider from 'react-slick'; 
@@ -13,7 +12,10 @@ const tp_setting = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    fade: false, 
+    fade: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
 }
 
 const brands_setting  = {	
@@ -113,9 +115,6 @@ const TestimonialArea = () => {
                                     <div className="row gx-0">
                                        <div className="col-xl-7 col-lg-7">
                                           <div className="tp-testimonial__left-item p-relative">
-                                             <div className="tp-testimonial__logo">
-                                                <Image src={item?.img} alt="theme-pure" />
-                                             </div>
                                              <div className="tp-testimonial__content z-index">
                                                 <p>{item.description} </p>
                                              </div>
@@ -132,11 +131,11 @@ const TestimonialArea = () => {
                                                 <p>{item.sub_des}</p>
                                              </div>
                                              <div className="tp-testimonial__link">
-                                                <Link href="#">
+                                                <Link href={item.projectSlug ? `/project-details/${item.projectSlug}` : "/project-details"}>
                                                    Read Case Study
                                                    <RightArrow />
                                                 </Link>
-                                             </div>
+                                              </div>
                                           </div>
                                        </div>
                                     </div>
@@ -146,18 +145,6 @@ const TestimonialArea = () => {
 
                            </Slider>
 
-                           <Slider
-                           asNavFor={slider1} ref={(slider) => setSlider2(slider)}
-                           {...brands_setting} 
-                           className="tp-testimonial__img-active mt-50">
-                            {testimonial_svg.map((item, i)  => 
-                                <div key={i} className="tp-testimonial__img-wrap tp-title-anim" ref={title_anim}>
-                                 <div className="tp-testimonial__img-item">
-                                    {item?.svg_img}  
-                                 </div>
-                              </div>    
-                            )} 
-                           </Slider>
                         </div>
                      </div>
                   </div>

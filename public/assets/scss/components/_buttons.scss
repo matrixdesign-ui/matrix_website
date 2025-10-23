@@ -62,7 +62,7 @@
 }
 .tp-btn-orange{
 	display: inline-block;
-	background-color: var(--tp-common-orange);
+	background-color: #FF4D4D;
 	color: var(--tp-common-white);
 	height: 36px;
 	line-height: 36px;
@@ -85,8 +85,18 @@
 	}
 	&:hover{
 		& span{
-			color: var(--tp-common-black);
+			color: var(--tp-common-white);
 			transition-delay: .1s;
+		}
+	}
+
+	&.tp-btn-hover.alt-color-white{
+		&:hover{
+			background-color: var(--tp-common-white);
+			color: #FF4D4D;
+			& span{
+				color: #FF4D4D;
+			}
 		}
 	}
 }

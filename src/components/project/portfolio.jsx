@@ -55,7 +55,12 @@ const Portfolio = () => {
                                     <div className="project-card-image-container">
                                         <Image className="project-card-image w-100" src={item.img_1} alt={item.title} />
                                         <div className="project-card-client-logo">
-                                            <Image src={item.img_2} alt={item.client_name} />
+                                            <img
+                                               src={item.img_2}
+                                               alt={`${item.client_name} logo`}
+                                               loading="lazy"
+                                               style={{ maxWidth: "120px", maxHeight: "60px", width: "100%", objectFit: "contain" }}
+                                            />
                                         </div>
                                         <div className="project-card-status-overlay">
                                            <span className={`project-status-badge ${item.status.toLowerCase()}`}>

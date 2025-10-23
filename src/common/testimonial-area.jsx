@@ -1,7 +1,7 @@
 import testimonial_data from '@/src/data/testimonial-data';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import { Navigation, Scrollbar } from 'swiper';
+import { Autoplay, Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const testimonial_content = {
@@ -40,6 +40,10 @@ const setting = {
    navigation: {
       nextEl: '.test-prev',
       prevEl: '.test-next',
+   },
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
    },
 }
 
@@ -88,23 +92,24 @@ const TestimonialArea = () => {
                            {...setting}
                            onSliderMove={handleSlideChange}
                            onTransitionEnd={handleTransitionEnd}
-                           modules={[Navigation, Scrollbar]}
+                           modules={[Autoplay, Navigation, Scrollbar]}
                            className={`swiper-container testimonial-five-slider-active ${isDragged ? "dragged" : ""
                               }`}>
-                           {testimonial_data.slice(12, 25).map((item, i) =>
+                           {testimonial_data.map((item, i) =>
                               <SwiperSlide key={i} className="tp-testimonial-five-item">
                                  <div className="tp-testimonial-five-wrapper d-flex justify-content-between align-items-center">
-                                    <div className="tp-testimonial-five-top-info d-flex align-items-center">
-                                       <div className="tp-testimonial-five-avata">
-                                          <Image src={item.author_img} alt="theme-pure" />
-                                       </div>
+                                    <div className="tp-testimonial-five-top-info d-flex align-items-center" style={{ gap: "12px" }}>
                                        <div className="tp-testimonial-five-author-info">
                                           <h4>{item.name}</h4>
                                           <span>{item.title}</span>
                                        </div>
                                     </div>
                                     <div className="tp-testimonial-five-brand d-none d-sm-block">
-                                       <Image src={item.brand_icon} alt="theme-pure" />
+                                       <Image
+                                          src={item.brand_icon}
+                                          alt={`${item.title} logo`}
+                                          style={{ width: "110px", height: "auto" }}
+                                       />
                                     </div>
                                  </div>
                                  <div className="tp-testimonial-five-content">
