@@ -58,21 +58,16 @@ const ServiceDetailsArea = ({ service }) => {
                                     {key_benefit && (
                                         <div className="key-benefit-highlight service-card">
                                           {/* Icon on top */}
-                                          <div className="service-icon-top mb-25">
+                                          <div className="service-icon-top">
                                             <div className="icon-placeholder">
-                                              <i className={`${serviceIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                              <i className={`${serviceIcon}`} style={{ fontSize: '1.75rem', color: 'white' }}></i>
                                             </div>
                                           </div>
                                           
-                                          <div className="service-header mb-25">
-                                            <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{serviceTitle}</h3>
-                                          </div>
+                                          <h3 className="service-title">{serviceTitle}</h3>
                                           
-                                          <div className="service-details mb-25">
-                                            <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
-                                              Key Benefit:
-                                            </h4>
-                                            <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{key_benefit}</p>
+                                          <div className="service-details">
+                                            <p className="service-description">{key_benefit}</p>
                                           </div>
                                           
                                           <div className="service-type">
@@ -113,19 +108,16 @@ const ServiceDetailsArea = ({ service }) => {
                                                 <div key={i} className="col-xl-4 col-md-6">
                                                     <div className="service-card">
                                                       {/* Icon on top */}
-                                                      <div className="service-icon-top mb-25">
+                                                      <div className="service-icon-top">
                                                         <div className="icon-placeholder">
-                                                          <i className={`${featureIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                                          <i className={`${featureIcon}`} style={{ fontSize: '1.75rem', color: 'white' }}></i>
                                                         </div>
                                                       </div>
             
-                                                      <div className="service-details mb-25">
-                                                        {boldTitle && (
-                                                            <h4 className="service-title" style={{ fontWeight: '880', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
-                                                                {boldTitle}:
-                                                            </h4>
-                                                        )}
-                                                        <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: descriptionText }}></p>
+                                                      <h3 className="service-title">{boldTitle || 'Feature'}</h3>
+                                                      
+                                                      <div className="service-details">
+                                                        <p className="service-description" dangerouslySetInnerHTML={{ __html: descriptionText }}></p>
                                                       </div>
                                                     </div>
                                                 </div>
@@ -165,23 +157,16 @@ const ServiceDetailsArea = ({ service }) => {
                                                     <div key={i} className="col-xl-4 col-md-6">
                                                         <div className="service-card">
                                                           {/* Icon on top */}
-                                                          <div className="service-icon-top mb-25">
+                                                          <div className="service-icon-top">
                                                             <div className="icon-placeholder">
-                                                              <i className={`${subServiceIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                                              <i className={`${subServiceIcon}`} style={{ fontSize: '1.75rem', color: 'white' }}></i>
                                                             </div>
                                                           </div>
                                                           
-                                                          <div className="service-header mb-25">
-                                                            <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>{subService.title}</h3>
-                                                          </div>
+                                                          <h3 className="service-title">{subService.title}</h3>
                                                           
-                                                          <div className="service-details mb-25">
-                                                            {boldDescTitle && (
-                                                                <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#222', marginBottom: '15px', textAlign: 'center' }}>
-                                                                    {boldDescTitle}:
-                                                                </h4>
-                                                            )}
-                                                            <p className="service-description" style={{ fontSize: '14px', color: '#495057', lineHeight: '1.5', marginBottom: '0', textAlign: 'center' }}>{descText}</p>
+                                                          <div className="service-details">
+                                                            <p className="service-description">{descText}</p>
                                                             <div className="features-list">
                                                                 {subService.features.slice(0, 3).map((feature, j) => {
                                                                     // Split feature into title and description parts
@@ -240,22 +225,64 @@ const ServiceDetailsArea = ({ service }) => {
                 }
                 
                 .service-card {
-                    background: white;
-                    border-radius: 15px;
-                    padding: 30px;
-                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                    transition: all 0.3s ease;
+                    background: #ffffff;
+                    border-radius: 1rem;
+                    padding: 2rem;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                     height: 100%;
-                    border: 1px solid #eee;
+                    text-align: center;
+                    border: 1px solid #e2e8f0;
+                    position: relative;
+                    overflow: hidden;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    text-align: center;
+                    cursor: pointer;
+                }
+                
+                .service-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                
+                .service-card::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: width 0.6s ease, height 0.6s ease;
+                    pointer-events: none;
                 }
                 
                 .service-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+                    transform: translateY(-8px) rotateX(2deg);
+                    box-shadow: 
+                      0 20px 40px rgba(59, 130, 246, 0.15),
+                      0 10px 20px rgba(0, 0, 0, 0.1),
+                      0 0 0 1px rgba(59, 130, 246, 0.1);
+                    border-color: rgba(59, 130, 246, 0.3);
+                }
+                
+                .service-card:hover::before {
+                    transform: scaleX(1);
+                }
+                
+                .service-card:hover::after {
+                    width: 300px;
+                    height: 300px;
                 }
                 
                 .service-type {
@@ -273,16 +300,50 @@ const ServiceDetailsArea = ({ service }) => {
                     font-weight: 600;
                 }
                 
+                .service-title {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: #0f172a;
+                    margin-bottom: 0.75rem;
+                    letter-spacing: -0.01em;
+                }
+                
+                .service-description {
+                    font-size: 0.9375rem;
+                    color: #64748b;
+                    line-height: 1.6;
+                    margin-bottom: 0;
+                }
+                
                 .icon-placeholder {
-                    border: none;
-                    border-radius: 8px;
-                    padding: 20px;
-                    min-height: 90px;
+                    width: 4rem;
+                    height: 4rem;
+                    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+                    border-radius: 0.75rem;
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    gap: 10px;
+                    margin: 0 auto 1.5rem;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    position: relative;
+                    z-index: 3;
+                }
+                
+                .service-card:hover .icon-placeholder {
+                    transform: scale(1.1) rotate(5deg);
+                    box-shadow: 
+                      0 8px 20px rgba(59, 130, 246, 0.4),
+                      0 0 30px rgba(59, 130, 246, 0.2);
+                    animation: iconGlow 2s ease-in-out infinite;
+                }
+                
+                @keyframes iconGlow {
+                    0%, 100% {
+                        filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+                    }
+                    50% {
+                        filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.6));
+                    }
                 }
                 
                 @media (max-width: 768px) {
@@ -291,7 +352,7 @@ const ServiceDetailsArea = ({ service }) => {
                     }
                     
                     .service-card {
-                        padding: 20px;
+                        padding: 1.5rem;
                     }
                 }
             `}</style>

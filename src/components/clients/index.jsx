@@ -344,10 +344,6 @@ const ClientsPage = () => {
                     </ul>
                   </div>
                   
-                  <div className="client-partnership">
-                    <span className="partnership-years">{client.partnership} partnership</span>
-                  </div>
-                  
                   <div className="client-logo-placeholder mt-30">
                     <div className="logo-placeholder">
                       <img
@@ -431,21 +427,6 @@ const ClientsPage = () => {
           margin: 0;
         }
         
-        .project-item {
-          display: flex;
-          align-items: flex-start;
-          margin-bottom: 12px;
-          font-size: 14px;
-          color: #495057;
-        }
-        
-        .project-item i {
-          color: #007bff;
-          margin-right: 10px;
-          margin-top: 4px;
-          font-size: 12px;
-        }
-        
         .client-partnership {
           padding-top: 20px;
           border-top: 1px solid #eee;
@@ -458,14 +439,14 @@ const ClientsPage = () => {
         }
         
         .logo-placeholder {
-          border: 2px dashed #007bff;
+          border: none;
           border-radius: 8px;
           padding: 20px;
           min-height: 120px;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #f8f9ff;
+          background: white;
         }
         
         .logo-placeholder img {

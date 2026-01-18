@@ -1,5 +1,4 @@
 import Breadcrumb from "@/src/common/breadcrumbs/breadcrumb";
-import HeroBanner from "@/src/common/hero-banner";
 import FooterFive from "@/src/layout/footers/footer-5";
 import HeaderSix from "@/src/layout/headers/header-6";
 import React from "react"; 
@@ -18,7 +17,6 @@ const Service = () => {
         <div id="smooth-content">
           <main>
             <Breadcrumb title_top={"Our Top"} title_bottom={"Service"} />
-            <HeroBanner title="Our Top" subtitle="Service" bg_img="/assets/img/breadcrumb/breadcrumb-2.jpg" />
             <ServiceArea /> 
             <CardArea style_service={true} />
             <SalesArea style_service={true} />

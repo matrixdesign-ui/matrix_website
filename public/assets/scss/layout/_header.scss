@@ -358,11 +358,23 @@
                 @media #{$lg}{
                     margin-left: -2px;  
                 }
+                @media #{$md,$xs}{
+                    margin-left: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
                 & li{
                     display: inline-block;
                     margin: 0px 17px;
                     @media #{$lg}{
                         margin: 0px 12px; 
+                    }
+                    @media #{$md}{
+                        margin: 0px 8px;
+                    }
+                    @media #{$xs}{
+                        margin: 0px 4px;
                     }
                     &:hover{
                         & a{
@@ -375,6 +387,18 @@
                         color: var(--tp-common-black);
                         display: inline-block;
                         padding: 40px 0;
+                        @media #{$lg}{
+                            padding: 35px 0;
+                            font-size: 14px;
+                        }
+                        @media #{$md}{
+                            padding: 30px 0;
+                            font-size: 13px;
+                        }
+                        @media #{$xs}{
+                            padding: 25px 0;
+                            font-size: 12px;
+                        }
                     }
                     & .submenu {
                         position: absolute;

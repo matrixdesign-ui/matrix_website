@@ -288,10 +288,6 @@ const Clients = () => {
                     <div className="clients-content">
                       <h5 className="clients-name">{client.name}</h5>
                       <p className="clients-project">{client.project}</p>
-                      <div className="clients-partnership">
-                        <span className="partnership-badge">Trusted Partner</span>
-                        <span className="partnership-years">{client.partnership}</span>
-                      </div>
                     </div>
                     
                     <div className="clients-logo-placeholder">
@@ -376,27 +372,6 @@ const Clients = () => {
           color: #495057;
           margin-bottom: 20px;
           line-height: 1.5;
-        }
-        
-        .clients-partnership {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-        }
-        
-        .partnership-badge {
-          background: #28a745;
-          color: white;
-          padding: 4px 12px;
-          border-radius: 20px;
-          font-size: 12px;
-          font-weight: 600;
-        }
-        
-        .partnership-years {
-          font-size: 13px;
-          color: #6c757d;
         }
         
         .logo-placeholder {

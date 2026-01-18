@@ -52,8 +52,8 @@ const nextConfig = {
     return config
   },
   
-  // Configuration for static export
-  output: 'export',
+  // Configuration for static export (only for production builds)
+  // output: 'export', // Commented out to allow dev server to run
 }
 
 module.exports = nextConfig

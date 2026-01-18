@@ -13,6 +13,11 @@ const MobileMenus = () => {
       setNavTitle(menu);
     }
   };
+
+  const isExternalLink = (url) => {
+    return url && (url.startsWith('http://') || url.startsWith('https://'));
+  };
+
   return (
     <>
       <nav className="mean-nav">
@@ -21,7 +26,11 @@ const MobileMenus = () => {
             <React.Fragment key={i}>
               {menu.has_dropdown && (
                 <li className="has-dropdown">
-                  <Link href={menu.link}>{menu.title}</Link>
+                  {isExternalLink(menu.link) ? (
+                    <a href={menu.link} target="_blank" rel="noopener noreferrer">{menu.title}</a>
+                  ) : (
+                    <Link href={menu.link}>{menu.title}</Link>
+                  )}
                   <ul
                     className="submenu"
                     style={{
@@ -30,7 +39,11 @@ const MobileMenus = () => {
                   >
                     {menu.sub_menus.map((sub, i) => (
                       <li key={i}>
-                        <Link href={sub.link}>{sub.title}</Link>
+                        {isExternalLink(sub.link) ? (
+                          <a href={sub.link} target="_blank" rel="noopener noreferrer">{sub.title}</a>
+                        ) : (
+                          <Link href={sub.link}>{sub.title}</Link>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -48,7 +61,11 @@ const MobileMenus = () => {
               )}
               {!menu.has_dropdown && (
                 <li>
-                  <Link href={menu.link}>{menu.title}</Link>
+                  {isExternalLink(menu.link) ? (
+                    <a href={menu.link} target="_blank" rel="noopener noreferrer">{menu.title}</a>
+                  ) : (
+                    <Link href={menu.link}>{menu.title}</Link>
+                  )}
                 </li>
               )}
             </React.Fragment>

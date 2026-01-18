@@ -61,7 +61,7 @@ const TestimonialArea = () => {
 
    return (
       <>
-         <div className="tp-testimonial-area pt-130 pb-130 fix"
+         <div className="tp-testimonial-area pt-60 pb-60 fix"
             style={{ backgroundImage: `url(${bg_img})` }}
          >
             <div className="container">

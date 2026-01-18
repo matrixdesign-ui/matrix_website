@@ -19,7 +19,7 @@ const service_categories = [
   {
     id: 1,
     title: "Software & Applications",
-    description: "Comprehensive software solutions encompassing Legal Case Management, Contracts Lifecycle Management, Electronic Board Management,  Audit Management,Ccustomer Relationship Management, Helpdesk Systems, and various specialized applications.",
+    description: "Comprehensive software solutions for legal case management, contracts lifecycle, electronic board management, and specialized applications.",
     link: "/services/software-applications",
     icon: "fas fa-laptop-code",
     img: service_img_1,
@@ -30,7 +30,7 @@ const service_categories = [
   {
     id: 2,
     title: "Infrastructure & Development",
-    description: "Custom software development and system integration services to build scalable, secure, and efficient business applications.",
+    description: "Custom software development and system integration services to build scalable and secure business applications.",
     link: "/services/infrastructure-development",
     icon: "fas fa-cogs",
     img: service_img_2,
@@ -41,7 +41,7 @@ const service_categories = [
   {
     id: 3,
     title: "Enterprise Solutions",
-    description: "Scalable enterprise-grade solutions for customer relationship management, helpdesk services, electronic board management, and IT support.",
+    description: "Scalable enterprise-grade solutions for customer relationship management, helpdesk services, and IT support.",
     link: "/services/enterprise-solutions",
     icon: "fas fa-building",
     img: service_img_3,
@@ -52,7 +52,7 @@ const service_categories = [
   {
     id: 4,
     title: "Governance & Compliance",
-    description: "Comprehensive solutions for Contract Lifecycle Management, Legal Case Management, Audit Management, and Social Media Monitoring to ensure your organization's compliance.",
+    description: "Comprehensive solutions for contract lifecycle management, legal case management, and audit management for compliance.",
     link: "/services/governance-compliance",
     icon: "fas fa-gavel",
     img: service_img_4,
@@ -63,7 +63,7 @@ const service_categories = [
   {
     id: 5,
     title: "Facilities & Asset Management",
-    description: "Advanced Computer-Aided Facility Management, Asset Tracking, Automated Visitor Management, and Meeting Room Management.",
+    description: "Advanced facility management, asset tracking, automated visitor management, and meeting room management solutions.",
     link: "/services/facilities-asset-management",
     icon: "fas fa-building-user",
     img: service_img_5,
@@ -74,7 +74,7 @@ const service_categories = [
   {
     id: 6,
     title: "Security & Operational Safety",
-    description: "Comprehensive security solutions such as AI-Powered Surveillance, Access Control Systems, Incident Management, and Environmental Health and Safety systems.",
+    description: "Comprehensive security solutions including AI-powered surveillance, access control systems, and incident management.",
     link: "/services/security-operational-safety",
     icon: "fas fa-shield-alt",
     img: service_img_6,
@@ -85,7 +85,7 @@ const service_categories = [
   {
     id: 7,
     title: "ICT, Telecom & Analytics",
-    description: "Advanced ICT and telecommunications solutions spanning Data Center Management, Unified Communications, VoIP systems, and AI-Powered analytics.",
+    description: "Advanced ICT and telecommunications solutions for data center management, unified communications, and VoIP systems.",
     link: "/services/ict-telecom-analytics",
     icon: "fas fa-network-wired",
     img: service_img_7,
@@ -96,7 +96,7 @@ const service_categories = [
   {
     id: 8,
     title: "Education Solutions",
-    description: "Comprehensive Learning Management system,and Examination Management System designed specifically for educational institutions to create, administer, and evaluate exams.",
+    description: "Comprehensive learning management and examination management systems designed specifically for educational institutions.",
     link: "/services/education-solutions",
     icon: "fas fa-graduation-cap",
     img: service_img_8,
@@ -124,21 +124,7 @@ const ServiceArea = () => {
         <>
             <div className="tp-service-area pb-120 z-index">
                <div className="container">
-                   <div className="row">
-                      <div className="col-xl-12">
-                          <div className="tp-service-section-wrapper mb-60 d-flex justify-content-between align-items-end">
-                              <h3 className="tp-section-title tp-title-anim">{title}</h3>
-                               <Link className="tp-btn-inner tp-btn-hover alt-color-black wow tpfadeRight"
-                                   data-wow-duration=".9s"
-                                   data-wow-delay=".3s"
-                                   href="/service">
-                                   <span>{btn_text}</span>
-                                   <b></b>
-                               </Link>
-                          </div>
-                      </div>
-                   </div>
-                   <div className="row g-4">
+                   <div className="row g-4" style={{ marginTop: '60px' }}>
                       {/* SERVICE CATEGORY CARDS - Updated to have icons on top with different icons per card */}
                       {service_categories.map((item, i) => {
                         // Split description into title and description parts
@@ -149,44 +135,22 @@ const ServiceArea = () => {
                         return (
                           <div key={item.id} className="col-xl-4 col-md-6">
                             <div className="service-card">
-                              {/* Background image container with gradient overlay */}
-                              <div className="service-bg-container">
-                                <Image 
-                                  src={item.img} 
-                                  alt={item.title} 
-                                  className="service-bg-image"
-                                  fill
-                                  style={{ objectFit: 'cover' }}
-                                />
-                                {/* Gradient overlay for better text visibility */}
-                                <div className="service-bg-overlay"></div>
-                              </div>
-                              
-                              {/* Content positioned on top of the background image */}
+                              {/* Content */}
                               <div className="service-content">
                                 <div className="service-content-inner">
-                                  <div className="service-icon-top mb-25">
+                                  <div className="service-icon-top">
                                     <div className="icon-placeholder">
-                                      <i className={`${item.cardIcon}`} style={{ fontSize: '48px', color: '#007bff' }}></i>
+                                      <i className={`${item.cardIcon}`} style={{ fontSize: '1.75rem', color: 'white' }}></i>
                                     </div>
                                   </div>
                                   
-                                  <div className="service-header mb-25">
-                                    <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                      <h3 className="service-name" style={{ fontWeight: 'bold', fontSize: '22px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{item.title}</h3>
-                                    </Link>
+                                  <h3 className="service-title">{item.title}</h3>
+                                  
+                                  <div className="service-details" style={{ marginBottom: '0' }}>
+                                    <p className="service-description" style={{ fontSize: '0.9375rem', color: '#64748b', lineHeight: '1.6', marginBottom: '0' }}>{descriptionText}</p>
                                   </div>
                                   
-                                  <div className="service-details mb-25">
-                                    {boldTitle && (
-                                      <h4 className="service-title" style={{ fontWeight: '600', fontSize: '18px', color: '#fff', marginBottom: '15px', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-                                        {boldTitle}:
-                                      </h4>
-                                    )}
-                                    <p className="service-description" style={{ fontSize: '14px', color: '#fff', lineHeight: '1.5', marginBottom: '0', textAlign: 'center', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{descriptionText}</p>
-                                  </div>
-                                  
-                                  <div className="service-type">
+                                  <div className="service-type" style={{ marginTop: 'auto', paddingTop: '1.5rem' }}>
                                     <Link href={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
                                       <span className="tp-btn-inner tp-btn-hover alt-color-black">
                                         <span>Learn More</span>
@@ -213,44 +177,64 @@ const ServiceArea = () => {
               }
               
               .service-card {
-                background: white;
-                border-radius: 15px;
-                padding: 0;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                transition: all 0.3s ease;
-                height: 400px;
-                border: 1px solid #eee;
+                background: #ffffff;
+                border-radius: 1rem;
+                padding: 2rem;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                height: 100%;
+                text-align: center;
+                border: 1px solid #e2e8f0;
                 position: relative;
                 overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+              }
+              
+              .service-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              }
+              
+              .service-card::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: width 0.6s ease, height 0.6s ease;
+                pointer-events: none;
               }
               
               .service-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+                transform: translateY(-8px) rotateX(2deg);
+                box-shadow: 
+                  0 20px 40px rgba(59, 130, 246, 0.15),
+                  0 10px 20px rgba(0, 0, 0, 0.1),
+                  0 0 0 1px rgba(59, 130, 246, 0.1);
+                border-color: rgba(59, 130, 246, 0.3);
               }
               
-              .service-bg-container {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
+              .service-card:hover::before {
+                transform: scaleX(1);
               }
               
-              .service-bg-image {
-                object-fit: cover;
-                transition: transform 0.3s ease;
-              }
-              
-              .service-bg-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-                z-index: 1;
+              .service-card:hover::after {
+                width: 300px;
+                height: 300px;
               }
               
               .service-content {
@@ -260,29 +244,33 @@ const ServiceArea = () => {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 text-align: center;
-                z-index: 2;
-                padding: 30px;
-                box-sizing: border-box;
+                padding: 0;
               }
               
               .service-content-inner {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 height: 100%;
                 width: 100%;
               }
               
-              .service-card:hover .service-bg-image {
-                transform: scale(1.05);
+              .service-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #0f172a;
+                margin-bottom: 0.75rem;
+                letter-spacing: -0.01em;
               }
               
               .service-type {
                 margin-top: auto;
                 width: 100%;
+                margin-bottom: 0;
+                padding-top: 1.5rem;
               }
               
               .type-badge {
@@ -295,24 +283,34 @@ const ServiceArea = () => {
               }
               
               .icon-placeholder {
-                border: none;
-                border-radius: 8px;
-                padding: 20px;
-                min-height: 90px;
+                width: 4rem;
+                height: 4rem;
+                background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+                border-radius: 0.75rem;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 50%;
-                width: 90px;
-                height: 90px;
-                margin: 0 auto;
+                margin: 0 auto 1.5rem;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 position: relative;
                 z-index: 3;
-                backdrop-filter: blur(5px);
-                border: 1px solid rgba(255, 255, 255, 0.3);
+              }
+              
+              .service-card:hover .icon-placeholder {
+                transform: scale(1.1) rotate(5deg);
+                box-shadow: 
+                  0 8px 20px rgba(59, 130, 246, 0.4),
+                  0 0 30px rgba(59, 130, 246, 0.2);
+                animation: iconGlow 2s ease-in-out infinite;
+              }
+              
+              @keyframes iconGlow {
+                0%, 100% {
+                  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+                }
+                50% {
+                  filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.6));
+                }
               }
               
               @media (max-width: 768px) {
@@ -321,11 +319,7 @@ const ServiceArea = () => {
                 }
                 
                 .service-card {
-                  height: 350px;
-                }
-                
-                .service-content {
-                  padding: 20px;
+                  padding: 1.5rem;
                 }
               }
             `}</style>

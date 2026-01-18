@@ -44,7 +44,7 @@ const footer_content = {
             links: [
                 { name: "About Us", link: "/about" },
                 { name: "Services", link: "/service" },
-                { name: "Projects", link: "#" }, // Consider creating a projects page
+                { name: "Projects", link: "/project" },
                 { name: "Blog", link: "/blog" },
                 { name: "Contact Us", link: "/contact" },
             ]

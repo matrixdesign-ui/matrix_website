@@ -31,12 +31,12 @@ const menu_data = [
     ],
   },
   
-  // --- 3. PRODUCT AND SERVICES (CLEANED MEGA MENU) ---
+  // --- 3. SERVICES (MEGA MENU) ---
   {
     id: 3,
     mega_menu: true, 
     has_dropdown: true,
-    title: "Product and services",
+    title: "Services",
     link: "/service",
     active: "",
     sub_menus: [
@@ -70,7 +70,7 @@ const menu_data = [
         ],
       },
 
-      // COLUMN 2: Enterprise Management Solutions (Specific Applications)
+      // COLUMN 3: Enterprise Management Solutions (Specific Applications)
       {
         title: "Enterprise Solutions",
         link: "/services/enterprise-solutions",
@@ -82,7 +82,7 @@ const menu_data = [
         ],
       },
 
-      // COLUMN 3: Governance, Risk, & Compliance
+      // COLUMN 4: Governance, Risk, & Compliance
       {
         title: "Governance & Compliance",
         link: "/services/governance-compliance",
@@ -94,7 +94,7 @@ const menu_data = [
         ],
       },
 
-      // COLUMN 4: Facilities & Asset Management (Detailed)
+      // COLUMN 5: Facilities & Asset Management (Detailed)
       {
         title: "Facilities & Asset Management",
         link: "/services/facilities-asset-management",
@@ -106,7 +106,7 @@ const menu_data = [
         ],
       },
 
-      // COLUMN 5: Security & Safety
+      // COLUMN 6: Security & Safety
       {
         title: "Security & Operational Safety",
         link: "/services/security-operational-safety",
@@ -122,7 +122,7 @@ const menu_data = [
         ],
       },
 
-      // COLUMN 6: ICT & Analytics
+      // COLUMN 7: ICT & Analytics
       {
         title: "ICT, Telecom & Analytics",
         link: "/services/ict-telecom-analytics",
@@ -135,7 +135,7 @@ const menu_data = [
         ],
       },
 
-      // COLUMN 7: Education & Examination
+      // COLUMN 8: Education & Examination
       {
         title: "Education Solutions",
         link: "/services/education-solutions",
@@ -147,18 +147,17 @@ const menu_data = [
     ],
   },
 
-  // --- 4. PROJECTS (Mapped to /project) ---
+  // --- 4. PRODUCTS ---
   {
     id: 4,
     mega_menu: false,
     has_dropdown: true,
-    title: "Projects",
-    link: "/project",
+    title: "Products",
+    link: "/products",
     active: "",
     sub_menus: [
-      { link: "/project", title: "All Projects" },
-      { link: "/project#ongoing", title: "Ongoing Projects" },
-      { link: "/project#completed", title: "Completed Projects" },
+      { link: "https://www.sheria360.com/", title: "Sheria360" },
+      { link: "/products/boardcloud", title: "Boardcloud" },
     ],
   },
 
