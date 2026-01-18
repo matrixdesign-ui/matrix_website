@@ -9,6 +9,7 @@ import team_img_8 from  "../../public/assets/img/team/team-4-8.png"
 import team_img_9 from  "../../public/assets/img/team/team-4-9.png"
 import team_img_10 from  "../../public/assets/img/team/team-4-10.png"
 import team_img_11 from  "../../public/assets/img/team/team-4-11.png"
+import team_img_12 from  "../../public/assets/img/team/team-5-12.png"
 
 const team_data = [
     {
@@ -301,6 +302,30 @@ const team_data = [
             "Mentored 5 junior technicians in electronics troubleshooting"
         ],
         certifications: ["Electronics Technician Certification", "ISO Quality Standards"],
+        languages: ["English", "Swahili"]
+    },
+    {
+        id: 13, 
+        cls: 2,
+        img: team_img_12,
+        name: "Faith Wanjiku",
+        job_title: "Head of Strategy and Growth",
+        experience: "8+ years",
+        location: "Nairobi, Kenya",
+        email: "faith@matrixvision.co.ke",
+        phone: "+254 700 333 555",
+        linkedin: "https://linkedin.com/in/faith-wanjiku",
+        education: "Bachelor of Commerce in Marketing",
+        skills: ["Strategy Development", "Software Marketing", "Business Growth", "Market Analysis", "Sales Management", "Digital Marketing"],
+        about: "Faith Wanjiku is the Head of Strategy and Growth at Matrix Vision Systems, leading our Sales and Marketing initiatives. She specializes in software marketing and is responsible for driving business growth through strategic planning and effective marketing campaigns. Her expertise in understanding market dynamics and customer needs has been instrumental in expanding our market reach.",
+        achievements: [
+            "Developed and executed marketing strategies resulting in 150% revenue growth",
+            "Led successful software product launches for enterprise and SME markets",
+            "Built strategic partnerships with key industry players increasing market presence by 200%",
+            "Managed sales teams achieving 120% of annual targets consistently",
+            "Established brand presence in new markets across East Africa"
+        ],
+        certifications: ["Digital Marketing Professional", "Sales Management Certification", "Google Analytics Certified"],
         languages: ["English", "Swahili"]
     }
 ];
