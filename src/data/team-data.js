@@ -89,7 +89,7 @@ const team_data = [
         cls: 2,
         img: team_img_12,
         name: "Faith Wanjiku",
-        job_title: "Head of Strategy and Growth",
+        job_title: "Head of Growth & Partnerships",
         experience: "8+ years",
         location: "Nairobi, Kenya",
         email: "faith@matrixvision.co.ke",
@@ -97,7 +97,7 @@ const team_data = [
         linkedin: "https://linkedin.com/in/faith-wanjiku",
         education: "Bachelor of Commerce in Marketing",
         skills: ["Strategy Development", "Software Marketing", "Business Growth", "Market Analysis", "Sales Management", "Digital Marketing"],
-        about: "Faith Wanjiku is the Head of Strategy and Growth at Matrix Vision Systems, leading our Sales and Marketing initiatives. She specializes in software marketing and is responsible for driving business growth through strategic planning and effective marketing campaigns. Her expertise in understanding market dynamics and customer needs has been instrumental in expanding our market reach.",
+        about: "Faith Wanjiku is the Head of Growth & Partnerships at Matrix Vision Systems, leading our Sales and Marketing initiatives. She specializes in software marketing and is responsible for driving business growth through strategic planning and effective marketing campaigns. Her expertise in understanding market dynamics and customer needs has been instrumental in expanding our market reach.",
         achievements: [
             "Developed and executed marketing strategies resulting in 150% revenue growth",
             "Led successful software product launches for enterprise and SME markets",
