@@ -16,6 +16,20 @@ const job_data = {
             job_location: "Nairobi, Kenya",
             slug: "intern-of-elec-electronics-engineer"
         },
+        {
+            id: 2,
+            category: "Administrative Assistant – Corporate Software Sales",
+            job_time: "Full-time",
+            job_location: "Nairobi, Kenya",
+            slug: "administrative-assistant-corporate-software-sales"
+        },
+        {
+            id: 3,
+            category: "Business Development Associate – Corporate Software Sales",
+            job_time: "Full-time",
+            job_location: "Nairobi, Kenya",
+            slug: "business-development-associate-corporate-software-sales"
+        },
         // {
         //     id:1,
         //     category: "Product Designer",

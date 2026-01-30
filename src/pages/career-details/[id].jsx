@@ -41,7 +41,9 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   // Define all possible career paths
   const paths = [
-    { params: { id: 'intern-of-elec-electronics-engineer' } }
+    { params: { id: 'intern-of-elec-electronics-engineer' } },
+    { params: { id: 'administrative-assistant-corporate-software-sales' } },
+    { params: { id: 'business-development-associate-corporate-software-sales' } }
   ];
 
   // Must use fallback: false for compatibility with output: export
