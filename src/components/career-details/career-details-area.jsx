@@ -146,12 +146,7 @@ const career_contents = {
                 title: "Impact of the Role",
                 description: <>By providing reliable administrative support, the Administrative Assistant will enhance team productivity and efficiency, ensure accurate documentation and compliance, strengthen client and stakeholder confidence through professional coordination, and contribute to the overall success of the corporate software sales division.</>,
             },
-            {
-                id: 8, 
-                cls: "",
-                title: "Compensation",
-                description: <>30-60K per month (Gross), commensurate with experience plus medical insurance.</>,
-            },
+
         ]
     },
     'business-development-associate-corporate-software-sales': {
@@ -241,12 +236,7 @@ const career_contents = {
                 title: "Contract Period",
                 description: <>The contract will be issued on an annual basis, with renewal contingent upon the candidate's successful achievement of agreed-upon Key Performance Indicators (KPIs). Performance will be reviewed at the end of each contract year, and continuation of the engagement will depend on meeting or exceeding the set targets.</>,
             },
-            {
-                id: 9, 
-                cls: "",
-                title: "Compensation",
-                description: <>80-100K per month (Gross), commensurate with experience plus medical insurance.</>,
-            },
+
         ]
     }
 };
