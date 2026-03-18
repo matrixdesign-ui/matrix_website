@@ -206,21 +206,21 @@ const team_data = [
         certifications: ["Adobe Certified Expert", "UX Design Professional"],
         languages: ["English", "Swahili"]
     },
-    // Replaced Dr. Priscilla Wanjiku with Yvonne Kituku
+    // Replaced Dr. Priscilla Wanjiku with Mary Wanjiru
     {
         id: 8, 
         cls: 1,
-        img: team_img_8,
-        name: "Yvonne Kituku",
+        img: team_img_11,
+        name: "Mary Wanjiru",
         job_title: "Accounts and Finance",
         experience: "6+ years",
         location: "Nairobi, Kenya",
-        email: "yvonne@matrixvision.co.ke",
+        email: "mary@matrixvision.co.ke",
         phone: "+254 700 555 666",
-        linkedin: "https://linkedin.com/in/yvonne-kituku",
+        linkedin: "https://linkedin.com/in/mary-wanjiru",
         education: "Bachelor of Commerce in Accounting",
         skills: ["Financial Management", "Accounting", "Budgeting", "Financial Reporting", "Tax Compliance"],
-        about: "Yvonne Kituku is our Accounts and Finance specialist, responsible for managing all financial operations and ensuring compliance with accounting standards. She brings expertise in financial planning, reporting, and analysis to support strategic decision-making.",
+        about: "Mary Wanjiru is our Accounts and Finance specialist, responsible for managing all financial operations and ensuring compliance with accounting standards. She brings expertise in financial planning, reporting, and analysis to support strategic decision-making.",
         achievements: [
             "Streamlined accounting processes reducing month-end close by 30%",
             "Implemented financial controls saving the company 15% in operational costs",
